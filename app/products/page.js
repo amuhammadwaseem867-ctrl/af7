@@ -56,7 +56,7 @@ const products = [
     title: "Nylon Zippers",
     description:
       "Lightweight nylon zipper solutions designed for versatile apparel and product applications, including reversible and waterproof constructions.",
-    image: "/images/products/nylonzippers/reversible nylon zipper.webp",
+    image: "/images/products/nylonzippers/2.webp",
     href: "/products/nylon-zippers",
     category: "ZIPPER SYSTEM",
     material: "NYLON",
@@ -158,80 +158,86 @@ export default function ProductsPage() {
             </div>
 
             <div className="products-list">
-              {products.map((product) => (
-                <article
-                  className="product-profile"
-                  key={product.number}
-                >
-                  <div className="product-profile-header">
-                    <div className="product-number">
-                      <span>{product.number}</span>
-                      <span className="product-number-line" />
-                      <span>
-                        {String(products.length).padStart(2, "0")}
+              {products.map((product) => {
+                const isSlider = product.category === "SLIDER COMPONENT";
+
+                return (
+                  <article
+                    className="product-profile"
+                    key={product.number}
+                  >
+                    <div className="product-profile-header">
+                      <div className="product-number">
+                        <span>{product.number}</span>
+                        <span className="product-number-line" />
+                        <span>
+                          {String(products.length).padStart(2, "0")}
+                        </span>
+                      </div>
+
+                      <span className="product-category">
+                        {product.category}
                       </span>
                     </div>
 
-                    <span className="product-category">
-                      {product.category}
-                    </span>
-                  </div>
+                    <div className="product-profile-grid">
+                      <div className="product-information">
+                        <span className="product-label">
+                          AF7 / PRODUCT PROFILE
+                        </span>
 
-                  <div className="product-profile-grid">
-                    <div className="product-information">
-                      <span className="product-label">
-                        AF7 / PRODUCT PROFILE
-                      </span>
+                        <h2>{product.title}</h2>
 
-                      <h2>{product.title}</h2>
+                        <p>{product.description}</p>
 
-                      <p>{product.description}</p>
+                        <div className="product-specification">
+                          <div>
+                            <span>CONSTRUCTION</span>
+                            <strong>{product.category}</strong>
+                          </div>
 
-                      <div className="product-specification">
-                        <div>
-                          <span>CONSTRUCTION</span>
-                          <strong>{product.category}</strong>
+                          <div>
+                            <span>MATERIAL</span>
+                            <strong>{product.material}</strong>
+                          </div>
                         </div>
 
-                        <div>
-                          <span>MATERIAL</span>
-                          <strong>{product.material}</strong>
-                        </div>
+                        <Link
+                          href={product.href}
+                          className="product-link"
+                        >
+                          <span>View Product Profile</span>
+                          <span aria-hidden="true">↗</span>
+                        </Link>
                       </div>
 
                       <Link
                         href={product.href}
-                        className="product-link"
+                        className={`product-visual ${
+                          isSlider ? "product-visual-slider" : ""
+                        }`}
+                        aria-label={`View ${product.title} product profile`}
                       >
-                        <span>View Product Profile</span>
-                        <span aria-hidden="true">↗</span>
+                        <div className="product-image">
+                          <Image
+                            src={product.image}
+                            alt={`AF7 ${product.title}`}
+                            fill
+                            sizes="(max-width: 700px) 100vw, 62vw"
+                          />
+                        </div>
+
+                        <div className="product-visual-meta">
+                          <span>AF7</span>
+                          <span>{product.number}</span>
+                        </div>
                       </Link>
                     </div>
 
-                    <Link
-                      href={product.href}
-                      className="product-visual"
-                      aria-label={`View ${product.title} product profile`}
-                    >
-                      <div className="product-image">
-                        <Image
-                          src={product.image}
-                          alt={`AF7 ${product.title}`}
-                          fill
-                          sizes="(max-width: 700px) 100vw, 62vw"
-                        />
-                      </div>
-
-                      <div className="product-visual-meta">
-                        <span>AF7</span>
-                        <span>{product.number}</span>
-                      </div>
-                    </Link>
-                  </div>
-
-                  <div className="product-divider" />
-                </article>
-              ))}
+                    <div className="product-divider" />
+                  </article>
+                );
+              })}
             </div>
 
             <div className="products-footer-meta">

@@ -127,8 +127,6 @@ const products = {
     applications: "APPAREL · BAGS · OUTERWEAR",
     images: [
       "/images/products/slider5/IMG_2028.webp",
-      "/images/products/slider5/IMG_2029.webp",
-      "/images/products/slider5/IMG_2033.webp",
       "/images/products/slider5/IMG_2045.webp",
       "/images/products/slider5/IMG_2053.webp",
       "/images/products/slider5/IMG_2054.webp",
@@ -249,6 +247,9 @@ export default async function ProductDetailPage({ params }) {
       ? productOrder[currentIndex + 1]
       : null;
 
+  const isSliderProduct =
+    slug === "slider-5" || slug === "sliders-4-5";
+
   return (
     <>
       <Header />
@@ -294,7 +295,11 @@ export default async function ProductDetailPage({ params }) {
                 </div>
               </div>
 
-              <div className="product-detail-visual">
+              <div
+                className={`product-detail-visual ${
+                  isSliderProduct ? "product-detail-visual-slider" : ""
+                }`}
+              >
                 <div className="product-detail-image">
                   <Image
                     src={product.images[0]}
@@ -331,7 +336,11 @@ export default async function ProductDetailPage({ params }) {
               </p>
             </div>
 
-            <div className="product-catalog-grid">
+            <div
+              className={`product-catalog-grid ${
+                isSliderProduct ? "product-catalog-grid-slider" : ""
+              }`}
+            >
               {product.images.map((image, index) => (
                 <figure
                   className={`product-catalog-item ${
