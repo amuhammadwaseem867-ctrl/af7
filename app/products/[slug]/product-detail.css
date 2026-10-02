@@ -1,0 +1,644 @@
+.product-detail-page {
+  width: 100%;
+  background: #ffffff;
+  color: #243146;
+}
+
+.product-detail-container {
+  width: var(--container);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.product-detail-intro {
+  padding: 145px 0 110px;
+}
+
+.product-detail-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dfe3e6;
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: #89919a;
+}
+
+.product-detail-index {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #243146;
+}
+
+.product-detail-index-line {
+  width: 28px;
+  height: 1px;
+  background: #c9ced3;
+}
+
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.55fr) minmax(0, 1.45fr);
+  gap: 75px;
+  align-items: center;
+  padding-top: 65px;
+}
+
+.product-detail-copy {
+  min-width: 0;
+}
+
+.product-detail-eyebrow {
+  display: block;
+  margin-bottom: 22px;
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: #89919a;
+}
+
+.product-detail-copy h1 {
+  max-width: 520px;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+  font-weight: 600;
+  color: #243146;
+}
+
+.product-detail-copy > p {
+  max-width: 400px;
+  margin: 30px 0 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+  color: #707985;
+}
+
+.product-detail-specs {
+  max-width: 400px;
+  margin-top: 40px;
+  border-top: 1px solid #dfe3e6;
+}
+
+.product-detail-specs div {
+  display: grid;
+  grid-template-columns: 105px 1fr;
+  gap: 15px;
+  padding: 13px 0;
+  border-bottom: 1px solid #e6e8ea;
+}
+
+.product-detail-specs span {
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #929aa2;
+}
+
+.product-detail-specs strong {
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  color: #243146;
+}
+
+.product-detail-visual {
+  position: relative;
+  min-width: 0;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f6f6;
+  overflow: hidden;
+}
+
+.product-detail-image {
+  position: relative;
+  width: 76%;
+  height: 76%;
+  min-height: 430px;
+}
+
+.product-detail-image img {
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+.product-detail-visual-meta {
+  position: absolute;
+  top: 19px;
+  left: 21px;
+  right: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: #89919a;
+}
+
+.product-detail-visual-label {
+  position: absolute;
+  right: 21px;
+  bottom: 19px;
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  color: #89919a;
+}
+
+.product-catalog {
+  padding: 100px 0 115px;
+  border-top: 1px solid #dfe3e6;
+}
+
+.product-catalog-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 80px;
+  align-items: end;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #dfe3e6;
+}
+
+.product-catalog-heading > div > span {
+  display: block;
+  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: #89919a;
+}
+
+.product-catalog-heading h2 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(34px, 4vw, 55px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  font-weight: 600;
+  color: #243146;
+}
+
+.product-catalog-heading p {
+  max-width: 400px;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  line-height: 1.85;
+  color: #707985;
+}
+
+.product-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 1px;
+  background: #dfe3e6;
+}
+
+.product-catalog-item {
+  position: relative;
+  margin: 0;
+  padding: 35px;
+  background: #f5f6f6;
+}
+
+.product-catalog-item-featured {
+  grid-column: auto;
+}
+
+.product-catalog-image {
+  position: relative;
+  width: 100%;
+  height: 420px;
+}
+
+.product-catalog-item-featured .product-catalog-image {
+  height: 420px;
+}
+
+.product-catalog-image img {
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+.product-catalog-item figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  padding-top: 13px;
+  border-top: 1px solid #d7dce0;
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  color: #89919a;
+}
+
+.product-catalog-item figcaption span:first-child {
+  color: #243146;
+}
+
+.product-catalog-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-top: 35px;
+  padding-top: 18px;
+  border-top: 1px solid #dfe3e6;
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: #89919a;
+}
+
+.product-catalog-footer span:nth-child(2) {
+  text-align: center;
+}
+
+.product-catalog-footer span:nth-child(3) {
+  text-align: right;
+}
+
+.product-detail-information {
+  padding: 105px 0;
+  border-top: 1px solid #dfe3e6;
+}
+
+.product-detail-information-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+  gap: 100px;
+  align-items: start;
+}
+
+.product-detail-section-label {
+  display: block;
+  margin-bottom: 22px;
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: #89919a;
+}
+
+.product-detail-information h2 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(38px, 4.5vw, 65px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 600;
+  color: #243146;
+}
+
+.product-detail-information h2 span {
+  color: #9ca4ac;
+}
+
+.product-detail-information-copy {
+  max-width: 430px;
+  padding-top: 32px;
+}
+
+.product-detail-information-copy > p {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+  color: #707985;
+}
+
+.product-detail-information-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e1e4e7;
+  font-family: "Poppins", sans-serif;
+}
+
+.product-detail-information-meta:first-of-type {
+  margin-top: 35px;
+  border-top: 1px solid #e1e4e7;
+}
+
+.product-detail-information-meta span:first-child {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  color: #929aa2;
+}
+
+.product-detail-information-meta span:last-child {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #243146;
+}
+
+.product-detail-navigation {
+  padding: 0 0 115px;
+}
+
+.product-detail-navigation-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-top: 1px solid #dfe3e6;
+  border-bottom: 1px solid #dfe3e6;
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: #89919a;
+}
+
+.product-detail-navigation-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  margin-top: 1px;
+  background: #dfe3e6;
+}
+
+.product-detail-nav-link {
+  position: relative;
+  min-height: 155px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px 35px;
+  background: #ffffff;
+  transition: background 0.3s ease;
+}
+
+.product-detail-nav-link:hover {
+  background: #f5f6f6;
+}
+
+.product-detail-nav-link-next {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.product-detail-nav-label {
+  margin-bottom: 13px;
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: #929aa2;
+}
+
+.product-detail-nav-title {
+  max-width: 330px;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(20px, 2.2vw, 30px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+  color: #243146;
+}
+
+.product-detail-nav-arrow {
+  position: absolute;
+  right: 35px;
+  bottom: 28px;
+  font-size: 17px;
+  color: #243146;
+}
+
+.product-detail-nav-link:not(.product-detail-nav-link-next)
+  .product-detail-nav-arrow {
+  left: 35px;
+  right: auto;
+}
+
+@media (max-width: 1100px) {
+  .product-detail-intro {
+    padding-top: 120px;
+  }
+
+  .product-detail-grid {
+    gap: 50px;
+  }
+
+  .product-detail-visual {
+    min-height: 470px;
+  }
+
+  .product-detail-image {
+    width: 82%;
+    height: 82%;
+    min-height: 350px;
+  }
+
+  .product-detail-information-grid {
+    gap: 60px;
+  }
+
+  .product-catalog-heading {
+    gap: 60px;
+  }
+
+  .product-catalog-item {
+    padding: 28px;
+  }
+
+  .product-catalog-image,
+  .product-catalog-item-featured .product-catalog-image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 700px) {
+  .product-detail-intro {
+    padding: 90px 0 75px;
+  }
+
+  .product-detail-topline > span {
+    display: none;
+  }
+
+  .product-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    padding-top: 42px;
+  }
+
+  .product-detail-copy h1 {
+    font-size: clamp(40px, 11vw, 58px);
+  }
+
+  .product-detail-copy > p {
+    margin-top: 24px;
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  .product-detail-specs {
+    margin-top: 30px;
+  }
+
+  .product-detail-visual {
+    min-height: 350px;
+    height: 78vw;
+    max-height: 470px;
+  }
+
+  .product-detail-image {
+    width: 82%;
+    height: 82%;
+    min-height: 0;
+  }
+
+  .product-catalog {
+    padding: 75px 0 80px;
+  }
+
+  .product-catalog-heading {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding-bottom: 32px;
+  }
+
+  .product-catalog-heading h2 {
+    font-size: 36px;
+  }
+
+  .product-catalog-heading p {
+    font-size: 12px;
+  }
+
+  .product-catalog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-catalog-item,
+  .product-catalog-item-featured {
+    grid-column: auto;
+    padding: 20px;
+  }
+
+  .product-catalog-image,
+  .product-catalog-item-featured .product-catalog-image {
+    height: 330px;
+  }
+
+  .product-catalog-item figcaption {
+    margin-top: 15px;
+    font-size: 7px;
+  }
+
+  .product-catalog-footer {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    line-height: 1.5;
+  }
+
+  .product-catalog-footer span:nth-child(2),
+  .product-catalog-footer span:nth-child(3) {
+    text-align: left;
+  }
+
+  .product-detail-information {
+    padding: 75px 0;
+  }
+
+  .product-detail-information-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .product-detail-information h2 {
+    font-size: 43px;
+  }
+
+  .product-detail-information-copy {
+    padding-top: 0;
+  }
+
+  .product-detail-information-copy > p {
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  .product-detail-navigation {
+    padding-bottom: 80px;
+  }
+
+  .product-detail-navigation-links {
+    grid-template-columns: 1fr;
+  }
+
+  .product-detail-nav-link,
+  .product-detail-nav-link-next {
+    min-height: 135px;
+    align-items: flex-start;
+    text-align: left;
+    padding: 25px;
+  }
+
+  .product-detail-nav-arrow {
+    right: 25px;
+    bottom: 24px;
+  }
+
+  .product-detail-nav-link:not(.product-detail-nav-link-next)
+    .product-detail-nav-arrow {
+    left: auto;
+    right: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-intro {
+    padding-top: 75px;
+  }
+
+  .product-detail-copy h1 {
+    font-size: 39px;
+  }
+
+  .product-detail-visual {
+    min-height: 300px;
+  }
+
+  .product-catalog-image,
+  .product-catalog-item-featured .product-catalog-image {
+    height: 280px;
+  }
+
+  .product-detail-information h2 {
+    font-size: 38px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-detail-nav-link {
+    transition: none;
+  }
+}

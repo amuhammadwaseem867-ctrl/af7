@@ -1,0 +1,546 @@
+.brand-intro {
+  width: 100%;
+  background: #ffffff;
+  color: #243146;
+}
+
+.brand-intro-container {
+  width: var(--container);
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 110px 0 130px;
+}
+
+.brand-intro-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 28px;
+
+  border-bottom: 1px solid rgba(36, 49, 70, 0.16);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.brand-intro-header-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.brand-intro-index {
+  color: #243146;
+}
+
+.brand-intro-header-left > span:last-child {
+  color: #68727d;
+}
+
+.brand-intro-header-right {
+  color: #8a939c;
+}
+
+.brand-intro-introduction {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.7fr);
+
+  gap: 100px;
+
+  padding: 105px 0 115px;
+}
+
+.brand-intro-title {
+  align-self: start;
+}
+
+.brand-intro-eyebrow {
+  display: block;
+
+  margin-bottom: 26px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.4;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: #8a939c;
+}
+
+.brand-intro-title h2 {
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(58px, 7.1vw, 104px);
+  font-weight: 500;
+
+  line-height: 0.91;
+  letter-spacing: -0.055em;
+
+  color: #243146;
+}
+
+.brand-intro-title h2 span {
+  color: #9aa4ad;
+}
+
+.brand-intro-statement {
+  align-self: center;
+
+  padding-top: 25px;
+}
+
+.brand-intro-statement p {
+  max-width: 510px;
+
+  margin: 0 0 24px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.9;
+
+  color: #6c7680;
+}
+
+.brand-intro-statement .brand-intro-lead {
+  margin-bottom: 28px;
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  color: #243146;
+}
+
+.brand-intro-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 30px;
+
+  margin-top: 16px;
+  padding-bottom: 9px;
+
+  border-bottom: 1px solid #243146;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+
+  letter-spacing: 0.05em;
+
+  color: #243146;
+
+  transition:
+    gap 0.3s ease,
+    color 0.3s ease;
+}
+
+.brand-intro-link:hover {
+  gap: 38px;
+  color: #66717d;
+}
+
+.brand-intro-link-arrow {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.brand-intro-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(280px, 0.75fr);
+
+  gap: 70px;
+
+  align-items: end;
+
+  padding-bottom: 100px;
+}
+
+.brand-intro-feature-image {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 1.65 / 1;
+
+  overflow: hidden;
+
+  background: #d3d3d3;
+}
+
+.brand-intro-feature-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.9s ease;
+}
+
+.brand-intro-feature:hover
+  .brand-intro-feature-image img {
+  transform: scale(1.025);
+}
+
+.brand-intro-feature-copy {
+  padding-bottom: 3px;
+}
+
+.brand-intro-feature-label {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.4;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #8a939c;
+}
+
+.brand-intro-feature-copy h3 {
+  margin: 0 0 25px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 500;
+
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+
+  color: #243146;
+}
+
+.brand-intro-feature-copy h3 span {
+  color: #9aa4ad;
+}
+
+.brand-intro-feature-copy p {
+  max-width: 400px;
+
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+
+  line-height: 1.85;
+
+  color: #6c7680;
+}
+
+.brand-intro-feature-meta {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-top: 35px;
+  padding-top: 15px;
+
+  border-top: 1px solid rgba(36, 49, 70, 0.15);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+
+  line-height: 1.4;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+
+  color: #8a939c;
+}
+
+.brand-intro-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.brand-intro-gallery-item {
+  margin: 0;
+}
+
+.brand-intro-gallery-image {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 1.18 / 1;
+
+  overflow: hidden;
+
+  background: #d3d3d3;
+}
+
+.brand-intro-gallery-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.brand-intro-gallery-item:hover
+  .brand-intro-gallery-image img {
+  transform: scale(1.035);
+}
+
+.brand-intro-gallery-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 12px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: #8a939c;
+}
+
+.brand-intro-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+
+  margin-top: 105px;
+}
+
+.brand-intro-bottom-line {
+  width: 100%;
+  height: 1px;
+
+  margin-top: 11px;
+
+  background: rgba(36, 49, 70, 0.18);
+}
+
+.brand-intro-bottom p {
+  max-width: 570px;
+
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+
+  line-height: 1.45;
+  letter-spacing: -0.025em;
+
+  color: #243146;
+}
+
+@media (max-width: 1100px) {
+  .brand-intro-container {
+    padding: 90px 0 110px;
+  }
+
+  .brand-intro-introduction {
+    gap: 60px;
+  }
+
+  .brand-intro-feature {
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 50px;
+  }
+
+  .brand-intro-title h2 {
+    font-size: clamp(54px, 7vw, 82px);
+  }
+}
+
+@media (max-width: 850px) {
+  .brand-intro-introduction {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding-top: 75px;
+    padding-bottom: 85px;
+  }
+
+  .brand-intro-statement {
+    padding-top: 0;
+  }
+
+  .brand-intro-statement p {
+    max-width: 650px;
+  }
+
+  .brand-intro-feature {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding-bottom: 80px;
+  }
+
+  .brand-intro-feature-image {
+    aspect-ratio: 1.5 / 1;
+  }
+
+  .brand-intro-feature-copy {
+    max-width: 620px;
+  }
+
+  .brand-intro-bottom {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 700px) {
+  .brand-intro-container {
+    padding: 70px 0 85px;
+  }
+
+  .brand-intro-header {
+    align-items: flex-start;
+
+    font-size: 8px;
+  }
+
+  .brand-intro-header-left {
+    gap: 16px;
+  }
+
+  .brand-intro-header-right {
+    max-width: 120px;
+
+    text-align: right;
+  }
+
+  .brand-intro-introduction {
+    gap: 38px;
+
+    padding: 58px 0 65px;
+  }
+
+  .brand-intro-eyebrow {
+    margin-bottom: 19px;
+
+    font-size: 8px;
+  }
+
+  .brand-intro-title h2 {
+    font-size: clamp(45px, 13vw, 68px);
+
+    line-height: 0.94;
+  }
+
+  .brand-intro-statement .brand-intro-lead {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .brand-intro-statement p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .brand-intro-feature {
+    gap: 34px;
+
+    padding-bottom: 65px;
+  }
+
+  .brand-intro-feature-image {
+    aspect-ratio: 1.15 / 1;
+  }
+
+  .brand-intro-feature-label {
+    font-size: 8px;
+  }
+
+  .brand-intro-feature-copy h3 {
+    margin-bottom: 20px;
+
+    font-size: 40px;
+  }
+
+  .brand-intro-feature-copy p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .brand-intro-feature-meta {
+    flex-direction: column;
+
+    gap: 8px;
+
+    font-size: 7px;
+  }
+
+  .brand-intro-gallery {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .brand-intro-gallery-image {
+    aspect-ratio: 1.3 / 1;
+  }
+
+  .brand-intro-gallery-caption {
+    font-size: 8px;
+  }
+
+  .brand-intro-bottom {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    margin-top: 70px;
+  }
+
+  .brand-intro-bottom-line {
+    margin-top: 0;
+  }
+
+  .brand-intro-bottom p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 400px) {
+  .brand-intro-title h2 {
+    font-size: 43px;
+  }
+
+  .brand-intro-feature-copy h3 {
+    font-size: 36px;
+  }
+
+  .brand-intro-bottom p {
+    font-size: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-intro-feature-image img,
+  .brand-intro-gallery-image img {
+    transition: none;
+  }
+}
