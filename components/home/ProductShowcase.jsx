@@ -97,7 +97,6 @@ export default function ProductShowcase() {
               <Link
                 href={`/products/${product.slug}`}
                 className="home-product-link"
-                data-cursor="View"
               >
                 <div className="home-product-image">
                   <Image
@@ -118,7 +117,7 @@ export default function ProductShowcase() {
             </motion.article>
           ))}
 
-          <Link href="/products" className="home-product-more" data-cursor="Explore">
+          <Link href="/products" className="home-product-more">
             <span>All products</span>
             <span className="home-product-more-arrow" aria-hidden="true">→</span>
           </Link>

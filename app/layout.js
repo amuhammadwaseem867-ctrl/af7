@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SmoothScroll from "@/components/motion/SmoothScroll";
 import ScrollProgress from "@/components/motion/ScrollProgress";
-import Cursor from "@/components/motion/Cursor";
 import PageTransition from "@/components/motion/PageTransition";
 
 const montserrat = Montserrat({
@@ -102,7 +101,6 @@ export default function RootLayout({ children }) {
           <Footer />
         </PageTransition>
         <FloatingContact />
-        <Cursor />
       </body>
     </html>
   );

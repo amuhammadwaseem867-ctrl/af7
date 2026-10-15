@@ -62,7 +62,7 @@ export default function ProductsExplorer() {
               exit={{ opacity: 0, scale: 0.94, transition: { duration: 0.3 } }}
               transition={{ duration: 0.8, delay: index * 0.05, ease }}
             >
-              <Link href={`/products/${product.slug}`} className="products-card-link" data-cursor="View">
+              <Link href={`/products/${product.slug}`} className="products-card-link">
                 <div className="products-card-image">
                   <Image
                     src={product.cover}

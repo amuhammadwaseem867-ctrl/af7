@@ -231,7 +231,6 @@ export default async function ProductDetailPage({ params }) {
                 <Link
                   href={`/products/${previousSlug}`}
                   className="product-detail-nav-link"
-                  data-cursor="Prev"
                 >
                   <span className="product-detail-nav-label">
                     PREVIOUS

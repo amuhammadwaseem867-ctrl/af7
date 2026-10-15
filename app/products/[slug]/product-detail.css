@@ -873,11 +873,11 @@
 .lightbox-image {
   position: absolute;
   inset: 0 60px;
-  cursor: grab;
+  cursor: var(--cursor-arrow);
 }
 
 .lightbox-image:active {
-  cursor: grabbing;
+  cursor: var(--cursor-arrow);
 }
 
 .lightbox-image img {

@@ -62,7 +62,6 @@ export default function ProductGallery({ images, title, isSlider }) {
                 setOpenIndex(index);
               }}
               aria-label={`Open ${title} image ${index + 1} of ${images.length}`}
-              data-cursor="Zoom"
             >
               <div className="product-catalog-image">
                 <div className="product-catalog-zoom">
