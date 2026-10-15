@@ -64,8 +64,7 @@
 }
 
 .home-ticker .marquee-item:nth-child(even) > span:first-child {
-  color: transparent;
-  -webkit-text-stroke: 1px var(--af7-navy);
+  color: #9aa4ad;
 }
 
 .home-ticker .marquee-dot {
