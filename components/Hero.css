@@ -119,14 +119,7 @@
 }
 
 .hero-line-accent {
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.85);
-}
-
-@supports not (-webkit-text-stroke: 1px white) {
-  .hero-line-accent {
-    color: #bcc6cc;
-  }
+  color: #bcc6cc;
 }
 
 .hero-description {
