@@ -7,7 +7,7 @@ export default function Error({ reset }) {
         <p style={{ marginBottom: "1rem", fontSize: "11px", letterSpacing: "0.18em", textTransform: "uppercase", color: "#bcc6cc" }}>
           AF7 / Error
         </p>
-        <h1 style={{ fontFamily: "Montserrat, sans-serif", fontSize: "clamp(2.8rem, 7vw, 5rem)", letterSpacing: "-0.06em", margin: "0 0 1rem" }}>
+        <h1 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(2.8rem, 7vw, 5rem)", letterSpacing: "-0.06em", margin: "0 0 1rem" }}>
           Something went wrong.
         </h1>
         <p style={{ fontSize: "1rem", lineHeight: "1.8", color: "rgba(255,255,255,0.74)", margin: "0 0 2rem" }}>

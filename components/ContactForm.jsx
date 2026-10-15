@@ -1,65 +1,103 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { AnimatePresence, motion } from "framer-motion";
+import { products } from "@/data/products";
+import { accessories } from "@/data/company";
+import { contact } from "@/data/navigation";
 
 const inquiryTypes = [
-  "Product Inquiry",
-  "Sample Request",
-  "Business Inquiry",
-  "General Inquiry",
+  "Product Enquiry",
+  "Samples",
+  "Specifications",
+  "Customization",
+  "Manufacturing Requirements",
+];
+
+const productOptions = [
+  ...products.map((product) => product.title),
+  ...accessories.map((item) => item.title),
 ];
 
 export default function ContactForm() {
-  const [statusMessage, setStatusMessage] = useState("");
+  const searchParams = useSearchParams();
+  const preselected = products.find(
+    (product) => product.slug === searchParams.get("product")
+  );
+
+  const [status, setStatus] = useState(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     const form = event.currentTarget;
-    const formData = new FormData(form);
-    const requiredFields = [
-      formData.get("name"),
-      formData.get("email"),
-      formData.get("inquiry"),
-      formData.get("message"),
-    ];
+    const data = Object.fromEntries(new FormData(form).entries());
+    const missing = ["name", "email", "inquiry", "message"].filter(
+      (field) => !String(data[field] || "").trim()
+    );
 
-    if (requiredFields.some((value) => !value || !String(value).trim())) {
-      setStatusMessage("Please complete the required fields before sending your inquiry.");
+    if (missing.length) {
+      setStatus({
+        type: "error",
+        text: "Please complete the required fields before sending your enquiry.",
+      });
+      form.querySelector(`[name="${missing[0]}"]`)?.focus();
       return;
     }
 
-    setStatusMessage(
-      "This form is ready for backend integration. Connect it to your preferred email or CRM endpoint to receive submissions."
-    );
+    if (!/^\S+@\S+\.\S+$/.test(String(data.email))) {
+      setStatus({ type: "error", text: "Please enter a valid email address." });
+      form.querySelector('[name="email"]')?.focus();
+      return;
+    }
+
+    const lines = [
+      `Hello AF7, I have a ${data.inquiry.toLowerCase()}.`,
+      "",
+      `Name: ${data.name}`,
+      data.company ? `Company: ${data.company}` : null,
+      `Email: ${data.email}`,
+      data.product ? `Product: ${data.product}` : null,
+      "",
+      data.message,
+    ].filter((line) => line !== null);
+
+    const url = `https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(lines.join("\n"))}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+
+    setStatus({
+      type: "success",
+      text: "Your enquiry is ready in WhatsApp — press send there to reach the AF7 team.",
+    });
     form.reset();
   };
 
   return (
-    <div className="contact-form-wrapper">
+    <motion.div
+      className="contact-form-wrapper"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+    >
       <div className="contact-form-heading">
-        <span>INQUIRY / 01</span>
+        <span>ENQUIRY / 01</span>
         <p>
-          Tell us what you are looking for and we&apos;ll have the right conversation.
+          Product enquiries, samples, specifications, customization or
+          manufacturing requirements — tell us what you need.
         </p>
       </div>
 
       <form className="contact-form" onSubmit={handleSubmit} noValidate>
         <div className="contact-form-row">
           <div className="contact-form-field">
-            <label htmlFor="name">NAME</label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              placeholder="Your name"
-              autoComplete="name"
-              required
-            />
+            <label htmlFor="name">NAME *</label>
+            <input id="name" name="name" type="text" placeholder="Your name" autoComplete="name" required />
           </div>
 
           <div className="contact-form-field">
-            <label htmlFor="email">EMAIL</label>
+            <label htmlFor="email">EMAIL *</label>
             <input
               id="email"
               name="email"
@@ -84,10 +122,10 @@ export default function ContactForm() {
           </div>
 
           <div className="contact-form-field">
-            <label htmlFor="inquiry">INQUIRY TYPE</label>
-            <select id="inquiry" name="inquiry" defaultValue="" required>
+            <label htmlFor="inquiry">ENQUIRY TYPE *</label>
+            <select id="inquiry" name="inquiry" defaultValue={preselected ? "Product Enquiry" : ""} required>
               <option value="" disabled>
-                Select inquiry type
+                Select enquiry type
               </option>
               {inquiryTypes.map((type) => (
                 <option key={type} value={type}>
@@ -98,28 +136,51 @@ export default function ContactForm() {
           </div>
         </div>
 
+        <div className="contact-form-field">
+          <label htmlFor="product">PRODUCT</label>
+          <select id="product" name="product" defaultValue={preselected?.title ?? ""}>
+            <option value="">Not sure yet / multiple products</option>
+            {productOptions.map((title) => (
+              <option key={title} value={title}>
+                {title}
+              </option>
+            ))}
+          </select>
+        </div>
+
         <div className="contact-form-field contact-form-message">
-          <label htmlFor="message">MESSAGE</label>
+          <label htmlFor="message">MESSAGE *</label>
           <textarea
             id="message"
             name="message"
-            rows="7"
-            placeholder="Tell us about your requirement"
+            rows="6"
+            placeholder="Zipper type and size, material, tape colour, finish, quantity…"
             required
           />
         </div>
 
         <button type="submit" className="contact-submit">
-          <span>Send Inquiry</span>
+          <span>Send via WhatsApp</span>
           <span aria-hidden="true">↗</span>
         </button>
 
-        {statusMessage ? (
-          <p className="contact-form-status" aria-live="polite">
-            {statusMessage}
-          </p>
-        ) : null}
+        <div aria-live="polite">
+          <AnimatePresence mode="wait">
+            {status ? (
+              <motion.p
+                key={status.text}
+                className={`contact-form-status is-${status.type}`}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.4 }}
+              >
+                {status.text}
+              </motion.p>
+            ) : null}
+          </AnimatePresence>
+        </div>
       </form>
-    </div>
+    </motion.div>
   );
 }

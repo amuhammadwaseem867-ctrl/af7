@@ -20,7 +20,7 @@
 
   border-bottom: 1px solid rgba(36, 49, 70, 0.16);
 
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 10px;
   font-weight: 500;
 
@@ -65,7 +65,7 @@
 
   margin-bottom: 26px;
 
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 10px;
   font-weight: 500;
 
@@ -79,7 +79,7 @@
 .brand-intro-title h2 {
   margin: 0;
 
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(58px, 7.1vw, 104px);
   font-weight: 500;
 
@@ -104,7 +104,7 @@
 
   margin: 0 0 24px;
 
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 13px;
   font-weight: 400;
 
@@ -133,7 +133,7 @@
 
   border-bottom: 1px solid #243146;
 
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 11px;
   font-weight: 500;
 
@@ -201,7 +201,7 @@
 
   margin-bottom: 20px;
 
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 10px;
   font-weight: 500;
 
@@ -215,7 +215,7 @@
 .brand-intro-feature-copy h3 {
   margin: 0 0 25px;
 
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(38px, 4vw, 58px);
   font-weight: 500;
 
@@ -234,7 +234,7 @@
 
   margin: 0;
 
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 400;
 
@@ -254,7 +254,7 @@
 
   border-top: 1px solid rgba(36, 49, 70, 0.15);
 
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 8px;
   font-weight: 500;
 
@@ -308,7 +308,7 @@
 
   padding-top: 12px;
 
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 8px;
   font-weight: 500;
 
@@ -342,7 +342,7 @@
 
   margin: 0;
 
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-heading);
   font-size: 21px;
   font-weight: 500;
 

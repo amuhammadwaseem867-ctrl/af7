@@ -3,7 +3,11 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import { setScrollLocked } from "@/components/motion/SmoothScroll";
+import { markPageReady } from "@/components/motion/usePageReady";
 import "./Preloader.css";
+
+const SEEN_KEY = "af7-preloader-seen";
 
 export default function Preloader() {
   const [progress, setProgress] = useState(0);
@@ -11,7 +15,20 @@ export default function Preloader() {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
+    let seen = false;
+    try {
+      seen = window.sessionStorage.getItem(SEEN_KEY) === "1";
+    } catch {}
+
+    if (seen) {
+      markPageReady();
+      // The inline script in the layout already hid the loader before paint.
+      const frame = requestAnimationFrame(() => setVisible(false));
+      return () => cancelAnimationFrame(frame);
+    }
+
     let value = 0;
+    setScrollLocked(true);
 
     const interval = setInterval(() => {
       if (value >= 100) {
@@ -19,10 +36,16 @@ export default function Preloader() {
 
         setTimeout(() => {
           setComplete(true);
+          setTimeout(markPageReady, 450);
+
+          try {
+            window.sessionStorage.setItem(SEEN_KEY, "1");
+          } catch {}
 
           setTimeout(() => {
+            setScrollLocked(false);
             setVisible(false);
-          }, 1100);
+          }, 1000);
         }, 300);
 
         return;
@@ -31,19 +54,22 @@ export default function Preloader() {
       let step;
 
       if (value < 55) {
-        step = Math.random() * 4 + 1.5;
+        step = Math.random() * 7 + 3;
       } else if (value < 85) {
-        step = Math.random() * 2.5 + 0.8;
+        step = Math.random() * 4 + 2;
       } else {
-        step = Math.random() * 1.2 + 0.3;
+        step = Math.random() * 2.5 + 1;
       }
 
       value = Math.min(value + step, 100);
 
       setProgress(Math.round(value));
-    }, 110);
+    }, 70);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      setScrollLocked(false);
+    };
   }, []);
 
   if (!visible) return null;
@@ -91,7 +117,7 @@ export default function Preloader() {
               alt="AF7 Apparel Fastener"
               width={260}
               height={90}
-              priority
+              preload
             />
           </motion.div>
 

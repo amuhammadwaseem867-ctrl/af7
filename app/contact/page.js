@@ -1,13 +1,17 @@
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import { Suspense } from "react";
+import SplitText from "@/components/motion/SplitText";
+import Reveal from "@/components/motion/Reveal";
+import { Stagger, StaggerItem } from "@/components/motion/Stagger";
+import { contactCopy, brand } from "@/data/company";
+import { contact } from "@/data/navigation";
 import "./contact.css";
 
 export const metadata = {
   title: "Contact AF7",
   description:
-    "Contact AF7 Apparel Fastener in Lahore, Pakistan for zipper and fastening component inquiries.",
+    "Contact AF7 in Lahore, Pakistan for product enquiries, samples, specifications, customization or manufacturing requirements.",
 };
 
 const contactChannels = [
@@ -29,7 +33,7 @@ const contactChannels = [
   {
     number: "03",
     label: "FACEBOOK",
-    title: "AF7 · Apparel Fastener",
+    title: "AF7 · Zipper Manufacturing",
     href: "https://www.facebook.com/profile.php?id=61584996430125&mibextid=wwXIfr",
     action: "Open Facebook",
     external: true,
@@ -38,22 +42,20 @@ const contactChannels = [
 
 export default function ContactPage() {
   return (
-    <>
-      <Header />
 
       <main className="contact-page">
         <section className="contact-intro">
           <div className="contact-container">
-            <div className="contact-topline">
+            <Reveal className="contact-topline" y={16}>
               <div className="contact-topline-left">
                 <span className="contact-index">05</span>
                 <span>Contact</span>
               </div>
 
               <span className="contact-topline-right">
-                AF7 · APPAREL FASTENER
+                AF7 · ZIPPER MANUFACTURING
               </span>
-            </div>
+            </Reveal>
 
             <div className="contact-intro-grid">
               <div className="contact-intro-heading">
@@ -61,25 +63,23 @@ export default function ContactPage() {
                   AF7 / CONTACT
                 </span>
 
-                <h1>
-                  Let&apos;s
-                  <br />
-                  <span>Connect.</span>
-                </h1>
+                <SplitText
+                  as="h1"
+                  lines={["Let's Create the", "Right Connection."]}
+                  accent={[1]}
+                  animateOnMount
+                  delay={0.2}
+                />
               </div>
 
-              <div className="contact-intro-copy">
-                <p>
-                  Looking for the right fastening solution, requesting
-                  samples or discussing a new requirement? Connect with
-                  AF7 and start the conversation.
-                </p>
+              <Reveal className="contact-intro-copy" delay={0.4}>
+                <p>{contactCopy.text}</p>
 
                 <div className="contact-intro-meta">
-                  <span>APPAREL FASTENER</span>
+                  <span>{brand.descriptor.toUpperCase()}</span>
                   <span>LAHORE · PAKISTAN</span>
                 </div>
-              </div>
+              </Reveal>
             </div>
           </div>
         </section>
@@ -92,11 +92,7 @@ export default function ContactPage() {
                   DIRECT CONTACT
                 </span>
 
-                <h2>
-                  Choose how
-                  <br />
-                  <span>to connect.</span>
-                </h2>
+                <SplitText as="h2" lines={["Choose how", "to connect."]} accent={[1]} />
               </div>
 
               <p>
@@ -104,8 +100,9 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="contact-channel-list">
+            <Stagger className="contact-channel-list" stagger={0.1}>
               {contactChannels.map((channel) => (
+                <StaggerItem key={channel.number}>
                 <a
                   key={channel.number}
                   href={channel.href}
@@ -134,24 +131,21 @@ export default function ContactPage() {
                     <span aria-hidden="true">↗</span>
                   </div>
                 </a>
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
           </div>
         </section>
 
         <section className="contact-main">
           <div className="contact-container">
             <div className="contact-main-grid">
-              <div className="contact-details">
+              <Reveal className="contact-details">
                 <span className="contact-section-label">
                   GET IN TOUCH
                 </span>
 
-                <h2>
-                  Start a
-                  <br />
-                  <span>conversation.</span>
-                </h2>
+                <SplitText as="h2" lines={["Start a", "conversation."]} accent={[1]} />
 
                 <div className="contact-detail-list">
                   <div className="contact-detail">
@@ -190,7 +184,7 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      AF7 · Apparel Fastener
+                      AF7 · Zipper Manufacturing
                       <span aria-hidden="true">↗</span>
                     </a>
                   </div>
@@ -201,15 +195,17 @@ export default function ContactPage() {
                     </span>
 
                     <span className="contact-detail-value">
-                      33b Punjab Small Industries Corporation
+                      33B, Punjab Small Industries Corporation,
                       <br />
-                      Sunder II Lahore Pakistan
+                      Sunder II, Lahore, Pakistan
                     </span>
                   </div>
                 </div>
-              </div>
+              </Reveal>
 
-              <ContactForm />
+              <Suspense fallback={null}>
+                <ContactForm />
+              </Suspense>
             </div>
           </div>
         </section>
@@ -222,27 +218,23 @@ export default function ContactPage() {
                   AF7 / LOCATION
                 </span>
 
-                <h2>
-                  Lahore,
-                  <br />
-                  <span>Pakistan.</span>
-                </h2>
+                <SplitText as="h2" lines={["Lahore,", "Pakistan."]} accent={[1]} />
               </div>
 
               <div className="contact-location-copy">
                 <span className="contact-location-label">
-                  ADDRESS
+                  FACTORY ADDRESS
                 </span>
 
                 <p>
-                  33b Punjab Small Industries Corporation
+                  33B, Punjab Small Industries Corporation,
                   <br />
-                  Sunder II Lahore Pakistan
+                  Sunder II, Lahore, Pakistan
                 </p>
 
                 <a
                   className="contact-map-link"
-                  href="https://www.google.com/maps/search/?api=1&query=33b%20Punjab%20Small%20Industries%20Corporation%20Sunder%20II%20Lahore%20Pakistan"
+                  href={contact.map}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -252,29 +244,34 @@ export default function ContactPage() {
 
                 <div className="contact-location-meta">
                   <span>AF7</span>
-                  <span>APPAREL FASTENER</span>
+                  <span>ZIPPER MANUFACTURING</span>
                   <span>LAHORE · PAKISTAN</span>
                 </div>
               </div>
             </div>
+
+            <Reveal className="contact-map" y={60}>
+              <iframe
+                title="AF7 factory location on Google Maps"
+                src="https://www.google.com/maps?q=Punjab+Small+Industries+Corporation+Sunder+II+Lahore+Pakistan&output=embed"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </Reveal>
           </div>
         </section>
 
         <section className="contact-closing">
           <div className="contact-container">
             <div className="contact-closing-top">
-              <span>AF7 / APPAREL FASTENER</span>
+              <span>AF7 / ZIPPER MANUFACTURING</span>
               <span>LAHORE · PAKISTAN</span>
             </div>
 
             <div className="contact-closing-content">
-              <span>PRODUCTS · APPLICATIONS · QUALITY</span>
+              <span>AF7 · {brand.descriptor.toUpperCase()}</span>
 
-              <h2>
-                Built for the
-                <br />
-                products you create.
-              </h2>
+              <SplitText as="h2" lines={["Precision in", "every detail."]} />
 
               <Link
                 href="/products"
@@ -287,8 +284,5 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
-    </>
   );
 }

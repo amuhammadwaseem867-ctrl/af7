@@ -1,13 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import SplitText from "@/components/motion/SplitText";
+import Reveal from "@/components/motion/Reveal";
+import ImageReveal from "@/components/ImageReveal";
+import { Stagger, StaggerItem } from "@/components/motion/Stagger";
+import {
+  about,
+  technology,
+  manufacturing,
+  vision,
+  mission,
+  commitment,
+  brand,
+} from "@/data/company";
 import "./about.css";
 
 export const metadata = {
   title: "About AF7",
   description:
-    "Learn about AF7 Apparel Fastener, a premium zipper and fastening components brand from Lahore, Pakistan.",
+    "AF7 is a specialized zipper manufacturing brand in Lahore, Pakistan — metal, aluminium, nylon and Vislon zippers with integrated in-house production.",
 };
 
 const companyImages = [
@@ -35,233 +46,226 @@ const companyImages = [
 
 export default function AboutPage() {
   return (
-    <>
-      <Header />
+    <main className="about-page">
+      <section className="about-intro">
+        <div className="about-container">
+          <Reveal className="about-topline" y={16}>
+            <div className="about-topline-left">
+              <span className="about-index">03</span>
+              <span>About AF7</span>
+            </div>
+            <span className="about-topline-right">AF7 · ZIPPER MANUFACTURING</span>
+          </Reveal>
 
-      <main className="about-page">
-        <section className="about-intro">
-          <div className="about-container">
-            <div className="about-topline">
-              <div className="about-topline-left">
-                <span className="about-index">03</span>
-                <span>About AF7</span>
-              </div>
-
-              <span className="about-topline-right">
-                AF7 · APPAREL FASTENER
-              </span>
+          <div className="about-intro-grid">
+            <div className="about-intro-heading">
+              <Reveal as="span" className="about-eyebrow" y={12}>
+                COMPANY PROFILE / LAHORE · PAKISTAN
+              </Reveal>
+              <SplitText
+                as="h1"
+                lines={["Precision in", "Every Detail."]}
+                accent={[1]}
+                animateOnMount
+                delay={0.2}
+              />
             </div>
 
-            <div className="about-intro-grid">
-              <div className="about-intro-heading">
-                <span className="about-eyebrow">
-                  COMPANY PROFILE / LAHORE · PAKISTAN
-                </span>
-
-                <h1>
-                  The Detail
-                  <br />
-                  <span>That Connects.</span>
-                </h1>
+            <Reveal className="about-intro-copy" delay={0.4}>
+              <p>{about.intro}</p>
+              <div className="about-intro-meta">
+                <span>{brand.descriptor.toUpperCase()}</span>
+                <span>LAHORE · PAKISTAN</span>
               </div>
-
-              <div className="about-intro-copy">
-                <p>
-                  AF7 is an apparel fastening brand focused on the components
-                  that bring garments, bags and related products together.
-                  From zipper systems to slider components, our work sits at
-                  the intersection of construction, function and finished
-                  appearance.
-                </p>
-
-                <div className="about-intro-meta">
-                  <span>APPAREL FASTENER</span>
-                  <span>LAHORE · PAKISTAN</span>
-                </div>
-              </div>
-            </div>
+            </Reveal>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="about-feature">
-          <div className="about-container">
-            <div className="about-feature-image">
+      <section className="about-feature">
+        <div className="about-container">
+          <div className="about-feature-image">
+            <ImageReveal fill zoom={0.15}>
               <Image
                 src={companyImages[0].image}
                 alt={companyImages[0].alt}
                 fill
-                priority
-                sizes="(max-width: 700px) 100vw, 100vw"
+                preload
+                sizes="100vw"
               />
-
-              <div className="about-image-meta">
-                <span>AF7</span>
-                <span>01 / 04</span>
-              </div>
-
-              <span className="about-image-label">
-                {companyImages[0].label}
-              </span>
+            </ImageReveal>
+            <div className="about-image-meta">
+              <span>AF7</span>
+              <span>01 / 04</span>
             </div>
+            <span className="about-image-label">{companyImages[0].label}</span>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="about-story">
-          <div className="about-container">
-            <div className="about-story-grid">
-              <div className="about-story-heading">
-                <span className="about-section-label">
-                  OUR APPROACH
-                </span>
+      <section className="about-story">
+        <div className="about-container">
+          <div className="about-story-grid">
+            <div className="about-story-heading">
+              <Reveal as="span" className="about-section-label" y={10}>
+                ABOUT AF7
+              </Reveal>
+              <SplitText
+                as="h2"
+                lines={["Precision.", "Technology.", "Reliability."]}
+                accent={[1, 2]}
+              />
+            </div>
 
-                <h2>
-                  Precision
-                  <br />
-                  <span>in every connection.</span>
-                </h2>
-              </div>
+            <Reveal className="about-story-copy" delay={0.15}>
+              <p>{about.facility}</p>
+              <p>{about.focus}</p>
+              <p className="about-philosophy">
+                <strong>Our philosophy is simple:</strong> {about.philosophy}
+              </p>
 
-              <div className="about-story-copy">
-                <p>
-                  A fastening component may be small, but its role within a
-                  finished product is significant. AF7 approaches fastening
-                  through the complete relationship between component,
-                  construction and application.
-                </p>
-
-                <p>
-                  Our focus is on dependable zipper and slider components
-                  intended for different product environments, with attention
-                  to consistency, finishing and the way each component
-                  integrates into the final product.
-                </p>
-
-                <div className="about-story-meta">
-                  <div>
-                    <span>FOCUS</span>
-                    <strong>FASTENING COMPONENTS</strong>
-                  </div>
-
-                  <div>
-                    <span>LOCATION</span>
-                    <strong>LAHORE · PAKISTAN</strong>
-                  </div>
-
-                  <div>
-                    <span>BRAND</span>
-                    <strong>APPAREL FASTENER</strong>
-                  </div>
+              <div className="about-story-meta">
+                <div>
+                  <span>FOCUS</span>
+                  <strong>ZIPPERS &amp; ACCESSORIES</strong>
+                </div>
+                <div>
+                  <span>LOCATION</span>
+                  <strong>LAHORE · PAKISTAN</strong>
+                </div>
+                <div>
+                  <span>PRODUCTION</span>
+                  <strong>INTEGRATED IN-HOUSE</strong>
                 </div>
               </div>
-            </div>
+            </Reveal>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="about-production">
-          <div className="about-container">
-            <div className="about-production-heading">
-              <div>
-                <span className="about-section-label">
-                  INSIDE AF7
-                </span>
-
-                <h2>
-                  From component
-                  <br />
-                  <span>to finished product.</span>
-                </h2>
-              </div>
-
-              <p>
-                Our production environment brings together machinery,
-                processes and people around the precise requirements of
-                fastening components.
-              </p>
+      <section className="about-production">
+        <div className="about-container">
+          <div className="about-production-heading">
+            <div>
+              <Reveal as="span" className="about-section-label" y={10}>
+                TECHNOLOGY &amp; MACHINERY
+              </Reveal>
+              <SplitText
+                as="h2"
+                lines={["Modern machinery.", "Controlled manufacturing."]}
+                accent={[1]}
+              />
             </div>
+            <Reveal as="p" delay={0.2}>
+              {technology.text} {technology.closing}
+            </Reveal>
+          </div>
 
-            <div className="about-production-grid">
-              {companyImages.slice(1).map((item, index) => (
-                <figure className="about-production-item" key={item.image}>
-                  <div className="about-production-image">
+          <Stagger className="about-production-grid" stagger={0.12}>
+            {companyImages.slice(1).map((item, index) => (
+              <StaggerItem as="figure" className="about-production-item" key={item.image} y={60}>
+                <div className="about-production-image">
+                  <ImageReveal fill zoom={0.18}>
                     <Image
                       src={item.image}
                       alt={item.alt}
                       fill
                       sizes="(max-width: 700px) 100vw, 50vw"
                     />
-                  </div>
+                  </ImageReveal>
+                </div>
+                <figcaption>
+                  <span>{String(index + 2).padStart(2, "0")}</span>
+                  <span>{item.label}</span>
+                </figcaption>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
 
-                  <figcaption>
-                    <span>
-                      {String(index + 2).padStart(2, "0")}
-                    </span>
-
-                    <span>{item.label}</span>
-                  </figcaption>
-                </figure>
-              ))}
+      <section className="about-process" aria-labelledby="about-process-title">
+        <div className="about-container">
+          <div className="about-process-head">
+            <div>
+              <Reveal as="span" className="about-section-label" y={10}>
+                MANUFACTURING
+              </Reveal>
+              <SplitText
+                id="about-process-title"
+                as="h2"
+                lines={["From tape to", "finished zipper."]}
+                accent={[1]}
+              />
             </div>
+            <Reveal as="p" delay={0.2}>
+              {manufacturing.intro}
+            </Reveal>
           </div>
-        </section>
 
-        <section className="about-positioning">
-          <div className="about-container">
-            <div className="about-positioning-grid">
-              <div>
-                <span className="about-section-label">
-                  AF7 / POSITION
+          <Stagger className="about-process-grid" stagger={0.07}>
+            {manufacturing.steps.map((step, index) => (
+              <StaggerItem as="article" className="about-process-step" key={step.title}>
+                <span className="about-process-index">
+                  {String(index + 1).padStart(2, "0")}
                 </span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
 
-                <h2>
-                  Built around
-                  <br />
-                  <span>what connects.</span>
-                </h2>
-              </div>
+      <section className="about-positioning">
+        <div className="about-container">
+          <Stagger className="about-vm-grid" stagger={0.15}>
+            <StaggerItem as="article" className="about-vm-card">
+              <span className="about-section-label">OUR VISION</span>
+              <p>{vision}</p>
+            </StaggerItem>
+            <StaggerItem as="article" className="about-vm-card about-vm-card-dark">
+              <span className="about-section-label">OUR MISSION</span>
+              <p>{mission}</p>
+            </StaggerItem>
+          </Stagger>
 
-              <div className="about-positioning-copy">
-                <p>
-                  AF7 operates within the apparel and fastening ecosystem,
-                  connecting component manufacturing with the needs of
-                  product makers, designers and manufacturers.
-                </p>
-
-                <p>
-                  The brand is grounded in a simple principle: fastening
-                  components should work as naturally as they belong within
-                  the product itself.
-                </p>
-
-                <Link href="/products" className="about-positioning-link">
-                  <span>Explore Product Range</span>
-                  <span aria-hidden="true">↗</span>
-                </Link>
-              </div>
+          <div className="about-positioning-grid">
+            <div>
+              <Reveal as="span" className="about-section-label" y={10}>
+                OUR COMMITMENT
+              </Reveal>
+              <SplitText
+                as="h2"
+                lines={["Excellence is", "in the details."]}
+                accent={[1]}
+              />
             </div>
+
+            <Reveal className="about-positioning-copy" delay={0.15}>
+              <p>{commitment}</p>
+              <Link href="/products" className="about-positioning-link">
+                <span>Explore Product Range</span>
+                <span aria-hidden="true">↗</span>
+              </Link>
+            </Reveal>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="about-closing">
-          <div className="about-container">
-            <div className="about-closing-top">
-              <span>AF7 / COMPANY PROFILE</span>
-              <span>LAHORE · PAKISTAN</span>
-            </div>
-
-            <div className="about-closing-content">
-              <span>APPAREL FASTENER</span>
-
-              <h2>
-                Made to become
-                <br />
-                part of the product.
-              </h2>
-            </div>
+      <section className="about-closing">
+        <div className="about-container">
+          <div className="about-closing-top">
+            <span>AF7 / COMPANY PROFILE</span>
+            <span>LAHORE · PAKISTAN</span>
           </div>
-        </section>
-      </main>
 
-      <Footer />
-    </>
+          <div className="about-closing-content">
+            <span>AF7</span>
+            <SplitText as="h2" lines={["Precision in", "every detail."]} />
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

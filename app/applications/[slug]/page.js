@@ -1,95 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { notFound } from "next/navigation";
+import {
+  applications,
+  getApplication,
+  getAdjacentApplications,
+} from "@/data/applications";
+import SplitText from "@/components/motion/SplitText";
+import Reveal from "@/components/motion/Reveal";
+import ImageReveal from "@/components/ImageReveal";
 import "./application-detail.css";
-
-const applications = {
-  apparel: {
-    number: "01",
-    title: "Apparel",
-    category: "APPLICATION PROFILE",
-    description:
-      "Fastening components integrated into apparel products where construction, movement and finishing work together.",
-    image: "/images/applications/apparel.webp",
-    focus:
-      "Apparel fastening is shaped by the relationship between garment construction, movement and finished appearance. AF7 components are positioned within this system as functional elements of the finished product.",
-    uses: "APPAREL · GARMENTS · FASHION",
-  },
-
-  bags: {
-    number: "02",
-    title: "Bags",
-    category: "APPLICATION PROFILE",
-    description:
-      "Zippers and fastening components designed for bags and accessories where reliable operation and finished appearance are essential.",
-    image: "/images/applications/bags.webp",
-    focus:
-      "Bag construction places emphasis on practical access, repeated movement and component integration. Fastening systems become part of both the function and visual character of the finished product.",
-    uses: "BAGS · ACCESSORIES · CARRY PRODUCTS",
-  },
-
-  denim: {
-    number: "03",
-    title: "Denim",
-    category: "APPLICATION PROFILE",
-    description:
-      "Durable fastening solutions suited to denim products where material character, construction and finishing require dependable components.",
-    image: "/images/applications/denim.webp",
-    focus:
-      "Denim products combine a distinctive material character with structured construction. Fastening components form part of this construction while contributing to the finished appearance of the product.",
-    uses: "DENIM · JEANS · GARMENTS",
-  },
-
-  footwear: {
-    number: "04",
-    title: "Footwear",
-    category: "APPLICATION PROFILE",
-    description:
-      "Fastening components developed for footwear applications where movement, usability and product construction come together.",
-    image: "/images/applications/footwear.webp",
-    focus:
-      "Footwear fastening systems operate within a product built around movement and repeated use. Component selection therefore works alongside construction and overall product design.",
-    uses: "FOOTWEAR · SHOES · PERFORMANCE PRODUCTS",
-  },
-
-  jackets: {
-    number: "05",
-    title: "Jackets",
-    category: "APPLICATION PROFILE",
-    description:
-      "Zipper systems and fastening components for jackets and outerwear, balancing practical performance with a refined finished appearance.",
-    image: "/images/applications/jackets.webp",
-    focus:
-      "Jackets and outerwear rely on fastening systems that become highly visible elements of the garment. Their construction, movement and finishing contribute directly to the final product.",
-    uses: "JACKETS · OUTERWEAR · GARMENTS",
-  },
-
-  sportswear: {
-    number: "06",
-    title: "Sportswear",
-    category: "APPLICATION PROFILE",
-    description:
-      "Lightweight and functional fastening solutions for sportswear where movement, construction and everyday performance matter.",
-    image: "/images/applications/sportswear.webp",
-    focus:
-      "Sportswear combines functional construction with freedom of movement. Fastening components are integrated into this relationship to support the structure and usability of the finished product.",
-    uses: "SPORTSWEAR · ACTIVEWEAR · PERFORMANCE APPAREL",
-  },
-};
-
-const applicationOrder = [
-  "apparel",
-  "bags",
-  "denim",
-  "footwear",
-  "jackets",
-  "sportswear",
-];
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const application = applications[slug];
+  const application = getApplication(slug);
 
   if (!application) {
     return {
@@ -103,58 +27,52 @@ export async function generateMetadata({ params }) {
   };
 }
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
-  return applicationOrder.map((slug) => ({
-    slug,
+  return applications.map((application) => ({
+    slug: application.slug,
   }));
 }
 
 export default async function ApplicationDetailPage({ params }) {
   const { slug } = await params;
-  const application = applications[slug];
+  const application = getApplication(slug);
 
   if (!application) {
-    return null;
+    notFound();
   }
 
-  const currentIndex = applicationOrder.indexOf(slug);
-
-  const previousSlug =
-    currentIndex > 0 ? applicationOrder[currentIndex - 1] : null;
-
-  const nextSlug =
-    currentIndex < applicationOrder.length - 1
-      ? applicationOrder[currentIndex + 1]
-      : null;
+  const { previous, next } = getAdjacentApplications(slug);
+  const previousSlug = previous?.slug;
+  const nextSlug = next?.slug;
 
   return (
-    <>
-      <Header />
 
       <main className="application-detail-page">
         <section className="application-detail-intro">
           <div className="application-detail-container">
-            <div className="application-detail-topline">
+            <Reveal className="application-detail-topline" y={16}>
               <div className="application-detail-index">
                 <span>{application.number}</span>
 
                 <span className="application-detail-index-line" />
 
                 <span>
-                  {String(applicationOrder.length).padStart(2, "0")}
+                  {String(applications.length).padStart(2, "0")}
                 </span>
               </div>
 
-              <span>AF7 · APPAREL FASTENER</span>
-            </div>
+              <span>AF7 · ZIPPER MANUFACTURING</span>
+            </Reveal>
 
             <div className="application-detail-grid">
-              <div className="application-detail-copy">
+              <Reveal className="application-detail-copy" delay={0.1}>
                 <span className="application-detail-eyebrow">
                   AF7 / APPLICATION PROFILE
                 </span>
 
-                <h1>{application.title}</h1>
+                <SplitText as="h1" lines={[application.title]} animateOnMount delay={0.2} />
 
                 <p>{application.description}</p>
 
@@ -169,17 +87,19 @@ export default async function ApplicationDetailPage({ params }) {
                     <strong>{application.uses}</strong>
                   </div>
                 </div>
-              </div>
+              </Reveal>
 
               <div className="application-detail-visual">
                 <div className="application-detail-image">
-                  <Image
-                    src={application.image}
-                    alt={`AF7 ${application.title} application`}
-                    fill
-                    priority
-                    sizes="(max-width: 700px) 100vw, 58vw"
-                  />
+                  <ImageReveal fill direction="left" zoom={0.08}>
+                    <Image
+                      src={application.image}
+                      alt={`AF7 ${application.title} application`}
+                      fill
+                      preload
+                      sizes="(max-width: 700px) 100vw, 58vw"
+                    />
+                  </ImageReveal>
                 </div>
 
                 <div className="application-detail-visual-meta">
@@ -203,15 +123,16 @@ export default async function ApplicationDetailPage({ params }) {
                   APPLICATION CHARACTER
                 </span>
 
-                <h2>
-                  Components
-                  <br />
-                  <span>within context.</span>
-                </h2>
+                <SplitText as="h2" lines={["Components", "within context."]} accent={[1]} />
               </div>
 
-              <div className="application-detail-information-copy">
+              <Reveal className="application-detail-information-copy" delay={0.15}>
                 <p>{application.focus}</p>
+                <p className="application-detail-custom">
+                  Zipper type and size, construction, tape colour, finish and
+                  configuration can be discussed according to your application.{" "}
+                  <Link href="/contact">Start an enquiry ↗</Link>
+                </p>
 
                 <div className="application-detail-meta-row">
                   <span>APPLICATION</span>
@@ -225,9 +146,9 @@ export default async function ApplicationDetailPage({ params }) {
 
                 <div className="application-detail-meta-row">
                   <span>AF7</span>
-                  <span>APPAREL FASTENER</span>
+                  <span>ZIPPER MANUFACTURING</span>
                 </div>
-              </div>
+              </Reveal>
             </div>
           </div>
         </section>
@@ -239,7 +160,7 @@ export default async function ApplicationDetailPage({ params }) {
 
               <span>
                 {application.number} /{" "}
-                {String(applicationOrder.length).padStart(2, "0")}
+                {String(applications.length).padStart(2, "0")}
               </span>
             </div>
 
@@ -254,7 +175,7 @@ export default async function ApplicationDetailPage({ params }) {
                   </span>
 
                   <span className="application-detail-range-title">
-                    {applications[previousSlug].title}
+                    {previous.title}
                   </span>
 
                   <span className="application-detail-range-arrow">
@@ -290,7 +211,7 @@ export default async function ApplicationDetailPage({ params }) {
                   </span>
 
                   <span className="application-detail-range-title">
-                    {applications[nextSlug].title}
+                    {next.title}
                   </span>
 
                   <span className="application-detail-range-arrow">
@@ -319,8 +240,5 @@ export default async function ApplicationDetailPage({ params }) {
           </div>
         </section>
       </main>
-
-      <Footer />
-    </>
   );
 }

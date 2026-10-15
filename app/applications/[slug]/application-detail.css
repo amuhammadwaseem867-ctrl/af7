@@ -21,7 +21,7 @@
   justify-content: space-between;
   padding-bottom: 20px;
   border-bottom: 1px solid #dfe3e6;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 9px;
   font-weight: 500;
   letter-spacing: 0.15em;
@@ -59,7 +59,7 @@
 .application-detail-eyebrow {
   display: block;
   margin-bottom: 22px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -68,7 +68,7 @@
 
 .application-detail-copy h1 {
   margin: 0 0 25px;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(55px, 7vw, 100px);
   line-height: 0.9;
   letter-spacing: -0.06em;
@@ -79,7 +79,7 @@
 .application-detail-copy p {
   max-width: 440px;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.85;
   color: #68717d;
@@ -101,7 +101,7 @@
 }
 
 .application-detail-specs span {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 8px;
   font-weight: 600;
   letter-spacing: 0.13em;
@@ -109,7 +109,7 @@
 }
 
 .application-detail-specs strong {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 9px;
   line-height: 1.5;
   font-weight: 600;
@@ -149,7 +149,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 8px;
   font-weight: 500;
   letter-spacing: 0.14em;
@@ -162,7 +162,7 @@
   right: 22px;
   bottom: 20px;
   z-index: 2;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 8px;
   font-weight: 500;
   letter-spacing: 0.13em;
@@ -184,7 +184,7 @@
 .application-detail-section-label {
   display: block;
   margin-bottom: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -193,7 +193,7 @@
 
 .application-detail-information-heading h2 {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(38px, 4.7vw, 65px);
   line-height: 0.96;
   letter-spacing: -0.055em;
@@ -212,7 +212,7 @@
 
 .application-detail-information-copy > p {
   margin: 0 0 45px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.9;
   color: #68717d;
@@ -231,7 +231,7 @@
 }
 
 .application-detail-meta-row span:first-child {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 8px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -239,7 +239,7 @@
 }
 
 .application-detail-meta-row span:last-child {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -257,7 +257,7 @@
   justify-content: space-between;
   padding: 20px 0;
   border-bottom: 1px solid #dfe3e6;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 8px;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -294,7 +294,7 @@
 
 .application-detail-range-label {
   margin-bottom: 15px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 8px;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -303,7 +303,7 @@
 
 .application-detail-range-title {
   max-width: 450px;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(25px, 3vw, 42px);
   line-height: 1;
   letter-spacing: -0.04em;
@@ -315,7 +315,7 @@
   position: absolute;
   right: 35px;
   bottom: 30px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 300;
   color: #243146;
@@ -475,4 +475,13 @@
   .application-detail-range-link {
     transition: none;
   }
+}
+.application-detail-custom {
+  margin-top: 24px !important;
+}
+
+.application-detail-custom a {
+  color: var(--af7-accent);
+  font-weight: 500;
+  white-space: nowrap;
 }

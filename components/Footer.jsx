@@ -1,5 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import SplitText from "./motion/SplitText";
+import Reveal from "./motion/Reveal";
+import FooterClock from "./FooterClock";
+import { brand } from "@/data/company";
+import { contact } from "@/data/navigation";
 import "./Footer.css";
 
 const footerLinks = [
@@ -15,15 +20,17 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-container">
         <div className="footer-branding">
-          <h2 className="footer-statement">
-            Precision in every
-            <span>connection.</span>
-          </h2>
+          <SplitText
+            as="h2"
+            className="footer-statement"
+            lines={["Precision in", "every detail."]}
+            accent={[1]}
+          />
 
-          <p className="footer-supporting">
-            Fastening components developed for products where detail,
-            construction and finish come together.
-          </p>
+          <Reveal as="p" className="footer-supporting" delay={0.2}>
+            {brand.descriptor}. Metal, aluminium, nylon and Vislon zippers,
+            tag strings and tippings — manufactured in Lahore, Pakistan.
+          </Reveal>
         </div>
 
         <nav className="footer-nav" aria-label="Footer navigation">
@@ -79,9 +86,9 @@ export default function Footer() {
             <span className="footer-label">LOCATION</span>
 
             <p className="footer-address">
-              33b Punjab Small Industries Corporation
+              33B, Punjab Small Industries Corporation,
               <br />
-              Sunder II Lahore Pakistan
+              Sunder II, Lahore, Pakistan
             </p>
 
             <a
@@ -107,25 +114,22 @@ export default function Footer() {
               alt="AF7 Apparel Fastener"
               width={420}
               height={118}
-              priority
             />
           </Link>
 
           <p className="footer-logo-tagline">
-            Precision in every connection.
+            {brand.tagline}
           </p>
         </div>
 
         <div className="footer-bar">
           <span>© 2026 Apparel Fastener</span>
 
-          <span className="footer-bar-center">
-            Lahore · Pakistan
-          </span>
+          <FooterClock />
 
           <div className="footer-bar-links">
-            <span className="footer-privacy">Privacy</span>
             <Link href="/contact">Contact</Link>
+            <a href={contact.phoneHref}>Call</a>
           </div>
         </div>
       </div>

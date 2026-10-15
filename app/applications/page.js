@@ -1,90 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { applications } from "@/data/applications";
+import { applicationAreas } from "@/data/company";
+import SplitText from "@/components/motion/SplitText";
+import Reveal from "@/components/motion/Reveal";
+import ImageReveal from "@/components/ImageReveal";
+import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 import "./applications.css";
 
 export const metadata = {
   title: "Applications",
   description:
-    "AF7 fastening components are designed for apparel, bags, denim, footwear, jackets and sportswear applications.",
+    "AF7 zipper solutions for apparel & fashion, denim & jeans, jackets & outerwear, casualwear, sportswear, bags & accessories, footwear and garment tags & drawstrings.",
 };
-
-const applications = [
-  {
-    number: "01",
-    title: "Apparel",
-    category: "APPLICATION",
-    description:
-      "Fastening components integrated into apparel products where construction, movement and finishing work together.",
-    image: "/images/applications/apparel.webp",
-    href: "/applications/apparel",
-  },
-  {
-    number: "02",
-    title: "Bags",
-    category: "APPLICATION",
-    description:
-      "Zippers and fastening components designed for bags and accessories where reliable operation and finished appearance are essential.",
-    image: "/images/applications/bags.webp",
-    href: "/applications/bags",
-  },
-  {
-    number: "03",
-    title: "Denim",
-    category: "APPLICATION",
-    description:
-      "Durable fastening solutions suited to denim products where material character, construction and finishing require dependable components.",
-    image: "/images/applications/denim.webp",
-    href: "/applications/denim",
-  },
-  {
-    number: "04",
-    title: "Footwear",
-    category: "APPLICATION",
-    description:
-      "Fastening components developed for footwear applications where movement, usability and product construction come together.",
-    image: "/images/applications/footwear.webp",
-    href: "/applications/footwear",
-  },
-  {
-    number: "05",
-    title: "Jackets",
-    category: "APPLICATION",
-    description:
-      "Zipper systems and fastening components for jackets and outerwear, balancing practical performance with a refined finished appearance.",
-    image: "/images/applications/jackets.webp",
-    href: "/applications/jackets",
-  },
-  {
-    number: "06",
-    title: "Sportswear",
-    category: "APPLICATION",
-    description:
-      "Lightweight and functional fastening solutions for sportswear where movement, construction and everyday performance matter.",
-    image: "/images/applications/sportswear.webp",
-    href: "/applications/sportswear",
-  },
-];
 
 export default function ApplicationsPage() {
   return (
-    <>
-      <Header />
 
       <main className="applications-page">
         <section className="applications-intro">
           <div className="applications-container">
-            <div className="applications-topline">
+            <Reveal className="applications-topline" y={16}>
               <div className="applications-topline-left">
                 <span className="applications-index">04</span>
                 <span>Applications</span>
               </div>
 
               <span className="applications-topline-right">
-                AF7 · APPAREL FASTENER
+                AF7 · ZIPPER MANUFACTURING
               </span>
-            </div>
+            </Reveal>
 
             <div className="applications-intro-grid">
               <div className="applications-intro-heading">
@@ -92,26 +37,36 @@ export default function ApplicationsPage() {
                   Apparel · Bags · Denim · Footwear
                 </span>
 
-                <h1>
-                  Built For
-                  <br />
-                  <span>Every Application.</span>
-                </h1>
+                <SplitText
+                  as="h1"
+                  lines={["Designed for", "Modern Apparel."]}
+                  accent={[1]}
+                  animateOnMount
+                  delay={0.2}
+                />
               </div>
 
-              <div className="applications-intro-copy">
+              <Reveal className="applications-intro-copy" delay={0.4}>
                 <p>
-                  AF7 fastening components are developed to integrate
-                  naturally into different product categories, supporting
-                  construction, movement, usability and finished appearance.
+                  AF7 zipper solutions can be used across a broad range of
+                  garment and fashion applications. {applicationAreas.closing}
                 </p>
 
                 <div className="applications-intro-meta">
                   <span>APPLICATION PROFILE</span>
                   <span>LAHORE · PAKISTAN</span>
                 </div>
-              </div>
+              </Reveal>
             </div>
+
+            <Stagger as="ul" className="applications-areas" stagger={0.05}>
+              {applicationAreas.items.map((area, index) => (
+                <StaggerItem as="li" key={area} y={16}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  {area}
+                </StaggerItem>
+              ))}
+            </Stagger>
           </div>
         </section>
 
@@ -120,21 +75,24 @@ export default function ApplicationsPage() {
             <div className="applications-range-header">
               <div className="applications-range-title">
                 <span>AF7 / APPLICATION RANGE</span>
-                <h2>Where Components Become Product.</h2>
+                <SplitText as="h2" lines={["Where Components Become Product."]} />
               </div>
 
               <p>
-                From everyday apparel to performance-led products, AF7
-                fastening components are selected according to the needs of
-                each application.
+                From everyday apparel to performance-led products, the
+                appropriate zipper construction is selected according to the
+                needs of each application.
               </p>
             </div>
 
             <div className="applications-list">
               {applications.map((application) => (
-                <article
+                <Reveal
+                  as="article"
                   className="application-profile"
                   key={application.number}
+                  y={70}
+                  amount={0.1}
                 >
                   <div className="application-profile-header">
                     <div className="application-number">
@@ -146,7 +104,7 @@ export default function ApplicationsPage() {
                     </div>
 
                     <span className="application-category">
-                      {application.category}
+                      APPLICATION
                     </span>
                   </div>
 
@@ -161,7 +119,7 @@ export default function ApplicationsPage() {
                       <p>{application.description}</p>
 
                       <Link
-                        href={application.href}
+                        href={`/applications/${application.slug}`}
                         className="application-link"
                       >
                         <span>View Application</span>
@@ -170,17 +128,20 @@ export default function ApplicationsPage() {
                     </div>
 
                     <Link
-                      href={application.href}
+                      href={`/applications/${application.slug}`}
                       className="application-visual"
+                      data-cursor="View"
                       aria-label={`View ${application.title} application`}
                     >
                       <div className="application-image">
-                        <Image
-                          src={application.image}
-                          alt={`AF7 ${application.title}`}
-                          fill
-                          sizes="(max-width: 700px) 100vw, 62vw"
-                        />
+                        <ImageReveal fill zoom={0.15}>
+                          <Image
+                            src={application.image}
+                            alt={`AF7 ${application.title}`}
+                            fill
+                            sizes="(max-width: 700px) 100vw, 62vw"
+                          />
+                        </ImageReveal>
                       </div>
 
                       <div className="application-visual-meta">
@@ -195,7 +156,7 @@ export default function ApplicationsPage() {
                   </div>
 
                   <div className="application-divider" />
-                </article>
+                </Reveal>
               ))}
             </div>
 
@@ -207,8 +168,5 @@ export default function ApplicationsPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
-    </>
   );
 }
