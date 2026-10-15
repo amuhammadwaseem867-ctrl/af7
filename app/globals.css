@@ -87,7 +87,7 @@ select {
 }
 
 button {
-  cursor: pointer;
+  cursor: var(--cursor-arrow);
 }
 
 a {
@@ -282,82 +282,26 @@ section {
   opacity: 0.6;
 }
 
-/* Custom cursor */
+/* Cursor: navy arrow with a white edge so it reads on dark sections too. */
 
-.has-custom-cursor,
-.has-custom-cursor * {
-  cursor: none !important;
+:root {
+  --cursor-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2.5v16.2l4.3-4.1 2.9 6.4 2.9-1.3-2.9-6.3h6z' fill='%23243146' stroke='%23fff' stroke-width='1.4' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, auto;
 }
 
-.cursor-ring,
-.cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10000;
-  pointer-events: none;
+html,
+body,
+a,
+button,
+[role="button"],
+label,
+select,
+summary {
+  cursor: var(--cursor-arrow);
 }
 
-.cursor-ring {
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
-  margin: -19px 0 0 -19px;
-  border: 1px solid rgba(184, 146, 90, 0.9);
-  border-radius: 50%;
-  mix-blend-mode: difference;
-  transition:
-    width 400ms var(--ease-out-expo),
-    height 400ms var(--ease-out-expo),
-    margin 400ms var(--ease-out-expo),
-    background-color 400ms var(--ease-out-expo),
-    opacity 300ms ease;
-}
-
-.cursor-ring span {
-  color: var(--af7-white);
-  font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 250ms ease;
-}
-
-.cursor-ring.is-hover {
-  width: 64px;
-  height: 64px;
-  margin: -32px 0 0 -32px;
-  background: rgba(217, 191, 147, 0.25);
-}
-
-.cursor-ring.has-label {
-  width: 96px;
-  height: 96px;
-  margin: -48px 0 0 -48px;
-  border-color: transparent;
-  background: var(--af7-navy);
-  mix-blend-mode: normal;
-}
-
-.cursor-ring.has-label span {
-  opacity: 1;
-}
-
-.cursor-dot {
-  width: 6px;
-  height: 6px;
-  margin: -3px 0 0 -3px;
-  border-radius: 50%;
-  background: var(--af7-accent);
-  transition: opacity 200ms ease;
-}
-
-.cursor-ring.is-hidden,
-.cursor-dot.is-hidden {
-  opacity: 0;
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
+textarea {
+  cursor: text;
 }
 
 /* Shared animated button */

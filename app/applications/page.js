@@ -130,7 +130,6 @@ export default function ApplicationsPage() {
                     <Link
                       href={`/applications/${application.slug}`}
                       className="application-visual"
-                      data-cursor="View"
                       aria-label={`View ${application.title} application`}
                     >
                       <div className="application-image">
