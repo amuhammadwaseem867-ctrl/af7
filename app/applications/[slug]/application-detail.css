@@ -481,7 +481,7 @@
 }
 
 .application-detail-custom a {
-  color: var(--af7-accent);
+  color: var(--af7-text-silver);
   font-weight: 500;
   white-space: nowrap;
 }

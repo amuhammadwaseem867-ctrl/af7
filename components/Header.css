@@ -138,7 +138,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  color: var(--af7-accent);
+  color: var(--af7-text-silver);
 }
 
 .desktop-navigation a:hover .nav-roll > span,
@@ -314,7 +314,7 @@
 }
 
 .mobile-link-mask a.is-active .mobile-label {
-  color: var(--af7-accent-soft);
+  color: var(--af7-text-light);
 }
 
 .mobile-index {
@@ -339,7 +339,7 @@
 
 .mobile-arrow {
   font-size: 18px;
-  color: var(--af7-accent-soft);
+  color: var(--af7-text-light);
 }
 
 .mobile-inquire {
