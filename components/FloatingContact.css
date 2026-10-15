@@ -106,3 +106,11 @@
     color: #ffffff;
   }
 }
+.floating-contact {
+  transition: opacity 300ms ease;
+}
+
+.overlay-open .floating-contact {
+  opacity: 0;
+  pointer-events: none;
+}

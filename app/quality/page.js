@@ -1,13 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import SplitText from "@/components/motion/SplitText";
+import Reveal from "@/components/motion/Reveal";
+import ImageReveal from "@/components/ImageReveal";
+import { Stagger, StaggerItem } from "@/components/motion/Stagger";
+import { quality, finishes } from "@/data/company";
 import "./quality.css";
 
 export const metadata = {
   title: "Quality",
   description:
-    "AF7 quality focus is grounded in detail, consistency, control and inspection for zipper and fastening components.",
+    "Quality in every stage: AF7 checks construction, teeth alignment, operation, finishing and conformity with agreed specifications through final inspection and packing.",
 };
 
 const qualityImages = [
@@ -35,272 +38,220 @@ const qualityImages = [
 
 export default function QualityPage() {
   return (
-    <>
-      <Header />
+    <main className="quality-page">
+      <section className="quality-intro">
+        <div className="quality-container">
+          <Reveal className="quality-topline" y={16}>
+            <div className="quality-topline-left">
+              <span className="quality-index">04</span>
+              <span>Quality</span>
+            </div>
+            <span className="quality-topline-right">AF7 · ZIPPER MANUFACTURING</span>
+          </Reveal>
 
-      <main className="quality-page">
-        <section className="quality-intro">
-          <div className="quality-container">
-            <div className="quality-topline">
-              <div className="quality-topline-left">
-                <span className="quality-index">04</span>
-                <span>Quality</span>
-              </div>
-
-              <span className="quality-topline-right">
-                AF7 · APPAREL FASTENER
-              </span>
+          <div className="quality-intro-grid">
+            <div className="quality-intro-heading">
+              <Reveal as="span" className="quality-eyebrow" y={12}>
+                QUALITY / INSPECTION / CONSISTENCY
+              </Reveal>
+              <SplitText
+                as="h1"
+                lines={["Quality In", "Every Stage."]}
+                accent={[1]}
+                animateOnMount
+                delay={0.2}
+              />
             </div>
 
-            <div className="quality-intro-grid">
-              <div className="quality-intro-heading">
-                <span className="quality-eyebrow">
-                  QUALITY / CONTROL / CONSISTENCY
-                </span>
-
-                <h1>
-                  Precision
-                  <br />
-                  <span>In The Detail.</span>
-                </h1>
+            <Reveal className="quality-intro-copy" delay={0.4}>
+              <p>
+                {quality.intro} From tape and teeth to finishing, assembly and
+                final inspection, every stage contributes to the finished zipper.
+              </p>
+              <div className="quality-intro-meta">
+                <span>AF7 / QUALITY</span>
+                <span>LAHORE · PAKISTAN</span>
               </div>
-
-              <div className="quality-intro-copy">
-                <p>
-                  Quality at AF7 is approached through attention to the
-                  component itself. Detail, construction, movement and
-                  finished appearance are considered throughout the
-                  fastening process.
-                </p>
-
-                <div className="quality-intro-meta">
-                  <span>AF7 / QUALITY</span>
-                  <span>LAHORE · PAKISTAN</span>
-                </div>
-              </div>
-            </div>
+            </Reveal>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="quality-feature">
-          <div className="quality-container">
-            <div className="quality-feature-image">
+      <section className="quality-feature">
+        <div className="quality-container">
+          <div className="quality-feature-image">
+            <ImageReveal fill zoom={0.15}>
               <Image
                 src={qualityImages[0].image}
                 alt={qualityImages[0].alt}
                 fill
-                priority
-                sizes="(max-width: 700px) 100vw, 100vw"
+                preload
+                sizes="100vw"
               />
+            </ImageReveal>
+            <div className="quality-image-meta">
+              <span>AF7</span>
+              <span>QUALITY / 01</span>
+            </div>
+            <span className="quality-image-label">{qualityImages[0].label}</span>
+          </div>
+        </div>
+      </section>
 
-              <div className="quality-image-meta">
-                <span>AF7</span>
-                <span>QUALITY / 01</span>
-              </div>
+      <section className="quality-approach">
+        <div className="quality-container">
+          <div className="quality-approach-grid">
+            <div className="quality-approach-heading">
+              <Reveal as="span" className="quality-section-label" y={10}>
+                OUR QUALITY FOCUS
+              </Reveal>
+              <SplitText as="h2" lines={["Every detail", "has a role."]} accent={[1]} />
+            </div>
 
-              <span className="quality-image-label">
-                {qualityImages[0].label}
-              </span>
+            <div className="quality-approach-copy">
+              <Reveal as="p">
+                At AF7, quality is considered throughout the manufacturing
+                process — not only at the end of it. Our quality focus includes:
+              </Reveal>
+
+              <Stagger className="quality-principles" stagger={0.08}>
+                {quality.focus.map((item, index) => (
+                  <StaggerItem className="quality-principle" key={item} y={20}>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <div>
+                      <strong>{item.toUpperCase()}</strong>
+                    </div>
+                  </StaggerItem>
+                ))}
+              </Stagger>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="quality-approach">
-          <div className="quality-container">
-            <div className="quality-approach-grid">
-              <div className="quality-approach-heading">
-                <span className="quality-section-label">
-                  OUR QUALITY APPROACH
-                </span>
-
-                <h2>
-                  Every detail
-                  <br />
-                  <span>has a role.</span>
-                </h2>
-              </div>
-
-              <div className="quality-approach-copy">
-                <p>
-                  A zipper is a functional component that becomes part of a
-                  much larger product. Its movement, construction and visual
-                  finish all contribute to the final result.
-                </p>
-
-                <p>
-                  AF7 places attention on these details so that fastening
-                  components can integrate naturally into the products they
-                  are designed for.
-                </p>
-
-                <div className="quality-principles">
-                  <div className="quality-principle">
-                    <span>01</span>
-
-                    <div>
-                      <strong>DETAIL</strong>
-                      <p>
-                        Close attention to component construction and
-                        finished appearance.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="quality-principle">
-                    <span>02</span>
-
-                    <div>
-                      <strong>CONSISTENCY</strong>
-                      <p>
-                        A controlled approach to components across product
-                        requirements.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="quality-principle">
-                    <span>03</span>
-
-                    <div>
-                      <strong>CONTROL</strong>
-                      <p>
-                        Inspection focused on the details that influence
-                        fastening performance.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <section className="quality-inspection">
+        <div className="quality-container">
+          <div className="quality-inspection-heading">
+            <div>
+              <Reveal as="span" className="quality-section-label" y={10}>
+                FINISHING &amp; QUALITY INSPECTION
+              </Reveal>
+              <SplitText
+                as="h2"
+                lines={["Looking closer", "at every component."]}
+                accent={[1]}
+              />
             </div>
+            <Reveal as="p" delay={0.2}>
+              Inspection checks construction, appearance, finishing, operation
+              and conformity with agreed requirements before products are
+              packed and prepared for delivery.
+            </Reveal>
           </div>
-        </section>
 
-        <section className="quality-inspection">
-          <div className="quality-container">
-            <div className="quality-inspection-heading">
-              <div>
-                <span className="quality-section-label">
-                  INSPECTION
-                </span>
-
-                <h2>
-                  Looking closer
-                  <br />
-                  <span>at every component.</span>
-                </h2>
-              </div>
-
-              <p>
-                Inspection brings attention to the physical characteristics
-                of zipper systems and slider components, from individual
-                details to finished construction.
-              </p>
-            </div>
-
-            <div className="quality-inspection-grid">
-              {qualityImages.slice(1).map((item, index) => (
-                <figure className="quality-inspection-item" key={item.image}>
-                  <div className="quality-inspection-image">
+          <Stagger className="quality-inspection-grid" stagger={0.12}>
+            {qualityImages.slice(1).map((item, index) => (
+              <StaggerItem as="figure" className="quality-inspection-item" key={item.image} y={60}>
+                <div className="quality-inspection-image">
+                  <ImageReveal fill zoom={0.18}>
                     <Image
                       src={item.image}
                       alt={item.alt}
                       fill
                       sizes="(max-width: 700px) 100vw, 50vw"
                     />
-                  </div>
+                  </ImageReveal>
+                </div>
+                <figcaption>
+                  <span>{String(index + 2).padStart(2, "0")}</span>
+                  <span>{item.label}</span>
+                </figcaption>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
 
-                  <figcaption>
-                    <span>
-                      {String(index + 2).padStart(2, "0")}
-                    </span>
-
-                    <span>{item.label}</span>
-                  </figcaption>
-                </figure>
-              ))}
+      <section className="quality-finishes" aria-labelledby="quality-finishes-title">
+        <div className="quality-container">
+          <div className="quality-inspection-heading">
+            <div>
+              <Reveal as="span" className="quality-section-label" y={10}>
+                CONTROLLED FINISHING
+              </Reveal>
+              <SplitText
+                id="quality-finishes-title"
+                as="h2"
+                lines={["Finishing that", "completes the product."]}
+                accent={[1]}
+              />
             </div>
+            <Reveal as="p" delay={0.2}>
+              Plating, lacquering and waxing are integrated into production for
+              applicable products. {finishes.intro}
+            </Reveal>
           </div>
-        </section>
 
-        <section className="quality-system">
-          <div className="quality-container">
-            <div className="quality-system-grid">
-              <div>
-                <span className="quality-section-label">
-                  AF7 / QUALITY SYSTEM
-                </span>
+          <Stagger className="quality-finish-grid" stagger={0.05}>
+            {finishes.items.map((finish) => (
+              <StaggerItem className="quality-finish" key={finish.name} y={20}>
+                <span className="quality-finish-swatch" style={{ background: finish.swatch }} />
+                <span>{finish.name}</span>
+              </StaggerItem>
+            ))}
+          </Stagger>
+          <p className="quality-finish-note">{finishes.note}</p>
+        </div>
+      </section>
 
-                <h2>
-                  Built around
-                  <br />
-                  <span>consistency.</span>
-                </h2>
-              </div>
+      <section className="quality-system">
+        <div className="quality-container">
+          <div className="quality-system-grid">
+            <div>
+              <Reveal as="span" className="quality-section-label" y={10}>
+                OUR OBJECTIVE
+              </Reveal>
+              <SplitText as="h2" lines={["Built around", "consistency."]} accent={[1]} />
+            </div>
 
-              <div className="quality-system-copy">
-                <p>
-                  Quality is not limited to the final appearance of a
-                  component. It is connected to how the component is
-                  constructed, inspected and prepared for its intended
-                  application.
-                </p>
-
-                <p>
-                  This approach allows AF7 to maintain a clear relationship
-                  between product requirements and the fastening components
-                  supplied for them.
-                </p>
-
-                <div className="quality-system-meta">
-                  <div>
-                    <span>FOCUS</span>
-                    <strong>COMPONENT QUALITY</strong>
-                  </div>
-
-                  <div>
-                    <span>PROCESS</span>
-                    <strong>INSPECTION & CONTROL</strong>
-                  </div>
-
-                  <div>
-                    <span>APPLICATION</span>
-                    <strong>APPAREL & RELATED PRODUCTS</strong>
-                  </div>
+            <Reveal className="quality-system-copy" delay={0.15}>
+              <p className="quality-objective">{quality.objective}</p>
+              <div className="quality-system-meta">
+                <div>
+                  <span>FOCUS</span>
+                  <strong>CONSTRUCTION &amp; FINISH</strong>
+                </div>
+                <div>
+                  <span>PROCESS</span>
+                  <strong>INSPECTION &amp; PACKING</strong>
+                </div>
+                <div>
+                  <span>STANDARD</span>
+                  <strong>AGREED SPECIFICATIONS</strong>
                 </div>
               </div>
-            </div>
+            </Reveal>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="quality-closing">
-          <div className="quality-container">
-            <div className="quality-closing-top">
-              <span>AF7 / QUALITY</span>
-              <span>LAHORE · PAKISTAN</span>
-            </div>
-
-            <div className="quality-closing-content">
-              <span>APPAREL FASTENER</span>
-
-              <h2>
-                Small components.
-                <br />
-                Considered precisely.
-              </h2>
-
-              <Link
-                href="/products"
-                className="quality-closing-link"
-              >
-                <span>Explore Product Range</span>
-                <span aria-hidden="true">↗</span>
-              </Link>
-            </div>
+      <section className="quality-closing">
+        <div className="quality-container">
+          <div className="quality-closing-top">
+            <span>AF7 / QUALITY</span>
+            <span>LAHORE · PAKISTAN</span>
           </div>
-        </section>
-      </main>
 
-      <Footer />
-    </>
+          <div className="quality-closing-content">
+            <span>AF7</span>
+            <SplitText as="h2" lines={["Precision in", "every detail."]} />
+            <Link href="/products" className="quality-closing-link">
+              <span>Explore Product Range</span>
+              <span aria-hidden="true">↗</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

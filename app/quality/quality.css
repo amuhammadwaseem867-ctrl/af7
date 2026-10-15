@@ -27,7 +27,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -39,7 +39,7 @@
 }
 
 .quality-topline-right {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 9px;
   font-weight: 500;
   letter-spacing: 0.15em;
@@ -57,7 +57,7 @@
 .quality-eyebrow {
   display: block;
   margin-bottom: 23px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -66,7 +66,7 @@
 
 .quality-intro-heading h1 {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(55px, 6.8vw, 98px);
   line-height: 0.93;
   letter-spacing: -0.06em;
@@ -86,7 +86,7 @@
 .quality-intro-copy p {
   max-width: 420px;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.85;
   color: #68717d;
@@ -100,7 +100,7 @@
   margin-top: 32px;
   padding-top: 16px;
   border-top: 1px solid #e1e4e7;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 8px;
   font-weight: 500;
   letter-spacing: 0.14em;
@@ -133,7 +133,7 @@
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 8px;
   font-weight: 500;
   letter-spacing: 0.14em;
@@ -146,7 +146,7 @@
   right: 22px;
   bottom: 20px;
   z-index: 2;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 8px;
   font-weight: 500;
   letter-spacing: 0.13em;
@@ -168,7 +168,7 @@
 .quality-section-label {
   display: block;
   margin-bottom: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -178,7 +178,7 @@
 .quality-approach-heading h2,
 .quality-system h2 {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(40px, 4.8vw, 68px);
   line-height: 0.96;
   letter-spacing: -0.055em;
@@ -198,7 +198,7 @@
 
 .quality-approach-copy > p {
   margin: 0 0 28px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.9;
   color: #68717d;
@@ -218,7 +218,7 @@
 }
 
 .quality-principle > span {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -228,7 +228,7 @@
 .quality-principle strong {
   display: block;
   margin-bottom: 7px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -237,7 +237,7 @@
 
 .quality-principle p {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   line-height: 1.7;
   color: #707985;
@@ -259,7 +259,7 @@
 
 .quality-inspection-heading h2 {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(38px, 4.7vw, 64px);
   line-height: 0.96;
   letter-spacing: -0.055em;
@@ -274,7 +274,7 @@
 .quality-inspection-heading > p {
   max-width: 420px;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 13px;
   line-height: 1.85;
   color: #707985;
@@ -318,7 +318,7 @@
   justify-content: space-between;
   gap: 20px;
   padding-top: 16px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 8px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -343,7 +343,7 @@
 
 .quality-system-copy > p {
   margin: 0 0 28px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.9;
   color: #68717d;
@@ -363,7 +363,7 @@
 }
 
 .quality-system-meta span {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 8px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -371,7 +371,7 @@
 }
 
 .quality-system-meta strong {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -389,7 +389,7 @@
   padding: 18px 0;
   border-top: 1px solid #dfe3e6;
   border-bottom: 1px solid #dfe3e6;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 8px;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -403,7 +403,7 @@
 .quality-closing-content > span {
   display: block;
   margin-bottom: 22px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.17em;
@@ -413,7 +413,7 @@
 .quality-closing-content h2 {
   max-width: 900px;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(45px, 6.2vw, 88px);
   line-height: 0.93;
   letter-spacing: -0.06em;
@@ -428,7 +428,7 @@
   margin-top: 42px;
   padding-bottom: 8px;
   border-bottom: 1px solid #243146;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -628,4 +628,81 @@
   .quality-closing-link {
     transition: none;
   }
+}
+/* Profile additions */
+
+.quality-principles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 32px;
+}
+
+.quality-finishes {
+  padding: 110px 0;
+  background: var(--af7-ink);
+  color: #ffffff;
+}
+
+.quality-finishes .quality-section-label,
+.quality-finishes h2 .split-accent {
+  color: var(--af7-accent-soft);
+}
+
+.quality-finishes .quality-inspection-heading p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.quality-finish-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 30px 20px;
+  margin-top: 56px;
+}
+
+.quality-finish {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+}
+
+.quality-finish-swatch {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15), 0 18px 40px rgba(0, 0, 0, 0.35);
+  transition: transform 600ms var(--ease-out-expo);
+}
+
+.quality-finish:hover .quality-finish-swatch {
+  transform: translateY(-6px) scale(1.04);
+}
+
+.quality-finish-note {
+  margin-top: 44px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+
+.quality-objective {
+  font-family: var(--font-heading);
+  font-size: clamp(20px, 2vw, 28px) !important;
+  font-weight: 500;
+  line-height: 1.4 !important;
+  letter-spacing: -0.02em;
+  color: var(--af7-navy) !important;
+}
+
+@media (max-width: 700px) {
+  .quality-principles {
+    grid-template-columns: 1fr;
+  }
+
+  .quality-finish-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.quality-finishes .quality-inspection-heading {
+  border-bottom-color: rgba(255, 255, 255, 0.14);
 }

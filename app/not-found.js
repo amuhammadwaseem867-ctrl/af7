@@ -1,37 +1,39 @@
 import Link from "next/link";
+import SplitText from "@/components/motion/SplitText";
+import Reveal from "@/components/motion/Reveal";
+
+export const metadata = {
+  title: "Page not found",
+};
 
 export default function NotFound() {
   return (
-    <main className="not-found-page" style={{ minHeight: "100vh", display: "grid", placeItems: "center", background: "#243146", color: "#fff", padding: "2rem" }}>
-      <div style={{ maxWidth: "560px", textAlign: "center" }}>
-        <p style={{ marginBottom: "1rem", fontSize: "11px", letterSpacing: "0.18em", textTransform: "uppercase", color: "#bcc6cc" }}>
+    <main className="not-found-page">
+      <div className="not-found-inner">
+        <Reveal as="span" className="section-eyebrow" y={12}>
           AF7 / 404
-        </p>
-        <h1 style={{ fontFamily: "Montserrat, sans-serif", fontSize: "clamp(3rem, 8vw, 6rem)", letterSpacing: "-0.06em", margin: "0 0 1rem" }}>
-          Page not found.
-        </h1>
-        <p style={{ fontSize: "1rem", lineHeight: "1.8", color: "rgba(255,255,255,0.74)", margin: "0 0 2rem" }}>
-          The page you are looking for does not exist or has moved. Return to the AF7 homepage to continue exploring our fastening components.
-        </p>
-        <Link
-          href="/"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "0.75rem",
-            minHeight: "52px",
-            padding: "0 1.25rem",
-            background: "#fff",
-            color: "#243146",
-            textDecoration: "none",
-            fontWeight: 600,
-            letterSpacing: "0.05em",
-            textTransform: "uppercase",
-          }}
-        >
-          Return Home
-        </Link>
+        </Reveal>
+        <SplitText
+          as="h1"
+          lines={["This page has", "come unzipped."]}
+          accent={[1]}
+          animateOnMount
+          delay={0.1}
+        />
+        <Reveal as="p" delay={0.3}>
+          The page you are looking for does not exist or has moved. Head back
+          to the homepage or explore the AF7 product range.
+        </Reveal>
+        <Reveal className="not-found-actions" delay={0.4}>
+          <Link href="/" className="af7-button af7-button-dark">
+            <span>Return home</span>
+            <span className="af7-button-arrow" aria-hidden="true">↗</span>
+          </Link>
+          <Link href="/products" className="af7-button af7-button-dark">
+            <span>View products</span>
+            <span className="af7-button-arrow" aria-hidden="true">↗</span>
+          </Link>
+        </Reveal>
       </div>
     </main>
   );

@@ -185,3 +185,6 @@
     display: none;
   }
 }
+html[data-preloaded] .af7-loader {
+  display: none;
+}

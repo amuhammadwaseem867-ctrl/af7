@@ -1,30 +1,31 @@
 "use client";
 
 import { Phone, MapPin } from "lucide-react";
+import { contact } from "@/data/navigation";
 import "./FloatingContact.css";
 
 const contactLinks = [
   {
     label: "Call AF7",
-    href: "tel:+923134710325",
+    href: contact.phoneHref,
     type: "phone",
     icon: Phone,
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/af7trims?stkn=ZmVyNscHJrY2J1",
+    href: contact.instagram,
     type: "instagram",
     external: true,
   },
   {
     label: "Facebook",
-    href: "https://www.facebook.com/profile.php?id=61584996430125&mibextid=wwXIfr",
+    href: contact.facebook,
     type: "facebook",
     external: true,
   },
   {
     label: "Location",
-    href: "https://www.google.com/maps/search/?api=1&query=33b%20Punjab%20Small%20Industries%20Corporation%20Sunder%20II%20Lahore%20Pakistan",
+    href: contact.map,
     type: "location",
     icon: MapPin,
     external: true,
