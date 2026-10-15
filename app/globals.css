@@ -8,6 +8,10 @@
   --af7-mist: #f4f6f8;
   --af7-accent: #b8925a;
   --af7-accent-soft: #d9bf93;
+
+  /* Text never uses the gold accent: silver on light, light grey on dark. */
+  --af7-text-silver: #7d8793;
+  --af7-text-light: #bcc6cc;
   --af7-line: rgba(36, 49, 70, 0.14);
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);

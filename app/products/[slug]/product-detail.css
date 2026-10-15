@@ -966,11 +966,11 @@
 }
 
 .product-finishes-head h2 .split-accent {
-  color: var(--af7-accent-soft);
+  color: var(--af7-text-light);
 }
 
 .product-finishes .product-detail-section-label {
-  color: var(--af7-accent-soft);
+  color: var(--af7-text-light);
 }
 
 .product-finishes-grid {

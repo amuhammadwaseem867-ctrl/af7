@@ -645,7 +645,7 @@
 
 .quality-finishes .quality-section-label,
 .quality-finishes h2 .split-accent {
-  color: var(--af7-accent-soft);
+  color: var(--af7-text-light);
 }
 
 .quality-finishes .quality-inspection-heading p {
