@@ -11,24 +11,13 @@
 
 .hero-image-slider {
   position: absolute;
-  inset: -4% -3%;
+  inset: 0;
   z-index: -3;
 }
 
-.hero-image-pointer,
-.hero-image-layer,
-.hero-image-zoom {
+.hero-image-layer {
   position: absolute;
   inset: 0;
-}
-
-.hero-image-zoom {
-  will-change: transform;
-}
-
-.hero-image {
-  object-fit: cover;
-  object-position: center;
 }
 
 .hero-overlay {

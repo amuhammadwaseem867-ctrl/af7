@@ -1,4 +1,4 @@
-import Image from "next/image";
+import FitImage from "@/components/FitImage";
 import Link from "next/link";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
@@ -63,8 +63,8 @@ export default function CustomizationPage() {
       </section>
 
       <div className="pf-feature">
-        <ImageReveal fill zoom={0.12}>
-          <Image
+        <ImageReveal fill>
+          <FitImage
             src="/images/quality/detail.webp"
             alt="AF7 zipper component detail"
             fill

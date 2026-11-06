@@ -105,7 +105,7 @@ export default async function ProductDetailPage({ params }) {
                 }`}
               >
                 <div className="product-detail-image">
-                  <ImageReveal fill direction="left" zoom={0.08}>
+                  <ImageReveal fill direction="left">
                     <Image
                       src={product.images[0]}
                       alt={`AF7 ${product.title}`}

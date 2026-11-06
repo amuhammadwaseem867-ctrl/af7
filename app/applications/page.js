@@ -1,4 +1,4 @@
-import Image from "next/image";
+import FitImage from "@/components/FitImage";
 import Link from "next/link";
 import { applications } from "@/data/applications";
 import { applicationAreas } from "@/data/company";
@@ -132,8 +132,8 @@ export default function ApplicationsPage() {
                       aria-label={`View ${application.title} application`}
                     >
                       <div className="application-image">
-                        <ImageReveal fill zoom={0.15}>
-                          <Image
+                        <ImageReveal fill>
+                          <FitImage
                             src={application.image}
                             alt={`AF7 ${application.title}`}
                             fill

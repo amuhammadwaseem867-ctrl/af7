@@ -121,7 +121,7 @@
 }
 
 .about-feature-image img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -293,13 +293,13 @@
 }
 
 .about-production-image img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   transition: transform 0.7s ease;
 }
 
 .about-production-item:hover .about-production-image img {
-  transform: scale(1.025);
+  transform: none;
 }
 
 .about-production-item figcaption {

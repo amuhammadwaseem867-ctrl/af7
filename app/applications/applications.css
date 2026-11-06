@@ -277,13 +277,13 @@
 }
 
 .application-image img {
-  object-fit: cover !important;
+  object-fit: contain !important;
   object-position: center center !important;
   transition: transform 0.7s ease;
 }
 
 .application-visual:hover .application-image img {
-  transform: scale(1.025);
+  transform: none;
 }
 
 .application-visual-meta {
