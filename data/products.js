@@ -37,7 +37,8 @@ export const products = [
       "/images/products/alumuniumzippers/6.webp",
       "/images/products/alumuniumzippers/7.webp",
       "/images/products/alumuniumzippers/8.webp",
-      "/images/products/alumuniumzippers/17eb0fb5be5ca47779ac246a5c767a13.jpg",
+      "/images/products/alumuniumzippers/aluminium-5.webp",
+      "/images/products/alumuniumzippers/aluminium-4-5.webp",
       "/images/products/alumuniumzippers/alumunium zipper.webp",
       "/images/products/alumuniumzippers/alumuniumzipper2.webp"
     ],
