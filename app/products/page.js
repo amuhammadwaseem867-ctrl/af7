@@ -3,13 +3,13 @@ import ProductsExplorer from "./ProductsExplorer";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
-import { accessories, customization, portfolio } from "@/data/company";
+import { customization, portfolio } from "@/data/company";
 import "./products.css";
 
 export const metadata = {
   title: "Products",
   description:
-    "AF7 product portfolio: #5 and #4.5 metal and aluminium zippers, nylon and Vislon zippers, sliders, tag strings, tipping and TPU tippings — manufactured in Lahore, Pakistan.",
+    "AF7 product range: #5 and #4.5 metal and aluminium zippers, two-way, nylon and Vislon zippers, tag strings, tipping and TPU tippings — manufactured in Lahore, Pakistan.",
 };
 
 export default function ProductsPage() {
@@ -20,7 +20,7 @@ export default function ProductsPage() {
           <Reveal className="products-topline" y={16}>
             <div className="products-topline-left">
               <span className="products-index">02</span>
-              <span>Product Range</span>
+              <span>Our Product Range</span>
             </div>
             <span className="products-topline-right">AF7 · ZIPPER MANUFACTURING</span>
           </Reveal>
@@ -28,11 +28,11 @@ export default function ProductsPage() {
           <div className="products-intro-grid">
             <div className="products-intro-heading">
               <Reveal as="span" className="products-eyebrow" y={12}>
-                Zippers · Sliders · Garment Accessories
+                Zippers · Garment Accessories
               </Reveal>
               <SplitText
                 as="h1"
-                lines={["Products", "Built To Perform."]}
+                lines={["Zippers and garment", "accessories, by line."]}
                 accent={[1]}
                 animateOnMount
                 delay={0.2}
@@ -50,39 +50,9 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <section className="products-range" aria-label="Zippers and sliders">
+      <section className="products-range" aria-label="Zippers and garment accessories">
         <div className="products-container">
           <ProductsExplorer />
-        </div>
-      </section>
-
-      <section className="products-accessories" aria-labelledby="accessories-title">
-        <div className="products-container">
-          <div className="products-section-head">
-            <Reveal as="span" className="section-eyebrow" y={12}>
-              Garment Accessories
-            </Reveal>
-            <SplitText
-              id="accessories-title"
-              as="h2"
-              lines={["Beyond", "the zipper."]}
-              accent={[1]}
-            />
-          </div>
-
-          <Stagger className="products-accessory-grid">
-            {accessories.map((item, index) => (
-              <StaggerItem as="article" className="products-accessory" key={item.title}>
-                <span className="products-accessory-index">0{index + 1}</span>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-                <Link href="/contact" className="products-accessory-link">
-                  <span>Enquire</span>
-                  <span aria-hidden="true">↗</span>
-                </Link>
-              </StaggerItem>
-            ))}
-          </Stagger>
         </div>
       </section>
 

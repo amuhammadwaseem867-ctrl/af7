@@ -45,7 +45,7 @@ export default async function ProductDetailPage({ params }) {
   const nextSlug = next?.slug;
 
   const isSliderProduct = product.category === "SLIDER COMPONENT";
-  const isMetalProduct = ["METAL", "BRASS"].includes(product.material);
+  const isMetalProduct = ["metal", "aluminium"].includes(product.family);
 
   return (
     <>
@@ -75,13 +75,17 @@ export default async function ProductDetailPage({ params }) {
 
                 <div className="product-detail-specs">
                   <div>
-                    <span>PRODUCT TYPE</span>
-                    <strong>{product.category}</strong>
+                    <span>REFERENCE</span>
+                    <strong>{product.code}</strong>
                   </div>
 
                   <div>
-                    <span>MATERIAL</span>
-                    <strong>{product.material}</strong>
+                    <span>CONSTRUCTION</span>
+                    <strong>
+                      {product.size
+                        ? `${product.familyLabel} · ${product.size}`
+                        : product.familyLabel}
+                    </strong>
                   </div>
 
                   <div>

@@ -4,16 +4,12 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
-import { products } from "@/data/products";
+import { productFilters, products } from "@/data/products";
 
-const filters = [
-  { label: "All", match: () => true },
-  { label: "Metal", match: (p) => p.material === "METAL" || p.material === "BRASS" },
-  { label: "Aluminium", match: (p) => p.material === "ALUMINIUM" },
-  { label: "Nylon", match: (p) => p.material === "NYLON" },
-  { label: "Vislon", match: (p) => p.material === "VISLON" },
-  { label: "Sliders", match: (p) => p.category === "SLIDER COMPONENT" },
-];
+const filters = productFilters.map((f) => ({
+  label: f.label,
+  match: (p) => f.id === "all" || p.family === f.id,
+}));
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -70,7 +66,10 @@ export default function ProductsExplorer() {
                     fill
                     sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
                   />
-                  <span className="products-card-tag">{product.material}</span>
+                  <span className="products-card-tag">{product.code}</span>
+                  {product.size ? (
+                    <span className="products-card-size">{product.size}</span>
+                  ) : null}
                   <span className="products-card-count">{product.images.length} views</span>
                 </div>
                 <div className="products-card-body">
@@ -80,7 +79,7 @@ export default function ProductsExplorer() {
                   </div>
                   <p>{product.summary}</p>
                   <div className="products-card-footer">
-                    <span>{product.category}</span>
+                    <span>{product.familyLabel}</span>
                     <span className="products-card-arrow" aria-hidden="true">↗</span>
                   </div>
                 </div>
