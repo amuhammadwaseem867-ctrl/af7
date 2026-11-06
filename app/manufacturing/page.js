@@ -1,4 +1,4 @@
-import Image from "next/image";
+import FitImage from "@/components/FitImage";
 import Link from "next/link";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
@@ -65,8 +65,8 @@ export default function ManufacturingPage() {
       </section>
 
       <div className="pf-feature">
-        <ImageReveal fill zoom={0.12}>
-          <Image
+        <ImageReveal fill>
+          <FitImage
             src="/images/about/machinery.webp"
             alt="AF7 automated zipper assembly machinery"
             fill
@@ -140,8 +140,8 @@ export default function ManufacturingPage() {
           <Stagger className="pf-gallery" stagger={0.12}>
             {gallery.map((item) => (
               <StaggerItem className="pf-gallery-item" key={item.src} y={60}>
-                <ImageReveal fill zoom={0.16}>
-                  <Image src={item.src} alt={item.alt} fill sizes="(max-width: 600px) 100vw, 50vw" />
+                <ImageReveal fill>
+                  <FitImage src={item.src} alt={item.alt} fill sizes="(max-width: 600px) 100vw, 50vw" />
                 </ImageReveal>
               </StaggerItem>
             ))}

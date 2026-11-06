@@ -131,13 +131,13 @@
 }
 
 .application-detail-image img {
-  object-fit: cover !important;
+  object-fit: contain !important;
   object-position: center center !important;
   transition: transform 0.8s ease;
 }
 
 .application-detail-visual:hover .application-detail-image img {
-  transform: scale(1.02);
+  transform: none;
 }
 
 .application-detail-visual-meta {

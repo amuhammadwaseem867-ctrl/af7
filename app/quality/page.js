@@ -1,4 +1,4 @@
-import Image from "next/image";
+import FitImage from "@/components/FitImage";
 import Link from "next/link";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
@@ -79,8 +79,8 @@ export default function QualityPage() {
       <section className="quality-feature">
         <div className="quality-container">
           <div className="quality-feature-image">
-            <ImageReveal fill zoom={0.15}>
-              <Image
+            <ImageReveal fill>
+              <FitImage
                 src={qualityImages[0].image}
                 alt={qualityImages[0].alt}
                 fill
@@ -153,8 +153,8 @@ export default function QualityPage() {
             {qualityImages.slice(1).map((item, index) => (
               <StaggerItem as="figure" className="quality-inspection-item" key={item.image} y={60}>
                 <div className="quality-inspection-image">
-                  <ImageReveal fill zoom={0.18}>
-                    <Image
+                  <ImageReveal fill>
+                    <FitImage
                       src={item.image}
                       alt={item.alt}
                       fill

@@ -208,12 +208,12 @@
 }
 
 .home-product-image img {
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 1.2s var(--ease-out-expo);
 }
 
 .home-product-link:hover .home-product-image img {
-  transform: scale(1.08);
+  transform: none;
 }
 
 .home-product-material {
@@ -338,12 +338,19 @@
 }
 
 .home-accordion-image {
-  object-fit: cover;
-  transform: scale(1.15);
   filter: grayscale(0.7) brightness(0.75);
   transition:
     transform 1.4s var(--ease-out-expo),
     filter 1s var(--ease-out-expo);
+}
+
+.home-accordion-image .fit-image-main {
+  opacity: 0;
+  transition: opacity 600ms var(--ease-out-expo) 200ms;
+}
+
+.home-accordion-panel.is-active .home-accordion-image .fit-image-main {
+  opacity: 1;
 }
 
 .home-accordion-panel.is-active .home-accordion-image {

@@ -456,12 +456,12 @@
 }
 
 .product-detail-visual-slider .product-detail-image img {
-  transform: scale(1.3);
+  transform: none;
   transform-origin: center center;
 }
 
 .product-catalog-grid-slider .product-catalog-image img {
-  transform: scale(1.24);
+  transform: none;
   transform-origin: center center;
 }
 
@@ -504,7 +504,7 @@
   }
 
   .product-detail-visual-slider .product-detail-image img {
-    transform: scale(1.26);
+    transform: none;
   }
 
   .product-catalog {
@@ -521,7 +521,7 @@
   }
 
   .product-catalog-grid-slider .product-catalog-image img {
-    transform: scale(1.2);
+    transform: none;
   }
 
   .product-detail-information {
@@ -606,7 +606,7 @@
   }
 
   .product-detail-visual-slider .product-detail-image img {
-    transform: scale(1.22);
+    transform: none;
   }
 
   .product-detail-visual-meta {
@@ -653,7 +653,7 @@
   }
 
   .product-catalog-grid-slider .product-catalog-image img {
-    transform: scale(1.16);
+    transform: none;
   }
 
   .product-catalog-footer {
@@ -759,7 +759,7 @@
   }
 
   .product-detail-visual-slider .product-detail-image img {
-    transform: scale(1.18);
+    transform: none;
   }
 
   .product-catalog-heading h2 {
@@ -772,7 +772,7 @@
   }
 
   .product-catalog-grid-slider .product-catalog-image img {
-    transform: scale(1.12);
+    transform: none;
   }
 
   .product-detail-information h2 {
@@ -812,7 +812,7 @@
 }
 
 .product-catalog-open:hover .product-catalog-zoom {
-  transform: scale(1.06);
+  transform: none;
 }
 
 .product-catalog-open:focus-visible {

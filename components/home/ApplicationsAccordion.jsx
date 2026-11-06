@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import FitImage from "@/components/FitImage";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { applications } from "@/data/applications";
@@ -46,7 +46,7 @@ export default function ApplicationsAccordion() {
                 className={`home-accordion-panel ${isActive ? "is-active" : ""}`}
                 onMouseEnter={() => setActive(index)}
               >
-                <Image
+                <FitImage
                   src={application.image}
                   alt=""
                   fill

@@ -158,7 +158,7 @@
   }
 
   .product-visual-slider .product-image img {
-    transform: scale(1.24);
+    transform: none;
   }
 }
 
@@ -297,7 +297,7 @@
   }
 
   .product-visual-slider .product-image img {
-    transform: scale(1.22);
+    transform: none;
   }
 
   .product-visual-meta {
@@ -369,7 +369,7 @@
   }
 
   .product-visual-slider .product-image img {
-    transform: scale(1.18);
+    transform: none;
   }
 }
 
@@ -464,12 +464,12 @@
 }
 
 .products-card-image img {
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 1.2s var(--ease-out-expo);
 }
 
 .products-card-link:hover .products-card-image img {
-  transform: scale(1.07);
+  transform: none;
 }
 
 .products-card-tag,

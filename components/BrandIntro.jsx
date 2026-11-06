@@ -1,4 +1,4 @@
-import Image from "next/image";
+import FitImage from "./FitImage";
 import Link from "next/link";
 import ImageReveal from "./ImageReveal";
 import Reveal from "./motion/Reveal";
@@ -67,7 +67,7 @@ export default function BrandIntro() {
         <div className="brand-intro-feature">
           <div className="brand-intro-feature-image">
             <ImageReveal fill direction="left">
-              <Image
+              <FitImage
                 src="/images/about/5.webp"
                 alt="AF7 Apparel Fastener"
                 width={2200}
@@ -102,8 +102,8 @@ export default function BrandIntro() {
               y={70}
             >
               <div className="brand-intro-gallery-image">
-                <ImageReveal fill zoom={0.18}>
-                  <Image
+                <ImageReveal fill>
+                  <FitImage
                     src={image.src}
                     alt={image.alt}
                     width={1600}

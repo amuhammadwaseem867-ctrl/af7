@@ -1,4 +1,4 @@
-import Image from "next/image";
+import FitImage from "@/components/FitImage";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -91,8 +91,8 @@ export default async function ApplicationDetailPage({ params }) {
 
               <div className="application-detail-visual">
                 <div className="application-detail-image">
-                  <ImageReveal fill direction="left" zoom={0.08}>
-                    <Image
+                  <ImageReveal fill direction="left">
+                    <FitImage
                       src={application.image}
                       alt={`AF7 ${application.title} application`}
                       fill

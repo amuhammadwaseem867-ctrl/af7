@@ -1,15 +1,13 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import FitImage from "./FitImage";
 import Link from "next/link";
 import {
   AnimatePresence,
   motion,
-  useMotionValue,
   useReducedMotion,
   useScroll,
-  useSpring,
   useTransform,
 } from "framer-motion";
 import { applications } from "@/data/applications";
@@ -53,22 +51,8 @@ export default function Hero() {
     target: sectionRef,
     offset: ["start start", "end start"],
   });
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "22%"]);
   const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "-35%"]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
-
-  // Pointer parallax on the imagery.
-  const pointerX = useMotionValue(0);
-  const pointerY = useMotionValue(0);
-  const smoothX = useSpring(pointerX, { stiffness: 60, damping: 20 });
-  const smoothY = useSpring(pointerY, { stiffness: 60, damping: 20 });
-
-  const handlePointerMove = (event) => {
-    if (reduceMotion || event.pointerType !== "mouse") return;
-    const { innerWidth, innerHeight } = window;
-    pointerX.set((event.clientX / innerWidth - 0.5) * -24);
-    pointerY.set((event.clientY / innerHeight - 0.5) * -16);
-  };
 
   const showIntro = ready || reduceMotion;
 
@@ -77,17 +61,9 @@ export default function Hero() {
       ref={sectionRef}
       className="hero"
       aria-label="AF7 Apparel Fastener"
-      onPointerMove={handlePointerMove}
     >
-      <motion.div
-        className="hero-image-slider"
-        style={reduceMotion ? undefined : { y: imageY }}
-        aria-hidden="true"
-      >
-        <motion.div
-          className="hero-image-pointer"
-          style={{ x: smoothX, y: smoothY }}
-        >
+      {/* Each slide is shown whole: never scaled, shifted or cropped. */}
+      <div className="hero-image-slider" aria-hidden="true">
           <AnimatePresence initial={false}>
             <motion.div
               key={slide.slug}
@@ -97,25 +73,15 @@ export default function Hero() {
               exit={{ opacity: 1, transition: { duration: 1.4 } }}
               transition={{ duration: 1.4, ease: [0.76, 0, 0.24, 1] }}
             >
-              <motion.div
-                className="hero-image-zoom"
-                initial={{ scale: 1.18 }}
-                animate={{ scale: 1.04 }}
-                transition={{ duration: SLIDE_DURATION / 1000 + 1.6, ease: "linear" }}
-              >
-                <Image
-                  src={slide.image}
-                  alt=""
-                  fill
-                  preload={activeSlide === 0}
-                  sizes="100vw"
-                  className="hero-image"
-                />
-              </motion.div>
+              <FitImage
+                src={slide.image}
+                alt=""
+                preload={activeSlide === 0}
+                sizes="100vw"
+              />
             </motion.div>
           </AnimatePresence>
-        </motion.div>
-      </motion.div>
+      </div>
 
       <div className="hero-overlay" aria-hidden="true" />
       <div className="hero-grain" aria-hidden="true" />

@@ -171,7 +171,7 @@
   position: relative;
 
   width: 100%;
-  aspect-ratio: 1.65 / 1;
+  aspect-ratio: 1.25 / 1;
 
   overflow: hidden;
 
@@ -182,14 +182,14 @@
   width: 100%;
   height: 100%;
 
-  object-fit: cover;
+  object-fit: contain;
 
   transition: transform 0.9s ease;
 }
 
 .brand-intro-feature:hover
   .brand-intro-feature-image img {
-  transform: scale(1.025);
+  transform: none;
 }
 
 .brand-intro-feature-copy {
@@ -291,14 +291,14 @@
   width: 100%;
   height: 100%;
 
-  object-fit: cover;
+  object-fit: contain;
 
   transition: transform 0.8s ease;
 }
 
 .brand-intro-gallery-item:hover
   .brand-intro-gallery-image img {
-  transform: scale(1.035);
+  transform: none;
 }
 
 .brand-intro-gallery-caption {
