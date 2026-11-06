@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { whyAf7 } from "@/data/company";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
@@ -30,6 +31,13 @@ export default function WhyAf7() {
               <p>{reason.text}</p>
             </StaggerItem>
           ))}
+          <StaggerItem className="home-why-card home-why-cta">
+            <Link href="/contact">
+              <span className="home-why-index">→</span>
+              <h3>Send a Product Enquiry</h3>
+              <p>Share your zipper type, size, finish, quantity and application.</p>
+            </Link>
+          </StaggerItem>
         </Stagger>
       </div>
     </section>

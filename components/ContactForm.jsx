@@ -9,9 +9,10 @@ import { contact } from "@/data/navigation";
 
 const inquiryTypes = [
   "Product Enquiry",
-  "Samples",
   "Specifications",
-  "Customization",
+  "Finish Options",
+  "Sample Discussion",
+  "Customization Request",
   "Manufacturing Requirements",
 ];
 
@@ -84,8 +85,8 @@ export default function ContactForm() {
       <div className="contact-form-heading">
         <span>ENQUIRY / 01</span>
         <p>
-          Product enquiries, samples, specifications, customization or
-          manufacturing requirements — tell us what you need.
+          Share your zipper type, size, preferred finish, estimated quantity
+          and intended application so our team can review the requirement.
         </p>
       </div>
 
@@ -159,8 +160,12 @@ export default function ContactForm() {
           />
         </div>
 
+        <p className="contact-form-hint">
+          Your enquiry opens in WhatsApp, ready to send to the AF7 team.
+        </p>
+
         <button type="submit" className="contact-submit">
-          <span>Send via WhatsApp</span>
+          <span>Send a Product Enquiry</span>
           <span aria-hidden="true">↗</span>
         </button>
 

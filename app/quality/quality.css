@@ -706,3 +706,58 @@
 .quality-finishes .quality-inspection-heading {
   border-bottom-color: rgba(255, 255, 255, 0.14);
 }
+
+.quality-principles {
+  grid-template-columns: 1fr;
+}
+
+.quality-principle p {
+  margin-top: 6px;
+  color: #66707d;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.quality-packaging {
+  padding: 110px 0;
+  background: var(--af7-navy);
+  color: #ffffff;
+}
+
+.quality-packaging-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(40px, 8vw, 120px);
+}
+
+.quality-packaging .quality-section-label {
+  color: var(--af7-text-light);
+}
+
+.quality-packaging h2 {
+  margin-top: 22px;
+  font-size: clamp(38px, 4.6vw, 70px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.quality-packaging h2 .split-accent {
+  color: var(--af7-text-light);
+}
+
+.quality-packaging-copy p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.quality-packaging-copy p + p {
+  margin-top: 18px;
+}
+
+@media (max-width: 900px) {
+  .quality-packaging-grid {
+    grid-template-columns: 1fr;
+  }
+}

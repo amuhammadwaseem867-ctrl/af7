@@ -200,13 +200,13 @@ export default function Hero() {
           >
             <Magnetic>
               <Link href="/products" className="af7-button af7-button-solid">
-                <span>Explore Products</span>
+                <span>Explore Our Products</span>
                 <span className="af7-button-arrow" aria-hidden="true">↗</span>
               </Link>
             </Magnetic>
             <Magnetic>
-              <Link href="/contact" className="af7-button af7-button-light">
-                <span>Start an Inquiry</span>
+              <Link href="/manufacturing" className="af7-button af7-button-light">
+                <span>Discover Our Manufacturing</span>
                 <span className="af7-button-arrow" aria-hidden="true">↗</span>
               </Link>
             </Magnetic>

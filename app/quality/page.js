@@ -4,13 +4,13 @@ import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
 import ImageReveal from "@/components/ImageReveal";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
-import { quality, finishes } from "@/data/company";
+import { quality, packaging } from "@/data/company";
 import "./quality.css";
 
 export const metadata = {
   title: "Quality",
   description:
-    "Quality in every stage: AF7 checks construction, teeth alignment, operation, finishing and conformity with agreed specifications through final inspection and packing.",
+    "Quality is built into every stage at AF7: construction and alignment, appearance and finishing, operation, specification conformity and packing preparation.",
 };
 
 const qualityImages = [
@@ -56,7 +56,7 @@ export default function QualityPage() {
               </Reveal>
               <SplitText
                 as="h1"
-                lines={["Quality In", "Every Stage."]}
+                lines={["Quality Is Built Into", "Every Stage."]}
                 accent={[1]}
                 animateOnMount
                 delay={0.2}
@@ -65,11 +65,10 @@ export default function QualityPage() {
 
             <Reveal className="quality-intro-copy" delay={0.4}>
               <p>
-                {quality.intro} From tape and teeth to finishing, assembly and
-                final inspection, every stage contributes to the finished zipper.
+                {quality.intro}
               </p>
               <div className="quality-intro-meta">
-                <span>AF7 / QUALITY</span>
+                <span>AF7 / QUALITY ASSURANCE</span>
                 <span>LAHORE · PAKISTAN</span>
               </div>
             </Reveal>
@@ -110,16 +109,17 @@ export default function QualityPage() {
 
             <div className="quality-approach-copy">
               <Reveal as="p">
-                At AF7, quality is considered throughout the manufacturing
-                process — not only at the end of it. Our quality focus includes:
+                Inspection is focused on the characteristics relevant to each
+                product and the specifications agreed with the customer:
               </Reveal>
 
               <Stagger className="quality-principles" stagger={0.08}>
-                {quality.focus.map((item, index) => (
-                  <StaggerItem className="quality-principle" key={item} y={20}>
+                {quality.checks.map((item, index) => (
+                  <StaggerItem className="quality-principle" key={item.title} y={20}>
                     <span>{String(index + 1).padStart(2, "0")}</span>
                     <div>
-                      <strong>{item.toUpperCase()}</strong>
+                      <strong>{item.title.toUpperCase()}</strong>
+                      <p>{item.text}</p>
                     </div>
                   </StaggerItem>
                 ))}
@@ -172,38 +172,6 @@ export default function QualityPage() {
         </div>
       </section>
 
-      <section className="quality-finishes" aria-labelledby="quality-finishes-title">
-        <div className="quality-container">
-          <div className="quality-inspection-heading">
-            <div>
-              <Reveal as="span" className="quality-section-label" y={10}>
-                CONTROLLED FINISHING
-              </Reveal>
-              <SplitText
-                id="quality-finishes-title"
-                as="h2"
-                lines={["Finishing that", "completes the product."]}
-                accent={[1]}
-              />
-            </div>
-            <Reveal as="p" delay={0.2}>
-              Plating, lacquering and waxing are integrated into production for
-              applicable products. {finishes.intro}
-            </Reveal>
-          </div>
-
-          <Stagger className="quality-finish-grid" stagger={0.05}>
-            {finishes.items.map((finish) => (
-              <StaggerItem className="quality-finish" key={finish.name} y={20}>
-                <span className="quality-finish-swatch" style={{ background: finish.swatch }} />
-                <span>{finish.name}</span>
-              </StaggerItem>
-            ))}
-          </Stagger>
-          <p className="quality-finish-note">{finishes.note}</p>
-        </div>
-      </section>
-
       <section className="quality-system">
         <div className="quality-container">
           <div className="quality-system-grid">
@@ -232,6 +200,26 @@ export default function QualityPage() {
               </div>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      <section className="quality-packaging" aria-labelledby="packaging-title">
+        <div className="quality-container quality-packaging-grid">
+          <div>
+            <Reveal as="span" className="quality-section-label" y={10}>
+              PACKAGING &amp; DELIVERY
+            </Reveal>
+            <SplitText
+              id="packaging-title"
+              as="h2"
+              lines={["Prepared with care,", "dispatched with clarity."]}
+              accent={[1]}
+            />
+          </div>
+          <Reveal className="quality-packaging-copy" delay={0.15}>
+            <p>{packaging.text}</p>
+            <p>{packaging.closing}</p>
+          </Reveal>
         </div>
       </section>
 

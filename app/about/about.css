@@ -739,3 +739,19 @@
     padding: 34px 26px;
   }
 }
+
+.about-values-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 1000px) {
+  .about-values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .about-values-grid {
+    grid-template-columns: 1fr;
+  }
+}

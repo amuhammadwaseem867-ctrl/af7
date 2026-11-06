@@ -32,7 +32,7 @@ export const metadata = {
     template: "%s | AF7",
   },
   description:
-    "AF7 is a specialized zipper manufacturer in Lahore, Pakistan — metal, aluminium, nylon and Vislon zippers, tag strings and TPU tippings, made through integrated in-house production. Precision in every detail.",
+    "Discover AF7, a zipper manufacturer in Lahore, Pakistan, producing metal, aluminium, nylon, and Vislon zippers, tag strings, and tipping with a focus on precision and quality.",
   keywords: [
     "AF7",
     "Apparel Fastener",

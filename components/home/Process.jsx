@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Link from "next/link";
 import { motion, useScroll, useSpring } from "framer-motion";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
@@ -32,6 +33,10 @@ export default function Process() {
             <p className="home-section-copy">
               {manufacturing.intro}
             </p>
+            <Link href="/manufacturing" className="home-text-link">
+              <span>Discover Our Manufacturing</span>
+              <span aria-hidden="true">↗</span>
+            </Link>
           </Reveal>
         </div>
 

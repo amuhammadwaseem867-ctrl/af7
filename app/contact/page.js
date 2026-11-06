@@ -48,7 +48,7 @@ export default function ContactPage() {
           <div className="contact-container">
             <Reveal className="contact-topline" y={16}>
               <div className="contact-topline-left">
-                <span className="contact-index">05</span>
+                <span className="contact-index">07</span>
                 <span>Contact</span>
               </div>
 
@@ -65,7 +65,7 @@ export default function ContactPage() {
 
                 <SplitText
                   as="h1"
-                  lines={["Let's Create the", "Right Connection."]}
+                  lines={["Let's Build Something", "Precise."]}
                   accent={[1]}
                   animateOnMount
                   delay={0.2}
@@ -145,9 +145,17 @@ export default function ContactPage() {
                   GET IN TOUCH
                 </span>
 
-                <SplitText as="h2" lines={["Start a", "conversation."]} accent={[1]} />
+                <SplitText as="h2" lines={["Send a product", "enquiry."]} accent={[1]} />
 
                 <div className="contact-detail-list">
+                  <div className="contact-detail">
+                    <span className="contact-detail-label">
+                      BUSINESS ENQUIRIES
+                    </span>
+
+                    <span className="contact-detail-value">{contactCopy.business}</span>
+                  </div>
+
                   <div className="contact-detail">
                     <span className="contact-detail-label">
                       PHONE

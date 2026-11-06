@@ -74,7 +74,7 @@ export default function ProductShowcase() {
               supported by tag strings and tipping solutions.
             </p>
             <Link href="/products" className="home-text-link">
-              <span>View all products</span>
+              <span>Explore Our Products</span>
               <span aria-hidden="true">↗</span>
             </Link>
           </Reveal>

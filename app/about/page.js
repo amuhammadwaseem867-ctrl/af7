@@ -7,10 +7,10 @@ import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 import {
   about,
   technology,
-  manufacturing,
   vision,
   mission,
-  commitment,
+  values,
+  philosophy,
   brand,
 } from "@/data/company";
 import "./about.css";
@@ -51,7 +51,7 @@ export default function AboutPage() {
         <div className="about-container">
           <Reveal className="about-topline" y={16}>
             <div className="about-topline-left">
-              <span className="about-index">03</span>
+              <span className="about-index">01</span>
               <span>About AF7</span>
             </div>
             <span className="about-topline-right">AF7 · ZIPPER MANUFACTURING</span>
@@ -72,7 +72,7 @@ export default function AboutPage() {
             </div>
 
             <Reveal className="about-intro-copy" delay={0.4}>
-              <p>{about.intro}</p>
+              <p>{about.overview}</p>
               <div className="about-intro-meta">
                 <span>{brand.descriptor.toUpperCase()}</span>
                 <span>LAHORE · PAKISTAN</span>
@@ -118,10 +118,11 @@ export default function AboutPage() {
             </div>
 
             <Reveal className="about-story-copy" delay={0.15}>
-              <p>{about.facility}</p>
-              <p>{about.focus}</p>
+              <p>{about.operation}</p>
+              <p>{about.range}</p>
+              <p>{about.details}</p>
               <p className="about-philosophy">
-                <strong>Our philosophy is simple:</strong> {about.philosophy}
+                <strong>{about.promise}</strong>
               </p>
 
               <div className="about-story-meta">
@@ -148,16 +149,20 @@ export default function AboutPage() {
           <div className="about-production-heading">
             <div>
               <Reveal as="span" className="about-section-label" y={10}>
-                TECHNOLOGY &amp; MACHINERY
+                MACHINERY &amp; TECHNOLOGY
               </Reveal>
               <SplitText
                 as="h2"
-                lines={["Modern machinery.", "Controlled manufacturing."]}
+                lines={["Modern equipment.", "Greater production control."]}
                 accent={[1]}
               />
             </div>
-            <Reveal as="p" delay={0.2}>
-              {technology.text} {technology.closing}
+            <Reveal delay={0.2}>
+              <p>{technology.text}</p>
+              <Link href="/manufacturing" className="about-positioning-link">
+                <span>Discover Our Manufacturing</span>
+                <span aria-hidden="true">↗</span>
+              </Link>
             </Reveal>
           </div>
 
@@ -184,33 +189,34 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="about-process" aria-labelledby="about-process-title">
+      <section className="about-process" aria-labelledby="about-values-title">
         <div className="about-container">
           <div className="about-process-head">
             <div>
               <Reveal as="span" className="about-section-label" y={10}>
-                MANUFACTURING
+                OUR VALUES
               </Reveal>
               <SplitText
-                id="about-process-title"
+                id="about-values-title"
                 as="h2"
-                lines={["From tape to", "finished zipper."]}
+                lines={["What guides", "our work."]}
                 accent={[1]}
               />
             </div>
             <Reveal as="p" delay={0.2}>
-              {manufacturing.intro}
+              Six principles shape how AF7 manufactures, communicates and
+              delivers — from the first production stage to the finished order.
             </Reveal>
           </div>
 
-          <Stagger className="about-process-grid" stagger={0.07}>
-            {manufacturing.steps.map((step, index) => (
-              <StaggerItem as="article" className="about-process-step" key={step.title}>
+          <Stagger className="about-process-grid about-values-grid" stagger={0.07}>
+            {values.map((value, index) => (
+              <StaggerItem as="article" className="about-process-step" key={value.title}>
                 <span className="about-process-index">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
+                <h3>{value.title}</h3>
+                <p>{value.text}</p>
               </StaggerItem>
             ))}
           </Stagger>
@@ -233,19 +239,20 @@ export default function AboutPage() {
           <div className="about-positioning-grid">
             <div>
               <Reveal as="span" className="about-section-label" y={10}>
-                OUR COMMITMENT
+                OUR MANUFACTURING PHILOSOPHY
               </Reveal>
               <SplitText
                 as="h2"
-                lines={["Excellence is", "in the details."]}
+                lines={["Precision is more", "than a promise."]}
                 accent={[1]}
               />
             </div>
 
             <Reveal className="about-positioning-copy" delay={0.15}>
-              <p>{commitment}</p>
+              <p>{philosophy.text}</p>
+              <p>{philosophy.closing}</p>
               <Link href="/products" className="about-positioning-link">
-                <span>Explore Product Range</span>
+                <span>Explore Our Products</span>
                 <span aria-hidden="true">↗</span>
               </Link>
             </Reveal>
