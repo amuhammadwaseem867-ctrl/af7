@@ -1,0 +1,141 @@
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9600;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 18px;
+  padding: 22px var(--page-gutter);
+  color: #ffffff;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border: 0;
+  background: rgba(21, 29, 43, 0.96);
+  backdrop-filter: blur(10px);
+}
+
+.lightbox-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.lightbox-close {
+  padding: 10px 0;
+  border: 0;
+  background: none;
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.lightbox-stage {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.lightbox-image {
+  position: absolute;
+  inset: 0 60px;
+  cursor: var(--cursor-arrow);
+}
+
+.lightbox-image:active {
+  cursor: var(--cursor-arrow);
+}
+
+.lightbox-image img {
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  background: rgba(21, 29, 43, 0.4);
+  color: #ffffff;
+  font-size: 18px;
+  transform: translateY(-50%);
+  transition: background-color 300ms ease, border-color 300ms ease;
+}
+
+.lightbox-nav:hover {
+  border-color: var(--af7-accent);
+  background: var(--af7-accent);
+}
+
+.lightbox-prev {
+  left: 0;
+}
+
+.lightbox-next {
+  right: 0;
+}
+
+.lightbox-thumbs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.lightbox-thumb {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid transparent;
+  background: #ffffff;
+  opacity: 0.45;
+  transition: opacity 300ms ease, border-color 300ms ease;
+}
+
+.lightbox-thumb img {
+  object-fit: contain;
+}
+
+.lightbox-thumb:hover,
+.lightbox-thumb.is-active {
+  opacity: 1;
+  border-color: var(--af7-accent);
+}
+
+.lightbox button:focus-visible {
+  outline: 2px solid var(--af7-accent);
+  outline-offset: 3px;
+}
+
+.lightbox-caption {
+  max-width: none;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .lightbox-image {
+    inset: 0;
+  }
+
+  .lightbox-nav {
+    display: none;
+  }
+}

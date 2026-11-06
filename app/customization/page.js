@@ -65,8 +65,8 @@ export default function CustomizationPage() {
       <div className="pf-feature">
         <ImageReveal fill>
           <FitImage
-            src="/images/quality/detail.webp"
-            alt="AF7 zipper component detail"
+            src="/images/factory/brass-sliders.webp"
+            alt="Brass sliders in a feeder bowl at AF7"
             fill
             preload
             sizes="100vw"
