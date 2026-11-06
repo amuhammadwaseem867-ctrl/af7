@@ -1,8 +1,10 @@
 export const navItems = [
+  { label: "About AF7", href: "/about" },
   { label: "Products", href: "/products" },
+  { label: "Manufacturing", href: "/manufacturing" },
+  { label: "Quality Assurance", href: "/quality" },
+  { label: "Customization", href: "/customization" },
   { label: "Applications", href: "/applications" },
-  { label: "About", href: "/about" },
-  { label: "Quality", href: "/quality" },
   { label: "Contact", href: "/contact" },
 ];
 

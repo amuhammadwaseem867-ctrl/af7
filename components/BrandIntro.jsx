@@ -53,9 +53,9 @@ export default function BrandIntro() {
           </div>
 
           <Reveal className="brand-intro-statement" delay={0.15}>
-            <p className="brand-intro-lead">{about.intro}</p>
+            <p className="brand-intro-lead">{about.overview}</p>
 
-            <p>{about.facility}</p>
+            <p>{about.overviewProcess}</p>
 
             <Link href="/about" className="brand-intro-link">
               <span>Discover AF7</span>
@@ -84,7 +84,7 @@ export default function BrandIntro() {
 
             <SplitText as="h3" lines={["Made For The", "World."]} accent={[1]} />
 
-            <p>{about.focus}</p>
+            <p>{about.approach}</p>
 
             <div className="brand-intro-feature-meta">
               <span>AF7 / APPAREL FASTENER</span>

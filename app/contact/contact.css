@@ -812,3 +812,9 @@
   box-shadow: 0 1px 0 var(--af7-accent);
   outline: none;
 }
+
+.contact-form-hint {
+  margin: 4px 0 16px;
+  color: #7b858e;
+  font-size: 12px;
+}

@@ -11,7 +11,7 @@ import "./applications.css";
 export const metadata = {
   title: "Applications",
   description:
-    "AF7 zipper solutions for apparel & fashion, denim & jeans, jackets & outerwear, casualwear, sportswear, bags & accessories, footwear and garment tags & drawstrings.",
+    "AF7 zippers and accessories for apparel and fashion, denim, jackets and outerwear, casualwear and sportswear, bags, footwear, hangtags, labels, cords and drawstring finishing.",
 };
 
 export default function ApplicationsPage() {
@@ -22,7 +22,7 @@ export default function ApplicationsPage() {
           <div className="applications-container">
             <Reveal className="applications-topline" y={16}>
               <div className="applications-topline-left">
-                <span className="applications-index">04</span>
+                <span className="applications-index">06</span>
                 <span>Applications</span>
               </div>
 
@@ -48,8 +48,7 @@ export default function ApplicationsPage() {
 
               <Reveal className="applications-intro-copy" delay={0.4}>
                 <p>
-                  AF7 zipper solutions can be used across a broad range of
-                  garment and fashion applications. {applicationAreas.closing}
+                  {applicationAreas.intro} {applicationAreas.closing}
                 </p>
 
                 <div className="applications-intro-meta">

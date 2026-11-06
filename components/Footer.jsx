@@ -4,16 +4,9 @@ import SplitText from "./motion/SplitText";
 import Reveal from "./motion/Reveal";
 import FooterClock from "./FooterClock";
 import { brand } from "@/data/company";
-import { contact } from "@/data/navigation";
+import { contact, navItems } from "@/data/navigation";
 import "./Footer.css";
 
-const footerLinks = [
-  { label: "Products", href: "/products" },
-  { label: "Applications", href: "/applications" },
-  { label: "About", href: "/about" },
-  { label: "Quality", href: "/quality" },
-  { label: "Contact", href: "/contact" },
-];
 
 export default function Footer() {
   return (
@@ -28,13 +21,12 @@ export default function Footer() {
           />
 
           <Reveal as="p" className="footer-supporting" delay={0.2}>
-            {brand.descriptor}. Metal, aluminium, nylon and Vislon zippers,
-            tag strings and tippings — manufactured in Lahore, Pakistan.
+            {brand.shortDescription}
           </Reveal>
         </div>
 
         <nav className="footer-nav" aria-label="Footer navigation">
-          {footerLinks.map((link, index) => (
+          {navItems.map((link, index) => (
             <Link
               key={link.href}
               href={link.href}

@@ -18,7 +18,7 @@ export default function CallToAction() {
         <SplitText
           id="cta-title"
           as="h2"
-          lines={["Let's create the", "right connection."]}
+          lines={["Let's build something", "precise."]}
           accent={[1]}
           className="home-cta-heading"
         />
@@ -29,7 +29,7 @@ export default function CallToAction() {
           <div className="home-cta-buttons">
             <Magnetic>
               <Link href="/contact" className="af7-button af7-button-solid">
-                <span>Start an Inquiry</span>
+                <span>Send a Product Enquiry</span>
                 <span className="af7-button-arrow" aria-hidden="true">↗</span>
               </Link>
             </Magnetic>

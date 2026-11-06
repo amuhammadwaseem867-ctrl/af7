@@ -3,13 +3,13 @@ import ProductsExplorer from "./ProductsExplorer";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
-import { accessories, customization } from "@/data/company";
+import { accessories, customization, portfolio } from "@/data/company";
 import "./products.css";
 
 export const metadata = {
   title: "Products",
   description:
-    "AF7 product range: #5 and #4.5 metal zippers, aluminium zippers, nylon and Vislon zippers, sliders, tag strings and TPU tippings — manufactured in Lahore, Pakistan.",
+    "AF7 product portfolio: #5 and #4.5 metal and aluminium zippers, nylon and Vislon zippers, sliders, tag strings, tipping and TPU tippings — manufactured in Lahore, Pakistan.",
 };
 
 export default function ProductsPage() {
@@ -19,7 +19,7 @@ export default function ProductsPage() {
         <div className="products-container">
           <Reveal className="products-topline" y={16}>
             <div className="products-topline-left">
-              <span className="products-index">01</span>
+              <span className="products-index">02</span>
               <span>Product Range</span>
             </div>
             <span className="products-topline-right">AF7 · ZIPPER MANUFACTURING</span>
@@ -40,12 +40,7 @@ export default function ProductsPage() {
             </div>
 
             <Reveal className="products-intro-copy" delay={0.4}>
-              <p>
-                Metal, aluminium, nylon and Vislon zippers along with selected
-                garment accessories — produced through an integrated process from
-                tape making and teeth manufacturing to finishing, assembly and
-                inspection.
-              </p>
+              <p>{portfolio.intro}</p>
               <div className="products-intro-meta">
                 <span>PRODUCT PROFILE</span>
                 <span>LAHORE · PAKISTAN</span>
@@ -122,8 +117,8 @@ export default function ProductsPage() {
             </Stagger>
             <Reveal className="products-custom-closing" delay={0.2}>
               <strong>{customization.closing}</strong>
-              <Link href="/contact" className="af7-button af7-button-light">
-                <span>Discuss your requirements</span>
+              <Link href="/customization" className="af7-button af7-button-light">
+                <span>Explore Customization</span>
                 <span className="af7-button-arrow" aria-hidden="true">↗</span>
               </Link>
             </Reveal>

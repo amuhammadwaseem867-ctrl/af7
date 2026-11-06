@@ -28,7 +28,7 @@ export const products = [
     title: "Aluminium Zippers #5 & #4.5",
     category: "ZIPPER SYSTEM",
     material: "ALUMINIUM",
-    description: "Lightweight aluminium zipper solutions combining functional performance with a distinctive metallic appearance — available in #5 and in a compact #4.5 profile with a refined metallic finish.",
+    description: "Our #5 Aluminium Zippers and #4.5 Aluminium Zippers provide aluminium-based fastening options for designs requiring a distinctive metallic look and functional performance. Suitable construction and finishing are considered according to the customer's product requirements.",
     applications: "APPAREL · BAGS · OUTERWEAR",
     images: [
       "/images/products/alumuniumzippers/3.webp",
@@ -41,7 +41,7 @@ export const products = [
       "/images/products/alumuniumzippers/alumunium zipper.webp",
       "/images/products/alumuniumzippers/alumuniumzipper2.webp"
     ],
-    summary: "Lightweight aluminium zippers in #5 and #4.5, combining functional performance with a distinctive metallic appearance.",
+    summary: "Aluminium-based fastening options in #5 and #4.5 for designs requiring a distinctive metallic look and functional performance.",
     cover: "/images/products/alumuniumzippers/alumunium zipper.webp"
   },
   {
@@ -50,7 +50,7 @@ export const products = [
     title: "#4.5 Metal Zippers",
     category: "ZIPPER SYSTEM",
     material: "METAL",
-    description: "A refined metal zipper option for applications requiring a more compact profile with reliable functionality.",
+    description: "#4.5 Metal Zippers for garment and accessory applications where metal teeth contribute to the product's appearance and fastening function. Attention is given to tooth formation, chain construction, finishing, and the intended application.",
     applications: "APPAREL · DENIM · BAGS",
     images: [
       "/images/products/brasszippers4.5/4.5.webp",
@@ -70,7 +70,7 @@ export const products = [
     title: "#5 Metal Zippers",
     category: "ZIPPER SYSTEM",
     material: "METAL",
-    description: "Robust metal zipper solutions for garments and applications requiring a distinctive, durable fastening component. Available with a range of applicable finishes.",
+    description: "#5 Metal Zippers for garment and accessory applications where metal teeth contribute to the product's appearance and fastening function. Attention is given to tooth formation, chain construction, finishing, and the intended application.",
     applications: "APPAREL · DENIM · OUTERWEAR",
     images: [
       "/images/products/brasszippers5/71sPgkXBneL.jpg",
@@ -100,7 +100,7 @@ export const products = [
     title: "Nylon Zippers",
     category: "ZIPPER SYSTEM",
     material: "NYLON",
-    description: "Flexible and versatile zipper solutions for a wide range of apparel and accessory applications, including reversible and waterproof constructions.",
+    description: "Nylon zippers offer a flexible and versatile fastening option for a wide variety of garments and accessories. Product selection can be discussed according to the intended application, zipper size, tape requirements, colour, and functional needs.",
     applications: "SPORTSWEAR · APPAREL · BAGS",
     images: [
       "/images/products/nylonzippers/2.webp",
@@ -113,7 +113,7 @@ export const products = [
       "/images/products/nylonzippers/waterproofnylonzipper.webp",
       "/images/products/nylonzippers/Zip003-edited.webp"
     ],
-    summary: "Flexible and versatile zipper solutions for a wide range of apparel and accessory applications.",
+    summary: "A flexible and versatile fastening option for a wide variety of garments and accessories.",
     cover: "/images/products/nylonzippers/2.webp"
   },
   {
@@ -172,7 +172,7 @@ export const products = [
     title: "Vislon Zippers",
     category: "ZIPPER SYSTEM",
     material: "VISLON",
-    description: "Moulded-tooth zipper solutions suitable for casualwear, sportswear, outerwear, and other functional applications.",
+    description: "Vislon-style zippers feature moulded plastic teeth and are used across a range of apparel and accessory applications. AF7 can discuss suitable options based on the desired appearance, construction, size, and end use.",
     applications: "CASUALWEAR · SPORTSWEAR · OUTERWEAR",
     images: [
       "/images/products/vislonzipper/1.webp",
@@ -196,7 +196,7 @@ export const products = [
       "/images/products/vislonzipper/vislon8.png",
       "/images/products/vislonzipper/vislon9.png"
     ],
-    summary: "Moulded-tooth zipper solutions suitable for casualwear, sportswear, outerwear, and other functional applications.",
+    summary: "Moulded plastic teeth for a range of apparel and accessory applications.",
     cover: "/images/products/vislonzipper/vislon zip.webp"
   }
 ];
