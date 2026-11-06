@@ -23,24 +23,24 @@ export const metadata = {
 
 const companyImages = [
   {
-    image: "/images/about/5.webp",
-    alt: "AF7 Apparel Fastener",
-    label: "AF7 / APPAREL FASTENER",
+    image: "/images/factory/assembly-line.webp",
+    alt: "AF7 automated zipper assembly line",
+    label: "AF7 / AUTOMATED ASSEMBLY",
   },
   {
-    image: "/images/about/factory.webp",
-    alt: "AF7 production facility",
-    label: "PRODUCTION / LAHORE",
+    image: "/images/factory/tape-looms.webp",
+    alt: "Tape looms at the AF7 factory",
+    label: "TAPE / PRODUCTION",
   },
   {
-    image: "/images/about/machinery.webp",
-    alt: "AF7 manufacturing machinery",
+    image: "/images/factory/chain-machine.webp",
+    alt: "AF7 zipper chain machine",
     label: "MANUFACTURING / MACHINERY",
   },
   {
-    image: "/images/about/production.webp",
-    alt: "AF7 production process",
-    label: "PRODUCTION / PROCESS",
+    image: "/images/factory/assembly-row.webp",
+    alt: "AF7 assembly area",
+    label: "ASSEMBLY / LAHORE",
   },
 ];
 

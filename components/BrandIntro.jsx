@@ -9,20 +9,20 @@ import "./BrandIntro.css";
 
 const companyImages = [
   {
-    src: "/images/about/factory.webp",
-    alt: "AF7 manufacturing facility",
+    src: "/images/factory/tape-weaving.webp",
+    alt: "Zipper tape weaving at AF7",
     label: "Manufacturing",
     number: "01",
   },
   {
-    src: "/images/about/machinery.webp",
-    alt: "AF7 manufacturing machinery",
+    src: "/images/factory/forming-machine.webp",
+    alt: "AF7 production machinery",
     label: "Machinery",
     number: "02",
   },
   {
-    src: "/images/about/production.webp",
-    alt: "AF7 production process",
+    src: "/images/factory/assembly-line.webp",
+    alt: "AF7 automated zipper assembly line",
     label: "Production",
     number: "03",
   },
@@ -68,7 +68,7 @@ export default function BrandIntro() {
           <div className="brand-intro-feature-image">
             <ImageReveal fill direction="left">
               <FitImage
-                src="/images/about/5.webp"
+                src="/images/factory/factory-floor.webp"
                 alt="AF7 Apparel Fastener"
                 width={2200}
                 height={1400}

@@ -4,6 +4,8 @@ import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
 import ImageReveal from "@/components/ImageReveal";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
+import FactoryGallery from "@/components/FactoryGallery";
+import { factoryPhotos } from "@/data/factory";
 import Finishes from "@/components/home/Finishes";
 import {
   manufacturing,
@@ -21,8 +23,8 @@ export const metadata = {
 };
 
 const gallery = [
-  { src: "/images/about/factory.webp", alt: "AF7 manufacturing facility in Lahore" },
-  { src: "/images/about/production.webp", alt: "AF7 zipper production" },
+  { src: "/images/factory/assembly-machines.webp", alt: "Row of AF7 zipper assembly machines" },
+  { src: "/images/factory/forming-machine.webp", alt: "AF7 production machinery" },
 ];
 
 export default function ManufacturingPage() {
@@ -67,8 +69,8 @@ export default function ManufacturingPage() {
       <div className="pf-feature">
         <ImageReveal fill>
           <FitImage
-            src="/images/about/machinery.webp"
-            alt="AF7 automated zipper assembly machinery"
+            src="/images/factory/assembly-line.webp"
+            alt="AF7 automated zipper assembly line"
             fill
             preload
             sizes="100vw"
@@ -146,6 +148,31 @@ export default function ManufacturingPage() {
               </StaggerItem>
             ))}
           </Stagger>
+        </div>
+      </section>
+
+      <section className="pf-section" aria-labelledby="factory-title">
+        <div className="pf-container">
+          <div className="pf-head">
+            <div>
+              <Reveal as="span" className="section-eyebrow" y={12}>
+                Inside the factory · {String(factoryPhotos.length).padStart(2, "0")} photos
+              </Reveal>
+              <SplitText
+                id="factory-title"
+                as="h2"
+                className="pf-heading"
+                lines={["A closer look", "at AF7, Lahore."]}
+                accent={[1]}
+              />
+            </div>
+            <Reveal as="p" delay={0.2}>
+              Tape weaving, automated assembly, slider feeding and the
+              machinery behind every AF7 zipper. Select any photo to view it
+              full screen.
+            </Reveal>
+          </div>
+          <FactoryGallery photos={factoryPhotos} />
         </div>
       </section>
 
