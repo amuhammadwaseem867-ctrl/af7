@@ -109,9 +109,7 @@
   padding: 110px 0 0;
 }
 
-/* =========================
-   TABLET
-========================= */
+/* Tablet */
 
 @media (max-width: 1100px){
 
@@ -162,9 +160,7 @@
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* Mobile */
 
 @media (max-width: 700px){
 
@@ -319,9 +315,7 @@
   }
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
+/* Small mobile */
 
 @media (max-width: 480px){
 
@@ -373,16 +367,14 @@
   }
 }
 
-/* =========================
-   REDUCED MOTION
-========================= */
+/* Reduced motion */
 
 @media (prefers-reduced-motion: reduce){
   .product-link {
     transition: none;
   }
 }
-/* ---------- Filters ---------- */
+/* Filters */
 
 .products-range {
   padding: 80px 0 120px;
@@ -444,7 +436,7 @@
   outline-offset: 3px;
 }
 
-/* ---------- Grid ---------- */
+/* Grid */
 
 .products-grid {
   display: grid;
@@ -464,7 +456,7 @@
 }
 
 /* Profile-style plate: product photo inset on the warm plate.
-   No blend modes / filters here — they force repaints on mobile scroll
+   No blend modes / filters here, they force repaints on mobile scroll
    and cause the cards to flash. */
 .products-card-image img {
   inset: 14% 12% 10% !important;
@@ -570,7 +562,7 @@
   transform: rotate(45deg);
 }
 
-/* ---------- Accessories ---------- */
+/* Accessories */
 
 .products-accessories {
   padding: 120px 0;
@@ -646,7 +638,7 @@
   color: var(--af7-text-silver);
 }
 
-/* ---------- Customization ---------- */
+/* Customization */
 
 .products-custom {
   padding: 120px 0;
