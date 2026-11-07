@@ -1,4 +1,4 @@
-// Company content — sourced from the AF7 Brand Profile, with the wording
+// Company content, sourced from the AF7 Brand Profile, with the wording
 // changes from the profile review applied (machinery is described by
 // its automation and precision, not its country of origin).
 
