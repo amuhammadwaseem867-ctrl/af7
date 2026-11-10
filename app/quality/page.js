@@ -1,4 +1,5 @@
 import FitImage from "@/components/FitImage";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Link from "next/link";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
@@ -237,6 +238,9 @@ export default function QualityPage() {
               <span>Explore Product Range</span>
               <span aria-hidden="true">↗</span>
             </Link>
+            <div className="quality-closing-whatsapp">
+              <WhatsAppButton variant="outline" />
+            </div>
           </div>
         </div>
       </section>

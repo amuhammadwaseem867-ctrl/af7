@@ -5,6 +5,7 @@ import Preloader from "@/components/Preloader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import SmoothScroll from "@/components/motion/SmoothScroll";
 import ScrollProgress from "@/components/motion/ScrollProgress";
 import PageTransition from "@/components/motion/PageTransition";
@@ -46,7 +47,6 @@ export const metadata = {
     "TPU tippings",
     "garment accessories",
     "fasteners",
-    "sliders",
     "apparel accessories",
     "Lahore",
     "Pakistan",
@@ -101,6 +101,7 @@ export default function RootLayout({ children }) {
           <Footer />
         </PageTransition>
         <FloatingContact />
+        <FloatingWhatsApp />
       </body>
     </html>
   );

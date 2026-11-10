@@ -5,6 +5,7 @@ import { products, getProduct, getAdjacentProducts } from "@/data/products";
 import { finishes } from "@/data/company";
 import ProductGallery from "./ProductGallery";
 import TapeColours from "./TapeColours";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
 import ImageReveal from "@/components/ImageReveal";
@@ -95,13 +96,17 @@ export default async function ProductDetailPage({ params }) {
                   </div>
                 </div>
 
-                <Link
-                  href={`/contact?product=${product.slug}`}
-                  className="af7-button af7-button-dark product-detail-enquire"
-                >
-                  <span>Enquire about this product</span>
-                  <span className="af7-button-arrow" aria-hidden="true">↗</span>
-                </Link>
+                <div className="product-detail-actions">
+                  <WhatsAppButton product={product.title} />
+
+                  <Link
+                    href={`/contact?product=${product.slug}`}
+                    className="af7-button af7-button-dark product-detail-enquire"
+                  >
+                    <span>Send a Product Enquiry</span>
+                    <span className="af7-button-arrow" aria-hidden="true">↗</span>
+                  </Link>
+                </div>
               </Reveal>
 
               <div

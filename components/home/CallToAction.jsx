@@ -1,4 +1,5 @@
 import Link from "next/link";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Marquee from "@/components/motion/Marquee";
 import Magnetic from "@/components/motion/Magnetic";
 import SplitText from "@/components/motion/SplitText";
@@ -27,6 +28,9 @@ export default function CallToAction() {
             {contactCopy.text}
           </p>
           <div className="home-cta-buttons">
+            <Magnetic>
+              <WhatsAppButton />
+            </Magnetic>
             <Magnetic>
               <Link href="/contact" className="af7-button af7-button-solid">
                 <span>Send a Product Enquiry</span>

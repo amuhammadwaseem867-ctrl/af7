@@ -1,4 +1,5 @@
 import FitImage from "@/components/FitImage";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Link from "next/link";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
@@ -255,6 +256,9 @@ export default function AboutPage() {
                 <span>Explore Our Products</span>
                 <span aria-hidden="true">↗</span>
               </Link>
+              <div className="about-positioning-whatsapp">
+                <WhatsAppButton variant="outline" />
+              </div>
             </Reveal>
           </div>
         </div>

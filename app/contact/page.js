@@ -5,7 +5,8 @@ import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 import { contactCopy, brand } from "@/data/company";
-import { contact } from "@/data/navigation";
+import { contact, whatsapp, whatsappLink } from "@/data/navigation";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import "./contact.css";
 
 export const metadata = {
@@ -17,13 +18,21 @@ export const metadata = {
 const contactChannels = [
   {
     number: "01",
+    label: "WHATSAPP BUSINESS",
+    title: whatsapp.number,
+    href: whatsappLink(),
+    action: "Chat with AF7",
+    external: true,
+  },
+  {
+    number: "02",
     label: "PHONE",
     title: "+92 313 4710325",
     href: "tel:+923134710325",
     action: "Call AF7",
   },
   {
-    number: "02",
+    number: "03",
     label: "INSTAGRAM",
     title: "@af7trims",
     href: "https://www.instagram.com/af7trims?stkn=ZmVyNscHJrY2J1",
@@ -31,7 +40,7 @@ const contactChannels = [
     external: true,
   },
   {
-    number: "03",
+    number: "04",
     label: "FACEBOOK",
     title: "AF7 · Zipper Manufacturing",
     href: "https://www.facebook.com/profile.php?id=61584996430125&mibextid=wwXIfr",
@@ -48,7 +57,7 @@ export default function ContactPage() {
           <div className="contact-container">
             <Reveal className="contact-topline" y={16}>
               <div className="contact-topline-left">
-                <span className="contact-index">07</span>
+                <span className="contact-index">08</span>
                 <span>Contact</span>
               </div>
 
@@ -75,6 +84,13 @@ export default function ContactPage() {
               <Reveal className="contact-intro-copy" delay={0.4}>
                 <p>{contactCopy.text}</p>
 
+                <div className="contact-intro-actions">
+                  <WhatsAppButton />
+                  <span className="contact-intro-hours">
+                    Business hours: {whatsapp.hours}
+                  </span>
+                </div>
+
                 <div className="contact-intro-meta">
                   <span>{brand.descriptor.toUpperCase()}</span>
                   <span>LAHORE · PAKISTAN</span>
@@ -96,7 +112,7 @@ export default function ContactPage() {
               </div>
 
               <p>
-                Reach AF7 directly through our phone and social channels.
+                Reach AF7 directly through WhatsApp Business, phone and our social channels.
               </p>
             </div>
 
@@ -165,6 +181,33 @@ export default function ContactPage() {
                       +92 313 4710325
                       <span aria-hidden="true">↗</span>
                     </a>
+                  </div>
+
+                  <div className="contact-detail">
+                    <span className="contact-detail-label">
+                      WHATSAPP BUSINESS
+                    </span>
+
+                    <a href={whatsappLink()} target="_blank" rel="noopener noreferrer">
+                      {whatsapp.number}
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+
+                  <div className="contact-detail">
+                    <span className="contact-detail-label">
+                      BUSINESS HOURS
+                    </span>
+
+                    <span className="contact-detail-value">{whatsapp.hours}</span>
+                  </div>
+
+                  <div className="contact-detail">
+                    <span className="contact-detail-label">
+                      TAP TO CHAT
+                    </span>
+
+                    <WhatsAppButton variant="outline" className="contact-detail-whatsapp" />
                   </div>
 
                   <div className="contact-detail">

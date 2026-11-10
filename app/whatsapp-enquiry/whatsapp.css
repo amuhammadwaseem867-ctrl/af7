@@ -1,0 +1,118 @@
+.wa-hours {
+  margin-top: 18px;
+  color: var(--af7-text-silver) !important;
+  font-size: 11px !important;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Chat preview of the pre-filled enquiry */
+
+.wa-chat {
+  max-width: 420px;
+  margin-top: clamp(36px, 5vw, 56px);
+  overflow: hidden;
+  border: 1px solid var(--af7-line);
+  background: #ffffff;
+  box-shadow: 0 18px 50px rgba(36, 49, 70, 0.08);
+}
+
+.wa-chat-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--af7-navy);
+  color: #ffffff;
+}
+
+.wa-chat-head strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 14px;
+}
+
+.wa-chat-head span {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.wa-chat-avatar {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #1f8f4e;
+  color: #ffffff !important;
+}
+
+.wa-chat-body {
+  padding: 22px 18px 26px;
+  background: #efeae2;
+}
+
+.wa-bubble {
+  position: relative;
+  max-width: 92%;
+  margin-left: auto;
+  padding: 12px 14px 22px;
+  border-radius: 10px 0 10px 10px;
+  background: #d9fdd3;
+  color: #1f2a37;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.wa-bubble-line {
+  color: #3b4754;
+}
+
+.wa-bubble-meta {
+  position: absolute;
+  right: 12px;
+  bottom: 6px;
+  color: #6b7a88;
+  font-size: 10px;
+}
+
+/* Who / Why */
+
+.wa-who {
+  max-width: 520px;
+  margin-top: 28px;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.wa-why {
+  margin-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.wa-why li {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  align-items: baseline;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  font-family: var(--font-heading);
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.wa-why li span {
+  color: var(--af7-text-light);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+@media (max-width: 700px) {
+  .wa-chat {
+    max-width: none;
+  }
+}
