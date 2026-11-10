@@ -12,6 +12,7 @@ export default function sitemap() {
     "/quality",
     "/customization",
     "/applications",
+    "/whatsapp-enquiry",
     "/contact",
   ];
 

@@ -1,4 +1,5 @@
 import FitImage from "@/components/FitImage";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -133,6 +134,10 @@ export default async function ApplicationDetailPage({ params }) {
                   configuration can be discussed according to your application.{" "}
                   <Link href="/contact">Start an enquiry ↗</Link>
                 </p>
+
+                <div className="application-detail-whatsapp">
+                  <WhatsAppButton />
+                </div>
 
                 <div className="application-detail-meta-row">
                   <span>APPLICATION</span>

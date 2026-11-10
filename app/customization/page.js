@@ -1,4 +1,5 @@
 import FitImage from "@/components/FitImage";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Link from "next/link";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
@@ -147,6 +148,7 @@ export default function CustomizationPage() {
             {customization.closing}
           </Reveal>
           <Reveal className="pf-actions" delay={0.3}>
+            <WhatsAppButton />
             <Link href="/contact" className="af7-button af7-button-dark">
               <span>Send a Product Enquiry</span>
               <span className="af7-button-arrow" aria-hidden="true">↗</span>

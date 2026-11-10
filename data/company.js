@@ -1,4 +1,4 @@
-// Company content — sourced from the AF7 Brand Profile, with the wording
+// Company content: sourced from the AF7 Brand Profile, with the wording
 // changes from the profile review applied (machinery is described by
 // its automation and precision, not its country of origin).
 
@@ -8,7 +8,7 @@ export const brand = {
   descriptor: "Zipper Manufacturing & Garment Accessories",
   location: "Lahore, Pakistan",
   shortDescription:
-    "AF7 is a zipper manufacturing brand based in Lahore, Pakistan, offering metal, aluminium, nylon, and Vislon zippers alongside tag strings and tipping. With advanced automated production technology and integrated in-house manufacturing capabilities, AF7 focuses on precision, product consistency, and dependable customer service.",
+    "AF7 is a zipper manufacturing brand based in Lahore, Pakistan, offering metal, aluminium, nylon, and Vislon zippers alongside tag strings and tipping. With advanced automated production technology and integrated in-house manufacturing capabilities, AF7 focuses on precision, product consistency, and dependable customer service. Connect with our team directly on WhatsApp for product enquiries.",
   metaDescription:
     "Discover AF7, a zipper manufacturer in Lahore, Pakistan, producing metal, aluminium, nylon, and Vislon zippers, tag strings, and tipping with a focus on precision and quality.",
 };
@@ -18,7 +18,7 @@ export const about = {
   overview:
     "AF7 is a zipper manufacturing brand based in Lahore, Pakistan, focused on producing metal, aluminium, nylon, and Vislon zippers, alongside selected garment accessories including tag strings and tipping.",
   overviewProcess:
-    "Supported by state-of-the-art automated zipper assembly lines and integrated in-house production capabilities, AF7 manages key stages of zipper manufacturing—from tape production and teeth formation to finishing, assembly, inspection, and preparation of finished products for delivery.",
+    "Supported by state-of-the-art automated zipper assembly lines and integrated in-house production capabilities, AF7 manages key stages of zipper manufacturing, from tape production and teeth formation to finishing, assembly, inspection, and preparation of finished products for delivery.",
   approach:
     "Our approach combines manufacturing discipline, attention to detail, and a practical understanding of the requirements of garment manufacturers, fashion brands, and accessory businesses. We aim to provide dependable fastening solutions with product specifications and finishes suited to each application.",
   promise:
@@ -114,7 +114,7 @@ export const accessories = [
 export const finishes = {
   title: "Finishing That Completes the Product",
   intro:
-    "A quality finish defines both the zipper's durability and the garment's aesthetic. For applicable metal zipper constructions, AF7 delivers superior in-house finishing—including precision plating, protective lacquering, and specialized waxing. Exact finish availability is tailored to your material and project specifications.",
+    "A quality finish defines both the zipper's durability and the garment's aesthetic. For applicable metal zipper constructions, AF7 delivers superior in-house finishing, including precision plating, protective lacquering, and specialized waxing. Exact finish availability is tailored to your material and project specifications.",
   note: "Metal zipper finishes are subject to confirmation for the selected product.",
   enquiry:
     "Product enquiries may include zipper size, material, tape colour, finish, construction, quantity, and intended application. Specific options should be confirmed with AF7 before a product specification is finalized.",
@@ -304,4 +304,52 @@ export const contactCopy = {
   text: "For product enquiries, specifications, finish options, sample discussions, or manufacturing requirements, contact AF7. Share your zipper type, size, preferred finish, estimated quantity, and intended application so our team can review the requirement and discuss suitable options.",
   business:
     "Product enquiries, customization requests, sample discussions, and manufacturing requirements.",
+};
+
+// 3. WhatsApp Lead Generation & Enquiry Content (AF7 Website Content)
+export const whatsappEnquiry = {
+  title: "Start Your Product Enquiry on WhatsApp",
+  subtitle:
+    "Share your zipper or accessory requirements directly with the AF7 team through WhatsApp Business.",
+  intro:
+    "Choosing the right zipper starts with a clear conversation about your product. With one click, you can connect with AF7 on WhatsApp, share your requirements, and discuss suitable specifications with our team. Whether you are enquiring about metal, aluminium, nylon, or Vislon zippers, tag strings, or tipping, we are ready to guide you.",
+  primaryLabel: "Chat with AF7 on WhatsApp",
+  alternativeLabels: ["Send a Product Enquiry on WhatsApp", "Get in Touch on WhatsApp"],
+  steps: [
+    {
+      title: "Click the button",
+      text: "The WhatsApp Business chat with AF7 opens on your phone or computer.",
+    },
+    {
+      title: "Share your requirements",
+      text: "Send us details such as product type, size, finish, and quantity.",
+    },
+    {
+      title: "Discuss specifications",
+      text: "Our team reviews your requirements and confirms suitable options.",
+    },
+    {
+      title: "Proceed with your order",
+      text: "Packing, identification, and dispatch arrangements are coordinated during order confirmation.",
+    },
+  ],
+  details: [
+    "Zipper type (metal, aluminium, nylon, or Vislon) and size",
+    "Tape colour",
+    "Required finish (for metal zippers)",
+    "Construction and product configuration",
+    "Estimated quantity",
+    "Intended application (e.g., denim, jackets, bags, footwear)",
+    "Packing and identification requirements",
+  ],
+  who: "Garment manufacturers, fashion brands, and accessory businesses looking for dependable fastening solutions and garment accessories.",
+  why: [
+    "Integrated in-house manufacturing in Lahore",
+    "Broad range: metal, aluminium, nylon, and Vislon zippers, tag strings, and tipping",
+    "In-house plating, lacquering, and waxing for applicable products",
+    "Direct communication with the AF7 team",
+  ],
+  closing: "Precision begins with the right conversation. Message AF7 on WhatsApp today.",
+  response:
+    "Our team will respond to your enquiry as soon as possible. Business hours: 9:00 AM to 6:00 PM (PKT).",
 };

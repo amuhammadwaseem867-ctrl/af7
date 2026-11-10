@@ -1,4 +1,5 @@
 import FitImage from "@/components/FitImage";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Link from "next/link";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
@@ -18,7 +19,7 @@ import "./about.css";
 export const metadata = {
   title: "About AF7",
   description:
-    "AF7 is a specialized zipper manufacturing brand in Lahore, Pakistan — metal, aluminium, nylon and Vislon zippers with integrated in-house production.",
+    "AF7 is a specialized zipper manufacturing brand in Lahore, Pakistan, offering metal, aluminium, nylon and Vislon zippers with integrated in-house production.",
 };
 
 const companyImages = [
@@ -205,7 +206,7 @@ export default function AboutPage() {
             </div>
             <Reveal as="p" delay={0.2}>
               Six principles shape how AF7 manufactures, communicates and
-              delivers — from the first production stage to the finished order.
+              delivers, from the first production stage to the finished order.
             </Reveal>
           </div>
 
@@ -255,6 +256,9 @@ export default function AboutPage() {
                 <span>Explore Our Products</span>
                 <span aria-hidden="true">↗</span>
               </Link>
+              <div className="about-positioning-whatsapp">
+                <WhatsAppButton variant="outline" />
+              </div>
             </Reveal>
           </div>
         </div>

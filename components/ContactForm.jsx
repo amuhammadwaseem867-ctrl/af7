@@ -69,7 +69,7 @@ export default function ContactForm() {
 
     setStatus({
       type: "success",
-      text: "Your enquiry is ready in WhatsApp — press send there to reach the AF7 team.",
+      text: "Your enquiry is ready in WhatsApp. Press send there to reach the AF7 team.",
     });
     form.reset();
   };

@@ -1,0 +1,83 @@
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 56px;
+  padding: 0 26px;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.whatsapp-button-solid {
+  background: #1f8f4e;
+  color: #ffffff;
+  border: 1px solid #1f8f4e;
+}
+
+.whatsapp-button-solid:hover {
+  background: #17723d;
+  border-color: #17723d;
+}
+
+.whatsapp-button-outline {
+  background: transparent;
+  color: #243146;
+  border: 1px solid rgba(36, 49, 70, 0.3);
+}
+
+.whatsapp-button-outline:hover {
+  background: #243146;
+  border-color: #243146;
+  color: #ffffff;
+}
+
+.whatsapp-button-outline .whatsapp-button-icon {
+  color: #1f8f4e;
+  transition: color 0.3s ease;
+}
+
+.whatsapp-button-outline:hover .whatsapp-button-icon {
+  color: #ffffff;
+}
+
+.whatsapp-button-light {
+  background: #ffffff;
+  color: #243146;
+  border: 1px solid #ffffff;
+}
+
+.whatsapp-button-light .whatsapp-button-icon {
+  color: #1f8f4e;
+}
+
+.whatsapp-button-light:hover {
+  background: #1f8f4e;
+  border-color: #1f8f4e;
+  color: #ffffff;
+}
+
+.whatsapp-button-light:hover .whatsapp-button-icon {
+  color: #ffffff;
+}
+
+.whatsapp-button-arrow {
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover .whatsapp-button-arrow {
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 480px) {
+  .whatsapp-button {
+    width: 100%;
+    justify-content: center;
+    padding: 0 18px;
+  }
+}

@@ -464,7 +464,7 @@
 }
 
 /* Profile-style plate: product photo inset on the warm plate.
-   No blend modes / filters here — they force repaints on mobile scroll
+   No blend modes / filters here: they force repaints on mobile scroll
    and cause the cards to flash. */
 .products-card-image img {
   inset: 14% 12% 10% !important;

@@ -1,4 +1,5 @@
 import FitImage from "@/components/FitImage";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Link from "next/link";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
@@ -19,7 +20,7 @@ import "../profile.css";
 export const metadata = {
   title: "Manufacturing",
   description:
-    "AF7's Lahore factory brings key zipper manufacturing stages under one roof — tape making, teeth manufacturing, plating, lacquering, waxing, automated assembly, inspection and dispatch.",
+    "AF7's Lahore factory brings key zipper manufacturing stages under one roof: tape making, teeth manufacturing, plating, lacquering, waxing, automated assembly, inspection and dispatch.",
 };
 
 const gallery = [
@@ -213,6 +214,7 @@ export default function ManufacturingPage() {
             {philosophy.text} {philosophy.closing}
           </Reveal>
           <Reveal className="pf-actions" delay={0.3}>
+            <WhatsAppButton />
             <Link href="/contact" className="af7-button af7-button-dark">
               <span>Send a Product Enquiry</span>
               <span className="af7-button-arrow" aria-hidden="true">↗</span>

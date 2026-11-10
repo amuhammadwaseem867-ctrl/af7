@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { products, getProduct, getAdjacentProducts } from "@/data/products";
 import { finishes } from "@/data/company";
 import ProductGallery from "./ProductGallery";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
 import ImageReveal from "@/components/ImageReveal";
@@ -94,13 +95,17 @@ export default async function ProductDetailPage({ params }) {
                   </div>
                 </div>
 
-                <Link
-                  href={`/contact?product=${product.slug}`}
-                  className="af7-button af7-button-dark product-detail-enquire"
-                >
-                  <span>Enquire about this product</span>
-                  <span className="af7-button-arrow" aria-hidden="true">↗</span>
-                </Link>
+                <div className="product-detail-actions">
+                  <WhatsAppButton product={product.title} />
+
+                  <Link
+                    href={`/contact?product=${product.slug}`}
+                    className="af7-button af7-button-dark product-detail-enquire"
+                  >
+                    <span>Send a Product Enquiry</span>
+                    <span className="af7-button-arrow" aria-hidden="true">↗</span>
+                  </Link>
+                </div>
               </Reveal>
 
               <div
@@ -173,9 +178,9 @@ export default async function ProductDetailPage({ params }) {
 
               <div className="product-detail-information-copy">
                 <p>
-                  AF7 zippers are produced through an integrated process —
+                  AF7 zippers are produced through an integrated process,
                   from tape making and teeth manufacturing to finishing,
-                  assembly, quality inspection and packing — with key
+                  assembly, quality inspection and packing, with key
                   stages managed under one roof in Lahore. Zipper type,
                   size, tape colour, finish and configuration can be
                   discussed according to your application.

@@ -1,4 +1,4 @@
-// Product range — mirrors the AF7 company profile catalogue (names, order,
+// Product range: mirrors the AF7 company profile catalogue (names, order,
 // reference codes, copy and photography).
 const P = "/images/products";
 

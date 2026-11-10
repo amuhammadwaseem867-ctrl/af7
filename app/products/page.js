@@ -9,7 +9,7 @@ import "./products.css";
 export const metadata = {
   title: "Products",
   description:
-    "AF7 product range: #5 and #4.5 metal and aluminium zippers, two-way, nylon and Vislon zippers, tag strings, tipping and TPU tippings — manufactured in Lahore, Pakistan.",
+    "AF7 product range: #5 and #4.5 metal and aluminium zippers, two-way, nylon and Vislon zippers, tag strings, tipping and TPU tippings, manufactured in Lahore, Pakistan.",
 };
 
 export default function ProductsPage() {
