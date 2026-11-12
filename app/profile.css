@@ -91,7 +91,7 @@
 }
 
 .pf-feature img {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /* Sections */
@@ -250,7 +250,7 @@
 }
 
 .pf-gallery-item img {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /* Numbered option list */
