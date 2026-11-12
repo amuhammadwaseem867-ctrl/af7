@@ -17,5 +17,6 @@ export const contact = {
   facebook:
     "https://www.facebook.com/profile.php?id=61584996430125&mibextid=wwXIfr",
   address: "33B, Punjab Small Industries Corporation, Sunder II, Lahore, Pakistan",
-  map: "https://www.google.com/maps/search/?api=1&query=33b%20Punjab%20Small%20Industries%20Corporation%20Sunder%20II%20Lahore%20Pakistan",
+  // Exact pin for the factory on Google Maps.
+  map: "https://www.google.com/maps/place/Apparel+Fastener/@31.3153592,74.1544612,20z/data=!4m6!3m5!1s0x391855001d700fb3:0xb32bce98e5fa04be!8m2!3d31.3152995!4d74.1545036!16s%2Fg%2F11lzklmg8w",
 };
