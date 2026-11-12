@@ -50,25 +50,25 @@ export default function Finishes() {
             <div
               className="home-finish-zipper"
               role="img"
-              aria-label={`Metal zipper with ${finish.name} finish on ${tape.name} tape`}
+              aria-label={`Open-end metal zipper with ${finish.name} finish on ${tape.name} tape`}
             >
               {finishes.tapes.map((item, index) => (
                 <Image
                   key={item.slug}
-                  src={`/images/finishes/zipper/tape-${item.slug}.webp`}
+                  src={`/images/finishes/zipper-v3/tape-${item.slug}.webp`}
                   alt=""
                   fill
-                  sizes="(max-width: 900px) 60vw, 360px"
+                  sizes="(max-width: 900px) 92vw, 560px"
                   className={`home-finish-layer ${index === tapeIndex ? "is-active" : ""}`}
                 />
               ))}
               {finishes.items.map((item, index) => (
                 <Image
                   key={item.slug}
-                  src={`/images/finishes/zipper/metal-${item.slug}.webp`}
+                  src={`/images/finishes/zipper-v3/metal-${item.slug}.webp`}
                   alt=""
                   fill
-                  sizes="(max-width: 900px) 60vw, 360px"
+                  sizes="(max-width: 900px) 92vw, 560px"
                   className={`home-finish-layer ${index === finishIndex ? "is-active" : ""}`}
                 />
               ))}
