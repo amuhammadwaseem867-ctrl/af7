@@ -16,7 +16,8 @@ const DEFAULT_FINISH = Math.max(
  * One zipper photo, built from two stacked layers: the tape (one image per
  * tape colour) and the metal teeth, slider and stops (one image per finish).
  * Every layer is rendered up front and only the selected pair is visible,
- * so switching is instant and the zipper never moves.
+ * so switching is instant and the zipper never moves. Hidden layers load
+ * eagerly too: lazy loading would skip them, since they are invisible.
  */
 export default function Finishes() {
   const [finishIndex, setFinishIndex] = useState(DEFAULT_FINISH);
@@ -59,6 +60,7 @@ export default function Finishes() {
                   alt=""
                   fill
                   sizes="(max-width: 900px) 92vw, 560px"
+                  loading="eager"
                   className={`home-finish-layer ${index === tapeIndex ? "is-active" : ""}`}
                 />
               ))}
@@ -69,6 +71,7 @@ export default function Finishes() {
                   alt=""
                   fill
                   sizes="(max-width: 900px) 92vw, 560px"
+                  loading="eager"
                   className={`home-finish-layer ${index === finishIndex ? "is-active" : ""}`}
                 />
               ))}
