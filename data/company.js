@@ -119,16 +119,16 @@ export const finishes = {
   enquiry:
     "Product enquiries may include zipper size, material, tape colour, finish, construction, quantity, and intended application. Specific options should be confirmed with AF7 before a product specification is finalized.",
   items: [
-    { name: "Antique Silver", swatch: "linear-gradient(135deg, #8d9094, #c9cbcd 45%, #6e7175)" },
-    { name: "Antique Brass", swatch: "linear-gradient(135deg, #6f5a35, #b39663 45%, #5a4727)" },
-    { name: "Golden Brass", swatch: "linear-gradient(135deg, #b8913f, #f1d58b 45%, #a17a2c)" },
-    { name: "Shiny Silver", swatch: "linear-gradient(135deg, #c7cbd0, #ffffff 45%, #a9aeb4)" },
-    { name: "Antique Copper", swatch: "linear-gradient(135deg, #6b3f26, #b57650 45%, #573020)" },
-    { name: "Dull / Matt Silver", swatch: "linear-gradient(135deg, #a3a6a9, #bfc1c3 50%, #9a9da0)" },
-    { name: "Shiny Black", swatch: "linear-gradient(135deg, #0d0e10, #4a4d52 45%, #050506)" },
-    { name: "Shiny Nickel", swatch: "linear-gradient(135deg, #a9adb1, #eef0f2 45%, #8e9296)" },
-    { name: "Shiny Gold", swatch: "linear-gradient(135deg, #c99a2e, #ffe28a 45%, #b0811d)" },
-    { name: "Gun Metal", swatch: "linear-gradient(135deg, #2f3236, #6a6e74 45%, #232528)" },
+    { name: "Antique Silver", swatch: "linear-gradient(135deg, #8d9094, #c9cbcd 45%, #6e7175)", image: "/images/finishes/puller-antique-silver.webp" },
+    { name: "Antique Brass", swatch: "linear-gradient(135deg, #6f5a35, #b39663 45%, #5a4727)", image: "/images/finishes/puller-antique-brass.webp" },
+    { name: "Golden Brass", swatch: "linear-gradient(135deg, #b8913f, #f1d58b 45%, #a17a2c)", image: "/images/finishes/puller-golden-brass.webp" },
+    { name: "Shiny Silver", swatch: "linear-gradient(135deg, #c7cbd0, #ffffff 45%, #a9aeb4)", image: "/images/finishes/puller-shiny-silver.webp" },
+    { name: "Antique Copper", swatch: "linear-gradient(135deg, #6b3f26, #b57650 45%, #573020)", image: "/images/finishes/puller-antique-copper.webp" },
+    { name: "Dull / Matt Silver", swatch: "linear-gradient(135deg, #a3a6a9, #bfc1c3 50%, #9a9da0)", image: "/images/finishes/puller-matt-silver.webp" },
+    { name: "Shiny Black", swatch: "linear-gradient(135deg, #0d0e10, #4a4d52 45%, #050506)", image: "/images/finishes/puller-shiny-black.webp" },
+    { name: "Shiny Nickel", swatch: "linear-gradient(135deg, #a9adb1, #eef0f2 45%, #8e9296)", image: "/images/finishes/puller-shiny-nickel.webp" },
+    { name: "Shiny Gold", swatch: "linear-gradient(135deg, #c99a2e, #ffe28a 45%, #b0811d)", image: "/images/finishes/puller-shiny-gold.webp" },
+    { name: "Gun Metal", swatch: "linear-gradient(135deg, #2f3236, #6a6e74 45%, #232528)", image: "/images/finishes/puller-gun-metal.webp" },
   ],
 };
 

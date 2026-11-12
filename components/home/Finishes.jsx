@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { finishes } from "@/data/company";
+import Image from "@/components/BaseImage";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
@@ -45,6 +46,21 @@ export default function Finishes() {
                 transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
               />
             </AnimatePresence>
+            <div className="home-finish-preview-stage" aria-hidden="true" />
+            <div className="home-finish-preview-puller">
+              {finishes.items.map((finish, index) => (
+                <Image
+                  key={finish.name}
+                  src={finish.image}
+                  alt={index === active ? `Zipper puller in ${finish.name} finish` : ""}
+                  aria-hidden={index === active ? undefined : true}
+                  fill
+                  sizes="(max-width: 900px) 260px, 420px"
+                  className={`home-finish-puller ${index === active ? "is-active" : ""}`}
+                  priority={index === 0}
+                />
+              ))}
+            </div>
             <div className="home-finish-preview-sheen" aria-hidden="true" />
             <div className="home-finish-preview-label">
               <span>{String(active + 1).padStart(2, "0")}</span>
