@@ -23,8 +23,8 @@ export const metadata = {
 };
 
 const gallery = [
-  { src: "/images/factory/assembly-machines.webp", alt: "Row of AF7 zipper assembly machines" },
-  { src: "/images/factory/forming-machine.webp", alt: "AF7 production machinery" },
+  { src: "/images/factory-v2/assembly-machines.webp", alt: "Row of AF7 zipper assembly machines" },
+  { src: "/images/factory-v2/forming-machine.webp", alt: "AF7 production machinery" },
 ];
 
 export default function ManufacturingPage() {
@@ -69,7 +69,7 @@ export default function ManufacturingPage() {
       <div className="pf-feature">
         <ImageReveal fill>
           <FitImage
-            src="/images/factory/assembly-line.webp"
+            src="/images/factory-v2/assembly-line.webp"
             alt="AF7 automated zipper assembly line"
             fill
             preload
