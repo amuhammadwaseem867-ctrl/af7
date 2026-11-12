@@ -12,6 +12,6 @@ export function withBasePath(src) {
   return `${basePath}${src}`;
 }
 
-export default function BaseImage({ src, ...props }) {
-  return <Image src={withBasePath(src)} {...props} />;
+export default function BaseImage({ src, alt, ...props }) {
+  return <Image src={withBasePath(src)} alt={alt} {...props} />;
 }
