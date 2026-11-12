@@ -1,16 +1,28 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { finishes } from "@/data/company";
 import Image from "@/components/BaseImage";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 
+const DEFAULT_FINISH = Math.max(
+  0,
+  finishes.items.findIndex((finish) => finish.slug === "golden-brass"),
+);
+
+/**
+ * One zipper photo, built from two stacked layers: the tape (one image per
+ * tape colour) and the metal teeth, slider and stops (one image per finish).
+ * Every layer is rendered up front and only the selected pair is visible,
+ * so switching is instant and the zipper never moves.
+ */
 export default function Finishes() {
-  const [active, setActive] = useState(0);
-  const current = finishes.items[active];
+  const [finishIndex, setFinishIndex] = useState(DEFAULT_FINISH);
+  const [tapeIndex, setTapeIndex] = useState(0);
+  const finish = finishes.items[finishIndex];
+  const tape = finishes.tapes[tapeIndex];
 
   return (
     <section className="home-finishes" aria-labelledby="finishes-title">
@@ -35,57 +47,77 @@ export default function Finishes() {
 
         <div className="home-finishes-layout">
           <Reveal className="home-finish-preview" y={50}>
-            <AnimatePresence mode="popLayout" initial={false}>
-              <motion.div
-                key={current.name}
-                className="home-finish-preview-swatch"
-                style={{ background: current.swatch }}
-                initial={{ clipPath: "circle(0% at 50% 50%)" }}
-                animate={{ clipPath: "circle(75% at 50% 50%)" }}
-                exit={{ opacity: 1 }}
-                transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
-              />
-            </AnimatePresence>
-            <div className="home-finish-preview-stage" aria-hidden="true" />
-            <div className="home-finish-preview-puller">
-              {finishes.items.map((finish, index) => (
+            <div
+              className="home-finish-zipper"
+              role="img"
+              aria-label={`Metal zipper with ${finish.name} finish on ${tape.name} tape`}
+            >
+              {finishes.tapes.map((item, index) => (
                 <Image
-                  key={finish.name}
-                  src={finish.image}
-                  alt={index === active ? `Zipper puller in ${finish.name} finish` : ""}
-                  aria-hidden={index === active ? undefined : true}
+                  key={item.slug}
+                  src={`/images/finishes/zipper/tape-${item.slug}.webp`}
+                  alt=""
                   fill
-                  sizes="(max-width: 900px) 260px, 420px"
-                  className={`home-finish-puller ${index === active ? "is-active" : ""}`}
-                  priority={index === 0}
+                  sizes="(max-width: 900px) 60vw, 360px"
+                  className={`home-finish-layer ${index === tapeIndex ? "is-active" : ""}`}
+                />
+              ))}
+              {finishes.items.map((item, index) => (
+                <Image
+                  key={item.slug}
+                  src={`/images/finishes/zipper/metal-${item.slug}.webp`}
+                  alt=""
+                  fill
+                  sizes="(max-width: 900px) 60vw, 360px"
+                  className={`home-finish-layer ${index === finishIndex ? "is-active" : ""}`}
                 />
               ))}
             </div>
-            <div className="home-finish-preview-sheen" aria-hidden="true" />
-            <div className="home-finish-preview-label">
-              <span>{String(active + 1).padStart(2, "0")}</span>
-              <span aria-live="polite">{current.name}</span>
+            <div className="home-finish-preview-label" aria-live="polite">
+              <span>{finish.name}</span>
+              <span>{tape.name} tape</span>
             </div>
           </Reveal>
 
           <div>
+            <Reveal as="h3" className="home-finish-group-title" y={16}>
+              Metal finish
+            </Reveal>
             <Stagger className="home-finish-grid" stagger={0.05}>
-              {finishes.items.map((finish, index) => (
-                <StaggerItem key={finish.name} y={24}>
+              {finishes.items.map((item, index) => (
+                <StaggerItem key={item.slug} y={24}>
                   <button
                     type="button"
-                    className={`home-finish ${index === active ? "is-active" : ""}`}
-                    onMouseEnter={() => setActive(index)}
-                    onFocus={() => setActive(index)}
-                    onClick={() => setActive(index)}
-                    aria-pressed={index === active}
+                    className={`home-finish ${index === finishIndex ? "is-active" : ""}`}
+                    onClick={() => setFinishIndex(index)}
+                    aria-pressed={index === finishIndex}
                   >
-                    <span className="home-finish-swatch" style={{ background: finish.swatch }} />
-                    <span className="home-finish-name">{finish.name}</span>
+                    <span className="home-finish-swatch" style={{ background: item.swatch }} />
+                    <span className="home-finish-name">{item.name}</span>
                   </button>
                 </StaggerItem>
               ))}
             </Stagger>
+
+            <Reveal as="h3" className="home-finish-group-title home-finish-group-title-tape" y={16}>
+              Tape colour
+            </Reveal>
+            <Reveal className="home-tape-grid" delay={0.1}>
+              {finishes.tapes.map((item, index) => (
+                <button
+                  key={item.slug}
+                  type="button"
+                  className={`home-tape ${index === tapeIndex ? "is-active" : ""}`}
+                  onClick={() => setTapeIndex(index)}
+                  aria-pressed={index === tapeIndex}
+                  aria-label={`${item.name} tape`}
+                  title={item.name}
+                >
+                  <span className="home-tape-swatch" style={{ background: item.color }} />
+                </button>
+              ))}
+            </Reveal>
+
             <Reveal as="p" className="home-finish-note" delay={0.2}>
               {finishes.note}
             </Reveal>
