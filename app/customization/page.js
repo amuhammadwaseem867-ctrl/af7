@@ -65,7 +65,7 @@ export default function CustomizationPage() {
       <div className="pf-feature">
         <ImageReveal fill>
           <FitImage
-            src="/images/factory/brass-sliders.webp"
+            src="/images/factory-v2/brass-sliders.webp"
             alt="Brass sliders in a feeder bowl at AF7"
             position="center 82%"
             fill

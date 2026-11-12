@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from "react";
 import Image from "@/components/BaseImage";
+import BrandMark, { brandMarkFor } from "@/components/BrandMark";
 import { AnimatePresence, motion } from "framer-motion";
 import Lightbox from "./Lightbox";
 import "./FactoryGallery.css";
@@ -41,6 +42,7 @@ export default function FactoryGallery({ photos, title = "Inside the AF7 factory
                 height={photo.height}
                 sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
               />
+              {brandMarkFor(photo.src) && <BrandMark {...brandMarkFor(photo.src)} />}
               <span className="factory-gallery-zoom" aria-hidden="true">
                 View ↗
               </span>

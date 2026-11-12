@@ -471,3 +471,24 @@ textarea {
   object-fit: cover !important;
   transform: none !important;
 }
+
+/* AF7 logo drawn over factory photos (components/BrandMark.jsx).
+   The SVG has built-in padding, so the offsets below are optical. */
+.brand-mark {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  line-height: 0;
+}
+
+.brand-mark img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.brand-mark-corner {
+  top: clamp(6px, 3.5%, 26px);
+  right: clamp(6px, 3.5%, 26px);
+  width: clamp(64px, 21%, 150px);
+}

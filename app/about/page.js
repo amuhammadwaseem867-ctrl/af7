@@ -23,22 +23,22 @@ export const metadata = {
 
 const companyImages = [
   {
-    image: "/images/factory/assembly-line.webp",
+    image: "/images/factory-v2/assembly-line.webp",
     alt: "AF7 automated zipper assembly line",
     label: "AF7 / AUTOMATED ASSEMBLY",
   },
   {
-    image: "/images/factory/tape-looms.webp",
+    image: "/images/factory-v2/tape-looms.webp",
     alt: "Tape looms at the AF7 factory",
     label: "TAPE / PRODUCTION",
   },
   {
-    image: "/images/factory/chain-machine.webp",
+    image: "/images/factory-v2/chain-machine.webp",
     alt: "AF7 zipper chain machine",
     label: "MANUFACTURING / MACHINERY",
   },
   {
-    image: "/images/factory/assembly-row.webp",
+    image: "/images/factory-v2/assembly-row.webp",
     alt: "AF7 assembly area",
     label: "ASSEMBLY / LAHORE",
   },
