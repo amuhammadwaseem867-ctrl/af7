@@ -1,7 +1,7 @@
 import { products } from "@/data/products";
 import { applications } from "@/data/applications";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.afgroup.com.hk/af7";
 
 export default function sitemap() {
   const staticRoutes = [

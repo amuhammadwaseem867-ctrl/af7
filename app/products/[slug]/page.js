@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/BaseImage";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products, getProduct, getAdjacentProducts } from "@/data/products";
