@@ -67,6 +67,7 @@ export default function CustomizationPage() {
           <FitImage
             src="/images/factory/brass-sliders.webp"
             alt="Brass sliders in a feeder bowl at AF7"
+            position="center 82%"
             fill
             preload
             sizes="100vw"

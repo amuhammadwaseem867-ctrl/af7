@@ -450,26 +450,23 @@
 
 .products-card-image {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   background: radial-gradient(120% 90% at 50% 40%, #f7f6f2 0%, #ebe8e1 100%);
 }
 
-/* Profile-style plate: product photo inset on the warm plate.
+/* Product photo fills the card edge to edge.
    No blend modes / filters here, they force repaints on mobile scroll
    and cause the cards to flash. */
 .products-card-image img {
-  inset: 14% 12% 10% !important;
-  width: 76% !important;
-  height: 76% !important;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   transition: transform 1.2s var(--ease-out-expo);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .products-card-link:hover .products-card-image img {
-    transform: scale(1.05) translateY(-6px);
+    transform: scale(1.04);
   }
 }
 

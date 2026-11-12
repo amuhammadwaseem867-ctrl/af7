@@ -457,7 +457,7 @@ textarea {
   margin-top: 36px;
 }
 
-/* Uncropped images: see components/FitImage.jsx */
+/* Frame-filling images: see components/FitImage.jsx */
 
 .fit-image {
   position: absolute;
@@ -467,13 +467,7 @@ textarea {
   background: #1b2536;
 }
 
-.fit-image .fit-image-backdrop {
-  object-fit: cover !important;
-  filter: blur(26px) brightness(0.82) saturate(1.1) !important;
-  transform: scale(1.15) !important;
-}
-
 .fit-image .fit-image-main {
-  object-fit: contain !important;
+  object-fit: cover !important;
   transform: none !important;
 }
