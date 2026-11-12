@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/BaseImage";
 
 /**
  * Shows the whole photo, never cropped: the image is contained in its

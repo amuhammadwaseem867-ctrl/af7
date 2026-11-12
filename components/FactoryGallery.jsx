@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import Image from "next/image";
+import Image from "@/components/BaseImage";
 import { AnimatePresence, motion } from "framer-motion";
 import Lightbox from "./Lightbox";
 import "./FactoryGallery.css";

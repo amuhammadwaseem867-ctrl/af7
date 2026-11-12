@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/BaseImage";
 import Link from "next/link";
 import SplitText from "./motion/SplitText";
 import Reveal from "./motion/Reveal";

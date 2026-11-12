@@ -8,7 +8,15 @@ const legacyProductSlugs = {
   "sliders-4-5": null,
 };
 
+// The site is served at https://www.afgroup.com.hk/af7: the main
+// afgroup.com.hk site forwards /af7 requests here.
+const basePath = "/af7";
+
 const nextConfig = {
+  basePath,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   async redirects() {
     return Object.entries(legacyProductSlugs).map(([from, to]) => ({
       source: `/products/${from}`,
