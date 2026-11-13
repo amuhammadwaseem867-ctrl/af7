@@ -18,7 +18,7 @@ import "./about.css";
 export const metadata = {
   title: "About AF7",
   description:
-    "AF7 is a specialized zipper manufacturing brand in Lahore, Pakistan — metal, aluminium, nylon and Vislon zippers with integrated in-house production.",
+    "AF7 is a specialized zipper manufacturing brand in Lahore, Pakistan, making metal, aluminium, nylon and Vislon zippers with integrated in-house production.",
 };
 
 const companyImages = [
@@ -205,7 +205,7 @@ export default function AboutPage() {
             </div>
             <Reveal as="p" delay={0.2}>
               Six principles shape how AF7 manufactures, communicates and
-              delivers — from the first production stage to the finished order.
+              delivers, from the first production stage to the finished order.
             </Reveal>
           </div>
 

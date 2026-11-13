@@ -71,7 +71,7 @@ export default function ProductShowcase() {
           <Reveal className="home-showcase-aside" delay={0.2}>
             <p>
               Metal, aluminium, nylon and Vislon zippers, supported by tag strings
-              and tipping solutions — each specified to the intended application.
+              and tipping solutions, each specified to the intended application.
             </p>
             <Link href="/products" className="home-text-link">
               <span>Explore Our Products</span>
