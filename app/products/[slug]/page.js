@@ -173,9 +173,9 @@ export default async function ProductDetailPage({ params }) {
 
               <div className="product-detail-information-copy">
                 <p>
-                  AF7 zippers are produced through an integrated process —
+                  AF7 zippers are produced through an integrated process,
                   from tape making and teeth manufacturing to finishing,
-                  assembly, quality inspection and packing — with key
+                  assembly, quality inspection and packing, with key
                   stages managed under one roof in Lahore. Zipper type,
                   size, tape colour, finish and configuration can be
                   discussed according to your application.

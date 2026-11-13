@@ -18,7 +18,7 @@ export const about = {
   overview:
     "AF7 is a zipper manufacturing brand based in Lahore, Pakistan, focused on producing metal, aluminium, nylon, and Vislon zippers, alongside selected garment accessories including tag strings and tipping.",
   overviewProcess:
-    "Supported by state-of-the-art automated zipper assembly lines and integrated in-house production capabilities, AF7 manages key stages of zipper manufacturing—from tape production and teeth formation to finishing, assembly, inspection, and preparation of finished products for delivery.",
+    "Supported by state-of-the-art automated zipper assembly lines and integrated in-house production capabilities, AF7 manages key stages of zipper manufacturing, from tape production and teeth formation to finishing, assembly, inspection, and preparation of finished products for delivery.",
   approach:
     "Our approach combines manufacturing discipline, attention to detail, and a practical understanding of the requirements of garment manufacturers, fashion brands, and accessory businesses. We aim to provide dependable fastening solutions with product specifications and finishes suited to each application.",
   promise:
@@ -114,7 +114,7 @@ export const accessories = [
 export const finishes = {
   title: "Finishing That Completes the Product",
   intro:
-    "A quality finish defines both the zipper's durability and the garment's aesthetic. For applicable metal zipper constructions, AF7 delivers superior in-house finishing—including precision plating, protective lacquering, and specialized waxing. Exact finish availability is tailored to your material and project specifications.",
+    "A quality finish defines both the zipper's durability and the garment's aesthetic. For applicable metal zipper constructions, AF7 delivers superior in-house finishing, including precision plating, protective lacquering, and specialized waxing. Exact finish availability is tailored to your material and project specifications.",
   note: "Metal zipper finishes are subject to confirmation for the selected product.",
   enquiry:
     "Product enquiries may include zipper size, material, tape colour, finish, construction, quantity, and intended application. Specific options should be confirmed with AF7 before a product specification is finalized.",

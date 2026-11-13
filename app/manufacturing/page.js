@@ -19,7 +19,7 @@ import "../profile.css";
 export const metadata = {
   title: "Manufacturing",
   description:
-    "AF7's Lahore factory brings key zipper manufacturing stages under one roof — tape making, teeth manufacturing, plating, lacquering, waxing, automated assembly, inspection and dispatch.",
+    "AF7's Lahore factory brings key zipper manufacturing stages under one roof: tape making, teeth manufacturing, plating, lacquering, waxing, automated assembly, inspection and dispatch.",
 };
 
 const gallery = [
