@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { products, getProduct, getAdjacentProducts } from "@/data/products";
 import { finishes } from "@/data/company";
 import ProductGallery from "./ProductGallery";
+import TapeColours from "./TapeColours";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
 import ImageReveal from "@/components/ImageReveal";
@@ -111,7 +112,7 @@ export default async function ProductDetailPage({ params }) {
                 <div className="product-detail-image">
                   <ImageReveal fill direction="left">
                     <Image
-                      src={product.images[0]}
+                      src={product.cover}
                       alt={`AF7 ${product.title}`}
                       fill
                       preload
@@ -132,6 +133,14 @@ export default async function ProductDetailPage({ params }) {
             </div>
           </div>
         </section>
+
+        {product.tapes ? (
+          <TapeColours
+            tapes={product.tapes}
+            title={product.title}
+            isVislon={product.slug === "vislon-zippers"}
+          />
+        ) : null}
 
         <section className="product-catalog">
           <div className="product-detail-container">

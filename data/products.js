@@ -10,6 +10,27 @@ export const productFilters = [
   { id: "accessories", label: "Accessories" },
 ];
 
+// Tape colour options shown on the product page. The finish stays the same
+// while only the tape colour changes.
+const T = `${P}/tape-colours`;
+const TAPE_SET = [
+  ["black", "Black", "#1c1c1e"],
+  ["navy", "Navy", "#1f2b47"],
+  ["burgundy", "Burgundy", "#6b1d2c"],
+  ["red", "Red", "#b0262f"],
+  ["forest-green", "Forest Green", "#2e4a38"],
+  ["olive", "Olive", "#4d5130"],
+  ["brown", "Brown", "#4a3427"],
+  ["grey", "Grey", "#85888c"],
+];
+
+const tapesFor = (folder) =>
+  TAPE_SET.map(([slug, name, color]) => ({
+    name,
+    color,
+    image: `${T}/${folder}/${slug}.webp`,
+  }));
+
 const range = [
   {
     slug: "metal-zippers-5",
@@ -25,6 +46,7 @@ const range = [
     description:
       "AF7 manufactures #5 Metal Zippers for garment and accessory applications where metal teeth contribute to the product's appearance and fastening function. Attention is given to tooth formation, chain construction, finishing, and the intended application.",
     applications: "APPAREL · DENIM · OUTERWEAR",
+    tapes: tapesFor("metal5-black-golden-brass-separating"),
     images: [
       `${P}/brasszippers5/1.webp`,
       `${P}/brasszippers5/2.webp`,
@@ -56,6 +78,7 @@ const range = [
     description:
       "AF7 manufactures #4.5 Metal Zippers for garment and accessory applications where metal teeth contribute to the product's appearance and fastening function. Attention is given to tooth formation, chain construction, finishing, and the intended application.",
     applications: "APPAREL · DENIM · BAGS",
+    tapes: tapesFor("metal45-black-antique-brass"),
     images: [
       `${P}/brasszippers4.5/1.webp`,
       `${P}/brasszippers4.5/2.webp`,
@@ -78,6 +101,7 @@ const range = [
     description:
       "Our #5 Aluminium Zippers provide aluminium-based fastening options for designs requiring a distinctive metallic look and functional performance. Suitable construction and finishing are considered according to the customer's product requirements.",
     applications: "APPAREL · BAGS · OUTERWEAR",
+    tapes: tapesFor("alu5-black-silver-separating-2"),
     images: [
       `${P}/alumuniumzipper5/1.webp`,
       `${P}/alumuniumzipper5/2.webp`,
@@ -99,6 +123,7 @@ const range = [
     description:
       "Our #4.5 Aluminium Zippers provide aluminium-based fastening options for designs requiring a distinctive metallic look and functional performance. Suitable construction and finishing are considered according to the customer's product requirements.",
     applications: "APPAREL · BAGS · OUTERWEAR",
+    tapes: tapesFor("alu45-black-light-gold"),
     images: [
       `${P}/alumuniumzippers4.5/1.webp`,
       `${P}/alumuniumzippers4.5/2.webp`,
@@ -121,6 +146,12 @@ const range = [
     description:
       "Versatile two-way zipper solutions for garments and applications requiring opening from both ends. Zipper size, tape colour, construction and finish can be discussed according to the intended application.",
     applications: "OUTERWEAR · JACKETS · BAGS",
+    tapes: [
+      { name: "Black", color: "#1c1c1e", image: `${T}/two-way/black.webp` },
+      { name: "Navy", color: "#1f2b47", image: `${T}/two-way/navy.webp` },
+      { name: "Grey", color: "#7d7570", image: `${T}/two-way/grey.webp` },
+      { name: "White", color: "#f1efe9", image: `${T}/two-way/white.webp` },
+    ],
     images: [
       `${P}/2wayzippers/black.webp`,
       `${P}/2wayzippers/black2.webp`,
@@ -146,6 +177,7 @@ const range = [
     description:
       "Nylon zippers offer a flexible and versatile fastening option for a wide variety of garments and accessories. Product selection can be discussed according to the intended application, zipper size, tape requirements, colour, and functional needs.",
     applications: "SPORTSWEAR · APPAREL · BAGS",
+    tapes: tapesFor("nylon-black-silver-slider"),
     images: [
       `${P}/nylonzippers/1.webp`,
       `${P}/nylonzippers/2.webp`,
@@ -169,6 +201,18 @@ const range = [
     description:
       "Vislon-style zippers feature moulded plastic teeth and are used across a range of apparel and accessory applications. AF7 can discuss suitable options based on the desired appearance, construction, size, and end use.",
     applications: "CASUALWEAR · SPORTSWEAR · OUTERWEAR",
+    // One zipper on the cards; the other colours are in the tape colour picker.
+    cover: `${T}/vislon/blue.webp`,
+    tapes: [
+      { name: "Blue", color: "#1f4fb8", image: `${T}/vislon/blue.webp` },
+      { name: "Red", color: "#d0202a", image: `${T}/vislon/red.webp` },
+      { name: "Orange", color: "#f07a1a", image: `${T}/vislon/orange.webp` },
+      { name: "Yellow", color: "#f2cf2e", image: `${T}/vislon/yellow.webp` },
+      { name: "Green", color: "#3f9a45", image: `${T}/vislon/green.webp` },
+      { name: "Purple", color: "#5b2a8c", image: `${T}/vislon/purple.webp` },
+      { name: "Pink", color: "#e8579b", image: `${T}/vislon/pink.webp` },
+      { name: "Black", color: "#1c1c1e", image: `${T}/vislon/black.webp` },
+    ],
     images: [
       `${P}/vislonzipper/1.webp`,
       `${P}/vislonzipper/2.webp`,
@@ -214,7 +258,7 @@ export const products = range.map((product, index) => ({
   ...product,
   number: String(index + 1).padStart(2, "0"),
   title: product.size ? `${product.size} ${product.name}` : product.name,
-  cover: product.images[0],
+  cover: product.cover ?? product.images[0],
 }));
 
 export const productMaterials = ["All", ...new Set(products.map((p) => p.material))];
@@ -230,3 +274,23 @@ export function getAdjacentProducts(slug) {
     next: index < products.length - 1 ? products[index + 1] : null,
   };
 }
+
+// Zipper pullers, shown as their own section on the products page.
+export const pullersIntro =
+  "Pullers for #4.5 and #5 zippers, produced in a range of shapes and metal finishes. Shape, size and finish can be matched to the zipper and the garment.";
+
+const pullerList = [
+  [195, "Matt nickel"], [197, "Black"], [199, "Gunmetal"], [201, "Nickel"],
+  [203, "Gold"], [205, "Nickel"], [207, "Antique brass"], [209, "Black nickel"],
+  [211, "Gunmetal"], [213, "Nickel"], [215, "Nickel"], [217, "Nickel"],
+  [221, "Black nickel"], [223, "Nickel"], [225, "Antique brass"], [227, "Gunmetal"],
+  [229, "Gunmetal"], [231, "Gold"], [233, "Gunmetal"], [235, "Antique brass"],
+  [237, "Gold"], [239, "Nickel"], [241, "Matt nickel"], [243, "Nickel"],
+  [245, "Nickel"], [247, "Golden brass"], [249, "Gunmetal"], [251, "Antique copper"],
+];
+
+export const pullers = pullerList.map(([n, finish], index) => ({
+  code: `P·${String(index + 1).padStart(2, "0")}`,
+  finish,
+  image: `${P}/pullers/p${n}.webp`,
+}));
