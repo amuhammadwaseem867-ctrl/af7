@@ -48,20 +48,13 @@ const range = [
     applications: "APPAREL · DENIM · OUTERWEAR",
     tapes: tapesFor("metal5-black-golden-brass-separating"),
     images: [
-      `${P}/brasszippers5/1.webp`,
-      `${P}/brasszippers5/2.webp`,
-      `${P}/brasszippers5/3.webp`,
-      `${P}/brasszippers5/4.webp`,
-      `${P}/brasszippers5/5.webp`,
-      `${P}/brasszippers5/6.webp`,
-      `${P}/brasszippers5/7.webp`,
-      `${P}/brasszippers5/8.webp`,
-      `${P}/brasszippers5/9.webp`,
-      `${P}/brasszippers5/10.webp`,
-      `${P}/brasszippers5/alumunium.webp`,
-      `${P}/brasszippers5/IMG_2071.webp`,
-      `${P}/brasszippers5/IMG_2074.webp`,
-      `${P}/brasszippers5/IMG_2077.webp`,
+      `${P}/photos/metal5-cream-antique-brass.webp`,
+      `${P}/photos/metal5-black-golden-brass-separating.webp`,
+      `${P}/photos/metal5-black-antique-brass-separating.webp`,
+      `${P}/photos/metal5-olive-nickel-separating.webp`,
+      `${P}/photos/metal5-black-antique-silver-separating.webp`,
+      `${P}/photos/metal5-brown-antique-brass-separating.webp`,
+      `${P}/photos/metal5-black-antique-brass-separating-2.webp`,
     ],
   },
   {
@@ -80,11 +73,10 @@ const range = [
     applications: "APPAREL · DENIM · BAGS",
     tapes: tapesFor("metal45-black-antique-brass"),
     images: [
-      `${P}/brasszippers4.5/1.webp`,
-      `${P}/brasszippers4.5/2.webp`,
-      `${P}/brasszippers4.5/3.webp`,
-      `${P}/brasszippers4.5/4.webp`,
-      `${P}/brasszippers4.5/images.webp`,
+      `${P}/photos/metal45-black-golden-brass.webp`,
+      `${P}/photos/metal45-black-antique-copper.webp`,
+      `${P}/photos/metal45-black-antique-brass-2.webp`,
+      `${P}/photos/metal45-black-antique-brass.webp`,
     ],
   },
   {
@@ -103,10 +95,11 @@ const range = [
     applications: "APPAREL · BAGS · OUTERWEAR",
     tapes: tapesFor("alu5-black-silver-separating-2"),
     images: [
-      `${P}/alumuniumzipper5/1.webp`,
-      `${P}/alumuniumzipper5/2.webp`,
-      `${P}/alumuniumzipper5/3.webp`,
-      `${P}/alumuniumzipper5/4.webp`,
+      `${P}/photos/alu5-black-silver-separating-2.webp`,
+      `${P}/photos/alu5-navy-silver-separating.webp`,
+      `${P}/photos/alu5-black-silver-separating.webp`,
+      `${P}/photos/alu5-black-silver-separating-3.webp`,
+      `${P}/photos/alu5-navy-silver-separating-2.webp`,
     ],
   },
   {
@@ -125,11 +118,8 @@ const range = [
     applications: "APPAREL · BAGS · OUTERWEAR",
     tapes: tapesFor("alu45-black-light-gold"),
     images: [
-      `${P}/alumuniumzippers4.5/1.webp`,
-      `${P}/alumuniumzippers4.5/2.webp`,
-      `${P}/alumuniumzippers4.5/3.webp`,
-      `${P}/alumuniumzippers4.5/4.webp`,
-      `${P}/alumuniumzippers4.5/images.webp`,
+      `${P}/photos/alu45-black-light-gold.webp`,
+      `${P}/photos/alu45-white-silver.webp`,
     ],
   },
   {
@@ -147,20 +137,20 @@ const range = [
       "Versatile two-way zipper solutions for garments and applications requiring opening from both ends. Zipper size, tape colour, construction and finish can be discussed according to the intended application.",
     applications: "OUTERWEAR · JACKETS · BAGS",
     tapes: [
-      { name: "Black", color: "#1c1c1e", image: `${T}/two-way/black.webp` },
-      { name: "Navy", color: "#1f2b47", image: `${T}/two-way/navy.webp` },
-      { name: "Grey", color: "#7d7570", image: `${T}/two-way/grey.webp` },
-      { name: "White", color: "#f1efe9", image: `${T}/two-way/white.webp` },
+      { name: "Black", color: "#1c1c1e", image: `${P}/two-way/black.webp` },
+      { name: "Navy", color: "#1f2b47", image: `${P}/two-way/navy.webp` },
+      { name: "Grey", color: "#7d7570", image: `${P}/two-way/grey.webp` },
+      { name: "White", color: "#f1efe9", image: `${P}/two-way/white.webp` },
     ],
     images: [
-      `${P}/2wayzippers/black.webp`,
-      `${P}/2wayzippers/black2.webp`,
-      `${P}/2wayzippers/burgandry.webp`,
-      `${P}/2wayzippers/grey.webp`,
-      `${P}/2wayzippers/navy.webp`,
-      `${P}/2wayzippers/nvy.webp`,
-      `${P}/2wayzippers/white.webp`,
-      `${P}/2wayzippers/white-tape.webp`,
+      `${P}/two-way/black.webp`,
+      `${P}/two-way/black2.webp`,
+      `${P}/two-way/burgandry.webp`,
+      `${P}/two-way/grey.webp`,
+      `${P}/two-way/navy.webp`,
+      `${P}/two-way/nvy.webp`,
+      `${P}/two-way/white.webp`,
+      `${P}/two-way/white-tape.webp`,
     ],
   },
   {
@@ -179,12 +169,8 @@ const range = [
     applications: "SPORTSWEAR · APPAREL · BAGS",
     tapes: tapesFor("nylon-black-silver-slider"),
     images: [
-      `${P}/nylonzippers/1.webp`,
-      `${P}/nylonzippers/2.webp`,
-      `${P}/nylonzippers/3.webp`,
-      `${P}/nylonzippers/4.webp`,
-      `${P}/nylonzippers/5.webp`,
-      `${P}/nylonzippers/6.webp`,
+      `${P}/photos/nylon-black-silver-slider.webp`,
+      `${P}/photos/nylon-black-invisible.webp`,
     ],
   },
   {
@@ -201,8 +187,6 @@ const range = [
     description:
       "Vislon-style zippers feature moulded plastic teeth and are used across a range of apparel and accessory applications. AF7 can discuss suitable options based on the desired appearance, construction, size, and end use.",
     applications: "CASUALWEAR · SPORTSWEAR · OUTERWEAR",
-    // One zipper on the cards; the other colours are in the tape colour picker.
-    cover: `${T}/vislon/blue.webp`,
     tapes: [
       { name: "Blue", color: "#1f4fb8", image: `${T}/vislon/blue.webp` },
       { name: "Red", color: "#d0202a", image: `${T}/vislon/red.webp` },
@@ -214,10 +198,7 @@ const range = [
       { name: "Black", color: "#1c1c1e", image: `${T}/vislon/black.webp` },
     ],
     images: [
-      `${P}/vislonzipper/1.webp`,
-      `${P}/vislonzipper/2.webp`,
-      `${P}/vislonzipper/3.webp`,
-      `${P}/vislonzipper/4.webp`,
+      `${T}/vislon/blue.webp`,
     ],
   },
   {
@@ -234,7 +215,15 @@ const range = [
     description:
       "Tag strings provide a practical attachment solution for hangtags, labels, and retail identification on garments and accessories. Specifications and presentation can be discussed according to the customer's product and branding requirements.",
     applications: "HANGTAGS · LABELS · RETAIL",
-    images: [`${P}/tagstring/1.webp`, `${P}/tagstring/2.webp`],
+    images: [
+      `${P}/photos/tagstring-black-1.webp`,
+      `${P}/photos/tagstring-white-1.webp`,
+      `${P}/photos/tagstring-black-2.webp`,
+      `${P}/photos/tagstring-white-2.webp`,
+      `${P}/photos/tagstring-black-3.webp`,
+      `${P}/photos/tagstring-white-3.webp`,
+      `${P}/photos/tagstring-white-4.webp`,
+    ],
   },
   {
     slug: "tipping",
@@ -250,7 +239,12 @@ const range = [
     description:
       "Tipping is used to finish the ends of suitable cords and drawstrings, helping create a neat and complete appearance. TPU tippings provide a thermoplastic polyurethane finishing option for compatible cords and drawstrings. Available material, shape, size, and colour options should be confirmed against the required application and production capabilities.",
     applications: "CORDS · DRAWSTRINGS · APPAREL",
-    images: [`${P}/tipping/1.webp`, `${P}/tipping/2.webp`],
+    images: [
+      `${P}/photos/tipping-black-1.webp`,
+      `${P}/photos/tipping-white-1.webp`,
+      `${P}/photos/tipping-black-2.webp`,
+      `${P}/photos/tipping-white-2.webp`,
+    ],
   },
 ];
 
