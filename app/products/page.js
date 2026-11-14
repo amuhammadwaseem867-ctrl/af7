@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ProductsExplorer from "./ProductsExplorer";
+import Pullers from "./Pullers";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
@@ -55,6 +56,8 @@ export default function ProductsPage() {
           <ProductsExplorer />
         </div>
       </section>
+
+      <Pullers />
 
       <section className="products-custom" aria-labelledby="custom-title">
         <div className="products-container products-custom-grid">
