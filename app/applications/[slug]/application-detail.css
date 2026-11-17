@@ -1,7 +1,7 @@
 .application-detail-page {
   width: 100%;
   background: #ffffff;
-  color: #243146;
+  color: #1A2336;
 }
 
 .application-detail-container {
@@ -32,7 +32,7 @@
   display: flex;
   align-items: center;
   gap: 9px;
-  color: #243146;
+  color: #1A2336;
 }
 
 .application-detail-index-line {
@@ -73,7 +73,7 @@
   line-height: 0.9;
   letter-spacing: -0.06em;
   font-weight: 600;
-  color: #243146;
+  color: #1A2336;
 }
 
 .application-detail-copy p {
@@ -114,7 +114,7 @@
   line-height: 1.5;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: #243146;
+  color: #1A2336;
 }
 
 .application-detail-visual {
@@ -198,7 +198,7 @@
   line-height: 0.96;
   letter-spacing: -0.055em;
   font-weight: 600;
-  color: #243146;
+  color: #1A2336;
 }
 
 .application-detail-information-heading h2 span {
@@ -243,7 +243,7 @@
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: #243146;
+  color: #1A2336;
 }
 
 .application-detail-range {
@@ -308,7 +308,7 @@
   line-height: 1;
   letter-spacing: -0.04em;
   font-weight: 600;
-  color: #243146;
+  color: #1A2336;
 }
 
 .application-detail-range-arrow {
@@ -318,7 +318,7 @@
   font-family: var(--font-body);
   font-size: 18px;
   font-weight: 300;
-  color: #243146;
+  color: #1A2336;
 }
 
 .application-detail-range-link-next .application-detail-range-arrow {

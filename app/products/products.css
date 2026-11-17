@@ -1,6 +1,6 @@
 .products-page{
   background: #ffffff;
-  color: #243146;
+  color: #1A2336;
 }
 
 .products-container{
@@ -34,7 +34,7 @@
 }
 
 .products-index{
-  color: #243146;
+  color: #1A2336;
   font-family: var(--font-heading);
   font-weight: 600;
 }
@@ -71,7 +71,7 @@
   line-height: 0.94;
   letter-spacing: -0.055em;
   font-weight: 600;
-  color: #243146;
+  color: #1A2336;
 }
 
 .products-intro-heading h1 span{
@@ -597,7 +597,7 @@
 
 .products-accessory:hover {
   transform: translateY(-6px);
-  box-shadow: 0 30px 60px rgba(36, 49, 70, 0.1);
+  box-shadow: 0 30px 60px rgba(26, 35, 54, 0.1);
 }
 
 .products-accessory-index {

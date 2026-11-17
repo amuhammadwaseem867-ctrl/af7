@@ -1,6 +1,6 @@
 export default function Loading() {
   return (
-    <main style={{ minHeight: "100vh", display: "grid", placeItems: "center", background: "#243146", color: "#fff" }}>
+    <main style={{ minHeight: "100vh", display: "grid", placeItems: "center", background: "#1A2336", color: "#fff" }}>
       <div style={{ width: "min(420px, calc(100% - 2rem))", textAlign: "center" }}>
         <div style={{ width: "100%", height: "2px", background: "rgba(255,255,255,0.14)", overflow: "hidden" }}>
           <div style={{ width: "38%", height: "100%", background: "#fff", animation: "loading-bar 1.4s ease-in-out infinite" }} />

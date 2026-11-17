@@ -2,7 +2,7 @@
 
 export default function Error({ reset }) {
   return (
-    <main style={{ minHeight: "100vh", display: "grid", placeItems: "center", background: "#243146", color: "#fff", padding: "2rem" }}>
+    <main style={{ minHeight: "100vh", display: "grid", placeItems: "center", background: "#1A2336", color: "#fff", padding: "2rem" }}>
       <div style={{ maxWidth: "560px", textAlign: "center" }}>
         <p style={{ marginBottom: "1rem", fontSize: "11px", letterSpacing: "0.18em", textTransform: "uppercase", color: "#bcc6cc" }}>
           AF7 / Error
@@ -18,7 +18,7 @@ export default function Error({ reset }) {
           onClick={() => reset()}
           style={{
             background: "#fff",
-            color: "#243146",
+            color: "#1A2336",
             border: "none",
             minHeight: "52px",
             padding: "0 1.25rem",

@@ -1,7 +1,7 @@
 .applications-page {
   width: 100%;
   background: #ffffff;
-  color: #243146;
+  color: #1A2336;
 }
 
 .applications-container {
@@ -72,7 +72,7 @@
   line-height: 0.93;
   letter-spacing: -0.06em;
   font-weight: 600;
-  color: #243146;
+  color: #1A2336;
 }
 
 .applications-intro-heading h1 span {
@@ -139,7 +139,7 @@
   line-height: 1;
   letter-spacing: -0.045em;
   font-weight: 600;
-  color: #243146;
+  color: #1A2336;
 }
 
 .applications-range-header > p {
@@ -170,7 +170,7 @@
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.12em;
-  color: #243146;
+  color: #1A2336;
 }
 
 .application-number-line {
@@ -219,7 +219,7 @@
   line-height: 0.98;
   letter-spacing: -0.045em;
   font-weight: 600;
-  color: #243146;
+  color: #1A2336;
 }
 
 .application-information p {
@@ -238,12 +238,12 @@
   gap: 14px;
   margin-top: 34px;
   padding-bottom: 7px;
-  border-bottom: 1px solid #243146;
+  border-bottom: 1px solid #1A2336;
   font-family: var(--font-body);
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: #243146;
+  color: #1A2336;
   transition:
     gap 0.3s ease,
     color 0.3s ease;

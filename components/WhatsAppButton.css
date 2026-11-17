@@ -27,13 +27,13 @@
 
 .whatsapp-button-outline {
   background: transparent;
-  color: #243146;
-  border: 1px solid rgba(36, 49, 70, 0.3);
+  color: #1A2336;
+  border: 1px solid rgba(26, 35, 54, 0.3);
 }
 
 .whatsapp-button-outline:hover {
-  background: #243146;
-  border-color: #243146;
+  background: #1A2336;
+  border-color: #1A2336;
   color: #ffffff;
 }
 
@@ -48,7 +48,7 @@
 
 .whatsapp-button-light {
   background: #ffffff;
-  color: #243146;
+  color: #1A2336;
   border: 1px solid #ffffff;
 }
 

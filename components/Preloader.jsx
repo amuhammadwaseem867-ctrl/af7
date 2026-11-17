@@ -190,7 +190,7 @@ export default function Preloader() {
                 </defs>
                 <path d="M6 4h28a4 4 0 0 1 4 4v14l-8 8H10l-8-8V8a4 4 0 0 1 4-4z" fill="url(#af7-silver)" />
                 <rect x="13" y="26" width="14" height="34" rx="7" fill="url(#af7-silver)" />
-                <rect x="17" y="40" width="6" height="14" rx="3" fill="#243146" opacity="0.55" />
+                <rect x="17" y="40" width="6" height="14" rx="3" fill="#1A2336" opacity="0.55" />
               </svg>
             </motion.div>
           </motion.div>

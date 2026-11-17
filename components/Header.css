@@ -1,6 +1,6 @@
 .site-header {
   --header-fg: var(--af7-navy);
-  --header-muted: rgba(36, 49, 70, 0.62);
+  --header-muted: rgba(26, 35, 54, 0.62);
 
   position: fixed;
   top: 0;
