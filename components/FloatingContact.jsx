@@ -1,11 +1,9 @@
 "use client";
 
-import { contact } from "@/data/navigation";
+import { contact, whatsappLink } from "@/data/navigation";
 import "./FloatingContact.css";
 
-const whatsappHref = `https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(
-  "Hello AF7, I would like to know more about your products.",
-)}`;
+const whatsappHref = whatsappLink();
 
 function WhatsAppIcon() {
   return (
@@ -72,7 +70,7 @@ function GoogleMapsIcon() {
 
 const contactLinks = [
   {
-    label: "Chat on WhatsApp",
+    label: "Chat with AF7",
     href: whatsappHref,
     type: "whatsapp",
     Icon: WhatsAppIcon,
