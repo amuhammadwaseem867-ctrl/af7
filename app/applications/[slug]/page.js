@@ -132,7 +132,7 @@ export default async function ApplicationDetailPage({ params }) {
                 <p className="application-detail-custom">
                   Zipper type and size, construction, tape colour, finish and
                   configuration can be discussed according to your application.{" "}
-                  <Link href="/contact">Start an enquiry ↗</Link>
+                  <Link href="/contact">Start an enquiry</Link>
                 </p>
 
                 <div className="application-detail-whatsapp">
@@ -183,9 +183,7 @@ export default async function ApplicationDetailPage({ params }) {
                     {previous.title}
                   </span>
 
-                  <span className="application-detail-range-arrow">
-                    ↙
-                  </span>
+                  
                 </Link>
               ) : (
                 <Link
@@ -200,9 +198,7 @@ export default async function ApplicationDetailPage({ params }) {
                     Applications
                   </span>
 
-                  <span className="application-detail-range-arrow">
-                    ↙
-                  </span>
+                  
                 </Link>
               )}
 
@@ -219,9 +215,7 @@ export default async function ApplicationDetailPage({ params }) {
                     {next.title}
                   </span>
 
-                  <span className="application-detail-range-arrow">
-                    ↗
-                  </span>
+                  
                 </Link>
               ) : (
                 <Link
@@ -236,9 +230,7 @@ export default async function ApplicationDetailPage({ params }) {
                     Applications
                   </span>
 
-                  <span className="application-detail-range-arrow">
-                    ↗
-                  </span>
+                  
                 </Link>
               )}
             </div>

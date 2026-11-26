@@ -80,7 +80,7 @@ export default function ProductsExplorer() {
                   <p>{product.summary}</p>
                   <div className="products-card-footer">
                     <span>{product.familyLabel}</span>
-                    <span className="products-card-arrow" aria-hidden="true">↗</span>
+                    
                   </div>
                 </div>
               </Link>

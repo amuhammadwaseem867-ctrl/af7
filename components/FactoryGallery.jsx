@@ -44,7 +44,7 @@ export default function FactoryGallery({ photos, title = "Inside the AF7 factory
               />
               {brandMarkFor(photo.src) && <BrandMark {...brandMarkFor(photo.src)} />}
               <span className="factory-gallery-zoom" aria-hidden="true">
-                View ↗
+                View
               </span>
             </button>
             <figcaption>

@@ -548,16 +548,6 @@
   letter-spacing: 0.16em;
 }
 
-.products-card-arrow {
-  color: var(--af7-navy);
-  font-size: 16px;
-  transition: transform 500ms var(--ease-out-expo), color 300ms ease;
-}
-
-.products-card-link:hover .products-card-arrow {
-  color: var(--af7-text-silver);
-  transform: rotate(45deg);
-}
 
 /* Accessories */
 

@@ -32,7 +32,7 @@ const waitForPage = () =>
  * unzips into two halves to reveal the site.
  */
 export default function Preloader() {
-  const [phase, setPhase] = useState("loading"); // loading → closing → done
+  const [phase, setPhase] = useState("loading"); // loading  closing  done
   const [count, setCount] = useState(0);
   const progress = useMotionValue(0);
 

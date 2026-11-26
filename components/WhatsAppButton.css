@@ -66,13 +66,6 @@
   color: #ffffff;
 }
 
-.whatsapp-button-arrow {
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-button:hover .whatsapp-button-arrow {
-  transform: translate(2px, -2px);
-}
 
 @media (max-width: 480px) {
   .whatsapp-button {

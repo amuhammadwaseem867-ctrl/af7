@@ -109,10 +109,10 @@ export default function Lightbox({ images, title, index, onClose }) {
         </AnimatePresence>
 
         <button type="button" className="lightbox-nav lightbox-prev" onClick={() => show(-1)} aria-label="Previous image">
-          ←
+          Prev
         </button>
         <button type="button" className="lightbox-nav lightbox-next" onClick={() => show(1)} aria-label="Next image">
-          →
+          Next
         </button>
       </div>
 

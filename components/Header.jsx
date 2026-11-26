@@ -142,9 +142,7 @@ export default function Header() {
             <Magnetic strength={0.25}>
               <Link href="/contact" className="inquire-button">
                 <span>Inquire</span>
-                <span className="inquire-arrow" aria-hidden="true">
-                  ↗
-                </span>
+                
               </Link>
             </Magnetic>
 
@@ -206,9 +204,7 @@ export default function Header() {
                   >
                     <span className="mobile-index">0{index + 1}</span>
                     <span className="mobile-label">{item.label}</span>
-                    <span className="mobile-arrow" aria-hidden="true">
-                      ↗
-                    </span>
+                    
                   </Link>
                 </motion.div>
               ))}
@@ -225,7 +221,7 @@ export default function Header() {
                   onClick={() => setMenuOpen(false)}
                 >
                   <span>Make an Inquiry</span>
-                  <span aria-hidden="true">↗</span>
+                  
                 </Link>
               </motion.div>
             </motion.nav>

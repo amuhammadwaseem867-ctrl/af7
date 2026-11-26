@@ -47,11 +47,10 @@
 .lightbox-image {
   position: absolute;
   inset: 0 60px;
-  cursor: var(--cursor-arrow);
 }
 
 .lightbox-image:active {
-  cursor: var(--cursor-arrow);
+  cursor: grab;
 }
 
 .lightbox-image img {

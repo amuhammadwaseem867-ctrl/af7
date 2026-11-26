@@ -186,7 +186,7 @@ export default function WhatsAppEnquiryPage() {
             <WhatsAppButton label={w.alternativeLabels[0]} />
             <Link href="/contact" className="af7-button af7-button-dark">
               <span>Contact Page</span>
-              <span className="af7-button-arrow" aria-hidden="true">↗</span>
+              
             </Link>
           </Reveal>
         </div>

@@ -75,7 +75,7 @@ export default function ProductShowcase() {
             </p>
             <Link href="/products" className="home-text-link">
               <span>Explore Our Products</span>
-              <span aria-hidden="true">↗</span>
+              
             </Link>
           </Reveal>
         </div>
@@ -110,7 +110,7 @@ export default function ProductShowcase() {
                 <div className="home-product-body">
                   <span className="home-product-number">{product.number}</span>
                   <h3>{product.title}</h3>
-                  <span className="home-product-arrow" aria-hidden="true">↗</span>
+                  
                 </div>
                 <p>{product.summary}</p>
               </Link>
@@ -119,7 +119,7 @@ export default function ProductShowcase() {
 
           <Link href="/products" className="home-product-more">
             <span>All products</span>
-            <span className="home-product-more-arrow" aria-hidden="true">→</span>
+            
           </Link>
         </motion.div>
 

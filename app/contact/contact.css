@@ -352,7 +352,6 @@
 
 .contact-form-field select {
   appearance: none;
-  cursor: var(--cursor-arrow);
 }
 
 .contact-form-field input:focus,
@@ -376,7 +375,7 @@
   border-radius: 0;
   background: #1A2336;
   color: #ffffff;
-  cursor: var(--cursor-arrow);
+  cursor: pointer;
   font-family: var(--font-body);
   font-size: 11px;
   font-weight: 600;

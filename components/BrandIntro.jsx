@@ -59,7 +59,7 @@ export default function BrandIntro() {
 
             <Link href="/about" className="brand-intro-link">
               <span>Discover AF7</span>
-              <span className="brand-intro-link-arrow">↗</span>
+              
             </Link>
           </Reveal>
         </div>

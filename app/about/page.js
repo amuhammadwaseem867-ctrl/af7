@@ -162,7 +162,7 @@ export default function AboutPage() {
               <p>{technology.text}</p>
               <Link href="/manufacturing" className="about-positioning-link">
                 <span>Discover Our Manufacturing</span>
-                <span aria-hidden="true">↗</span>
+                
               </Link>
             </Reveal>
           </div>
@@ -254,7 +254,7 @@ export default function AboutPage() {
               <p>{philosophy.closing}</p>
               <Link href="/products" className="about-positioning-link">
                 <span>Explore Our Products</span>
-                <span aria-hidden="true">↗</span>
+                
               </Link>
               <div className="about-positioning-whatsapp">
                 <WhatsAppButton variant="outline" />

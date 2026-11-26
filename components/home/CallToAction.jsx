@@ -34,13 +34,13 @@ export default function CallToAction() {
             <Magnetic>
               <Link href="/contact" className="af7-button af7-button-solid">
                 <span>Send a Product Enquiry</span>
-                <span className="af7-button-arrow" aria-hidden="true">↗</span>
+                
               </Link>
             </Magnetic>
             <Magnetic>
               <a href="tel:+923134710325" className="af7-button af7-button-light">
                 <span>+92 313 4710325</span>
-                <span className="af7-button-arrow" aria-hidden="true">↗</span>
+                
               </a>
             </Magnetic>
           </div>

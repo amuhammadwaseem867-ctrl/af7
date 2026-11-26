@@ -27,11 +27,11 @@ export default function NotFound() {
         <Reveal className="not-found-actions" delay={0.4}>
           <Link href="/" className="af7-button af7-button-dark">
             <span>Return home</span>
-            <span className="af7-button-arrow" aria-hidden="true">↗</span>
+            
           </Link>
           <Link href="/products" className="af7-button af7-button-dark">
             <span>View products</span>
-            <span className="af7-button-arrow" aria-hidden="true">↗</span>
+            
           </Link>
         </Reveal>
       </div>

@@ -35,7 +35,7 @@ export default function Process() {
             </p>
             <Link href="/manufacturing" className="home-text-link">
               <span>Discover Our Manufacturing</span>
-              <span aria-hidden="true">↗</span>
+              
             </Link>
           </Reveal>
         </div>

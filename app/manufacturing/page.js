@@ -59,7 +59,7 @@ export default function ManufacturingPage() {
               <div className="pf-actions">
                 <Link href="/contact" className="af7-button af7-button-dark">
                   <span>Send a Product Enquiry</span>
-                  <span className="af7-button-arrow" aria-hidden="true">↗</span>
+                  
                 </Link>
               </div>
             </Reveal>
@@ -217,11 +217,11 @@ export default function ManufacturingPage() {
             <WhatsAppButton />
             <Link href="/contact" className="af7-button af7-button-dark">
               <span>Send a Product Enquiry</span>
-              <span className="af7-button-arrow" aria-hidden="true">↗</span>
+              
             </Link>
             <Link href="/products" className="af7-button af7-button-dark">
               <span>Explore Our Products</span>
-              <span className="af7-button-arrow" aria-hidden="true">↗</span>
+              
             </Link>
           </Reveal>
         </div>

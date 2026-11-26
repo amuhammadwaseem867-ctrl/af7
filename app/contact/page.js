@@ -144,7 +144,7 @@ export default function ContactPage() {
 
                   <div className="contact-channel-action">
                     <span>{channel.action}</span>
-                    <span aria-hidden="true">↗</span>
+                    
                   </div>
                 </a>
                 </StaggerItem>
@@ -179,7 +179,7 @@ export default function ContactPage() {
 
                     <a href="tel:+923134710325">
                       +92 313 4710325
-                      <span aria-hidden="true">↗</span>
+                      
                     </a>
                   </div>
 
@@ -190,7 +190,7 @@ export default function ContactPage() {
 
                     <a href={whatsappLink()} target="_blank" rel="noopener noreferrer">
                       {whatsapp.number}
-                      <span aria-hidden="true">↗</span>
+                      
                     </a>
                   </div>
 
@@ -221,7 +221,7 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                     >
                       @af7trims
-                      <span aria-hidden="true">↗</span>
+                      
                     </a>
                   </div>
 
@@ -236,7 +236,7 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                     >
                       AF7 · Zipper Manufacturing
-                      <span aria-hidden="true">↗</span>
+                      
                     </a>
                   </div>
 
@@ -290,7 +290,7 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                 >
                   <span>Open Location</span>
-                  <span aria-hidden="true">↗</span>
+                  
                 </a>
 
                 <div className="contact-location-meta">
@@ -329,7 +329,7 @@ export default function ContactPage() {
                 className="contact-closing-link"
               >
                 <span>Explore Product Range</span>
-                <span aria-hidden="true">↗</span>
+                
               </Link>
             </div>
           </div>

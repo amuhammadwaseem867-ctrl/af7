@@ -23,7 +23,7 @@ export default function FooterClock() {
     <span className="footer-bar-center">
       <span>Lahore · Pakistan{time ? ` · ${time} PKT` : ""}</span>
       <button type="button" className="footer-top" onClick={scrollToTop}>
-        Back to top <span aria-hidden="true">↑</span>
+        Back to top
       </button>
     </span>
   );

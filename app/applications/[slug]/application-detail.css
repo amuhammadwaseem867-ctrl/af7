@@ -311,21 +311,6 @@
   color: #1A2336;
 }
 
-.application-detail-range-arrow {
-  position: absolute;
-  right: 35px;
-  bottom: 30px;
-  font-family: var(--font-body);
-  font-size: 18px;
-  font-weight: 300;
-  color: #1A2336;
-}
-
-.application-detail-range-link-next .application-detail-range-arrow {
-  right: auto;
-  left: 35px;
-}
-
 @media (max-width: 1100px) {
   .application-detail-intro {
     padding-top: 120px;
@@ -444,12 +429,6 @@
     font-size: 30px;
   }
 
-  .application-detail-range-arrow,
-  .application-detail-range-link-next .application-detail-range-arrow {
-    right: 28px;
-    left: auto;
-    bottom: 25px;
-  }
 }
 
 @media (max-width: 480px) {

@@ -82,7 +82,7 @@ export default function ApplicationsAccordion() {
                         className="home-accordion-link"
                       >
                         <span>Explore {application.title}</span>
-                        <span aria-hidden="true">↗</span>
+                        
                       </Link>
                     </motion.div>
                   ) : null}

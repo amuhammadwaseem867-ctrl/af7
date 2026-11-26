@@ -122,7 +122,7 @@ export default function ApplicationsPage() {
                         className="application-link"
                       >
                         <span>View Application</span>
-                        <span aria-hidden="true">↗</span>
+                        
                       </Link>
                     </div>
 

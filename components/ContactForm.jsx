@@ -166,7 +166,7 @@ export default function ContactForm() {
 
         <button type="submit" className="contact-submit">
           <span>Send a Product Enquiry</span>
-          <span aria-hidden="true">↗</span>
+          
         </button>
 
         <div aria-live="polite">

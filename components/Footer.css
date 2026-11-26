@@ -84,11 +84,6 @@
   transform: translateY(-1px);
 }
 
-.footer-nav-item:hover .footer-nav-arrow,
-.footer-nav-item:focus-visible .footer-nav-arrow {
-  transform: translate(3px, -2px);
-}
-
 .footer-nav-index {
   color: rgba(255, 255, 255, 0.42);
   font-family: var(--font-body);
@@ -106,12 +101,6 @@
   letter-spacing: 0.02em;
 }
 
-.footer-nav-arrow {
-  color: rgba(255, 255, 255, 0.76);
-  font-size: 17px;
-  line-height: 1;
-  transition: transform 180ms ease;
-}
 
 /* Contact / location */
 
@@ -401,7 +390,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   .footer-nav-item,
-  .footer-nav-arrow,
   .footer-meta-list a,
   .footer-map-link,
   .footer-bar a {

@@ -236,7 +236,7 @@ export default function QualityPage() {
             <SplitText as="h2" lines={["Precision in", "every detail."]} />
             <Link href="/products" className="quality-closing-link">
               <span>Explore Product Range</span>
-              <span aria-hidden="true">↗</span>
+              
             </Link>
             <div className="quality-closing-whatsapp">
               <WhatsAppButton variant="outline" />

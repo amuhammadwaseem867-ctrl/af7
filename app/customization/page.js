@@ -55,7 +55,7 @@ export default function CustomizationPage() {
               <div className="pf-actions">
                 <Link href="/contact" className="af7-button af7-button-dark">
                   <span>Send a Product Enquiry</span>
-                  <span className="af7-button-arrow" aria-hidden="true">↗</span>
+                  
                 </Link>
               </div>
             </Reveal>
@@ -152,11 +152,11 @@ export default function CustomizationPage() {
             <WhatsAppButton />
             <Link href="/contact" className="af7-button af7-button-dark">
               <span>Send a Product Enquiry</span>
-              <span className="af7-button-arrow" aria-hidden="true">↗</span>
+              
             </Link>
             <Link href="/manufacturing" className="af7-button af7-button-dark">
               <span>Discover Our Manufacturing</span>
-              <span className="af7-button-arrow" aria-hidden="true">↗</span>
+              
             </Link>
           </Reveal>
         </div>

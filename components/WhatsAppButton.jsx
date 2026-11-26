@@ -18,7 +18,7 @@ export default function WhatsAppButton({
     >
       <WhatsAppIcon size={18} className="whatsapp-button-icon" />
       <span>{label}</span>
-      <span className="whatsapp-button-arrow" aria-hidden="true">↗</span>
+      
     </a>
   );
 }

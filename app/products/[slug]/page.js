@@ -104,7 +104,7 @@ export default async function ProductDetailPage({ params }) {
                     className="af7-button af7-button-dark product-detail-enquire"
                   >
                     <span>Send a Product Enquiry</span>
-                    <span className="af7-button-arrow" aria-hidden="true">↗</span>
+                    
                   </Link>
                 </div>
               </Reveal>
@@ -258,7 +258,7 @@ export default async function ProductDetailPage({ params }) {
                     {previous.title}
                   </span>
 
-                  <span className="product-detail-nav-arrow">↙</span>
+                  
                 </Link>
               ) : (
                 <Link
@@ -273,7 +273,7 @@ export default async function ProductDetailPage({ params }) {
                     Product Range
                   </span>
 
-                  <span className="product-detail-nav-arrow">↙</span>
+                  
                 </Link>
               )}
 
@@ -290,7 +290,7 @@ export default async function ProductDetailPage({ params }) {
                     {next.title}
                   </span>
 
-                  <span className="product-detail-nav-arrow">↗</span>
+                  
                 </Link>
               ) : (
                 <Link
@@ -305,7 +305,7 @@ export default async function ProductDetailPage({ params }) {
                     Product Range
                   </span>
 
-                  <span className="product-detail-nav-arrow">↗</span>
+                  
                 </Link>
               )}
             </div>

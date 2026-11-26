@@ -238,15 +238,6 @@
   letter-spacing: -0.03em;
 }
 
-.home-product-arrow {
-  transition: transform 500ms var(--ease-out-expo);
-}
-
-.home-product-link:hover .home-product-arrow {
-  transform: rotate(45deg);
-  color: var(--af7-text-silver);
-}
-
 .home-product-link p {
   margin-top: 14px;
   color: #747d88;
@@ -278,15 +269,6 @@
   background: var(--af7-accent);
 }
 
-.home-product-more-arrow {
-  align-self: flex-end;
-  font-size: 48px;
-  transition: transform 600ms var(--ease-out-expo);
-}
-
-.home-product-more:hover .home-product-more-arrow {
-  transform: translateX(10px);
-}
 
 .home-showcase-progress {
   width: var(--container);

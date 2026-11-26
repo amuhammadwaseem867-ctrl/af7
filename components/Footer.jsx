@@ -40,9 +40,7 @@ export default function Footer() {
                 {link.label}
               </span>
 
-              <span className="footer-nav-arrow" aria-hidden="true">
-                ↗
-              </span>
+              
             </Link>
           ))}
         </nav>
@@ -90,7 +88,7 @@ export default function Footer() {
               rel="noopener noreferrer"
             >
               <span>Open Location</span>
-              <span aria-hidden="true">↗</span>
+              
             </a>
           </div>
         </div>
