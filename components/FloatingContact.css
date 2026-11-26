@@ -1,4 +1,4 @@
-/* Floating contact buttons: official brand marks in their real colours. */
+/* Floating contact buttons use AF7's navy and white palette. */
 
 .floating-contact {
   --fc-size: 52px;
@@ -67,9 +67,9 @@
   display: block;
 }
 
-/* WhatsApp: white mark on WhatsApp green. */
+/* WhatsApp: white mark on navy. */
 .floating-contact__button--whatsapp {
-  background: #25d366;
+  background: #1A2336;
 }
 
 .floating-contact__button--whatsapp svg {
@@ -77,17 +77,9 @@
   height: 56%;
 }
 
-/* Instagram: white glyph on the Instagram gradient. */
+/* Instagram: white glyph on navy. */
 .floating-contact__button--instagram {
-  background:
-    radial-gradient(
-      circle at 30% 107%,
-      #fdf497 0%,
-      #fdf497 5%,
-      #fd5949 45%,
-      #d6249f 60%,
-      #285aeb 90%
-    );
+  background: #1A2336;
 }
 
 .floating-contact__button--instagram svg {
@@ -163,7 +155,7 @@
   inset: 0;
   z-index: -1;
   border-radius: 50%;
-  background: #25d366;
+  background: #1A2336;
   animation: floating-contact-pulse 2.4s ease-out 1.6s infinite;
 }
 
