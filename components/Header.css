@@ -273,6 +273,7 @@
   position: fixed;
   inset: 0;
   z-index: 999;
+  font-family: var(--font-body);
 
   display: flex;
   flex-direction: column;
@@ -299,7 +300,7 @@
   display: grid;
   grid-template-columns: 38px 1fr auto;
   align-items: center;
-  min-height: 72px;
+  min-height: 64px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.13);
   color: #ffffff;
 }
@@ -317,10 +318,10 @@
 }
 
 .mobile-label {
-  font-family: var(--font-heading);
-  font-size: clamp(30px, 8vw, 44px);
+  font-family: var(--font-body);
+  font-size: clamp(22px, 6.2vw, 30px);
   font-weight: 500;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.02em;
   transition: transform 500ms var(--ease-out-expo);
 }
 
