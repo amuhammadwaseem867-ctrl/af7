@@ -164,6 +164,7 @@ export default async function ProductDetailPage({ params }) {
               images={product.images}
               title={product.title}
               isSlider={isSliderProduct}
+              isMetalFive={product.slug === "metal-zippers-5"}
             />
 
             <div className="product-catalog-footer">

@@ -224,6 +224,10 @@
   background: #dfe3e6;
 }
 
+.product-catalog-grid-metal-five {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .product-catalog-item {
   position: relative;
   margin: 0;
@@ -474,6 +478,10 @@
     transform: none;
   }
 
+  .product-catalog-grid-metal-five {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .product-detail-information {
     padding: 90px 0;
   }
@@ -573,8 +581,16 @@
     grid-template-columns: 1fr;
   }
 
+  .product-catalog-grid-metal-five {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .product-catalog-item {
     padding: 24px;
+  }
+
+  .product-catalog-grid-metal-five .product-catalog-item {
+    padding: 12px;
   }
 
   .product-catalog-grid-slider .product-catalog-image img {

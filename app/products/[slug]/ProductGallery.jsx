@@ -7,14 +7,16 @@ import Lightbox from "@/components/Lightbox";
 
 const ease = [0.16, 1, 0.3, 1];
 
-export default function ProductGallery({ images, title, isSlider }) {
+export default function ProductGallery({ images, title, isSlider, isMetalFive }) {
   const [openIndex, setOpenIndex] = useState(null);
   const isOpen = openIndex !== null;
   const closeLightbox = useCallback(() => setOpenIndex(null), []);
 
   return (
     <>
-      <div className={`product-catalog-grid ${isSlider ? "product-catalog-grid-slider" : ""}`}>
+      <div
+        className={`product-catalog-grid${isSlider ? " product-catalog-grid-slider" : ""}${isMetalFive ? " product-catalog-grid-metal-five" : ""}`}
+      >
         {images.map((image, index) => (
           <motion.figure
             className={`product-catalog-item ${index === 0 ? "product-catalog-item-featured" : ""}`}
